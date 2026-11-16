@@ -25,7 +25,11 @@ jobs:
         run: |
           version="$(node -e 'const x=require("./plugins/com.novaway.marketplace-capability-smoke/plugin.json"); console.log(x.version)')"
           tag="com.novaway.marketplace-capability-smoke-v${version}"
-          gh release create "$tag" dist/com.novaway.marketplace-capability-smoke-"${version}".zip --title "$tag" --generate-notes
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release $tag already exists; verifying its immutable asset."
+          else
+            gh release create "$tag" dist/com.novaway.marketplace-capability-smoke-"${version}".zip --title "$tag" --generate-notes
+          fi
       - name: Verify the published asset matches the catalog
         shell: bash
         run: |

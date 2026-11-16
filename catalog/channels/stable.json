@@ -225,6 +225,68 @@
           "size": 5335
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.marketplace-capability-smoke",
+      "name": "NovaWay Marketplace Capability Smoke",
+      "version": "0.2.2",
+      "description": "Official executable fixture proving Agents, Skills, Tools, Commands, Interceptors, Providers, Office, Surfaces and Previewers are usable after installation.",
+      "longDescription": "A first-party end-to-end capability fixture covering the remaining v2 contribution registries and their lifecycle cleanup.",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "developer-tools",
+        "testing"
+      ],
+      "tags": [
+        "official",
+        "agent",
+        "skill",
+        "tool",
+        "command",
+        "interceptor",
+        "provider",
+        "office",
+        "surface",
+        "previewer",
+        "fixture"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills",
+        "tools",
+        "commands",
+        "interceptors",
+        "providers",
+        "office",
+        "surfaces",
+        "previewers"
+      ],
+      "permissions": [],
+      "releaseNotes": "Adds executable Interceptor, Provider and Office contributions plus Surface and Previewer registrations.",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-capability-smoke-v0.2.2/com.novaway.marketplace-capability-smoke-0.2.2.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.marketplace-capability-smoke-v0.2.2",
+          "asset": "com.novaway.marketplace-capability-smoke-0.2.2.zip",
+          "sha256": "9deb6a6421a3c1e6db4d92e1661d7be6bdce5471c8997d123e4c0736e3f13521",
+          "size": 5389
+        }
+      ]
     }
   ]
 }

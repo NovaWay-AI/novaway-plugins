@@ -1,0 +1,9 @@
+{
+  "name": "@novaway/official-plugins",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build:smoke": "python scripts/build_plugin.py com.novaway.marketplace-smoke"
+  }
+}

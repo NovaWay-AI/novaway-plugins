@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
+  "title": "NovaWay Plugin Manifest",
+  "type": "object",
+  "required": ["apiVersion", "name", "kind", "contributes"],
+  "properties": {
+    "apiVersion": { "const": 2 },
+    "name": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$" },
+    "version": { "type": "string" },
+    "kind": { "enum": ["declarative", "code", "mixed"] },
+    "main": { "type": "string" },
+    "engines": { "type": "object" },
+    "contributes": { "type": "object" },
+    "capabilities": { "type": "object" },
+    "permissions": { "type": "array", "items": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "enum": ["code", "mixed"] } } },
+      "then": { "required": ["main"] }
+    }
+  ]
+}

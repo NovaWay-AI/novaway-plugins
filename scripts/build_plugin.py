@@ -31,7 +31,14 @@ with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as handle:
         info = zipfile.ZipInfo(relative, date_time=(2020, 1, 1, 0, 0, 0))
         info.compress_type = zipfile.ZIP_DEFLATED
         info.external_attr = 0o100644 << 16
-        handle.writestr(info, path.read_bytes())
+        payload = path.read_bytes()
+    # Keep release bytes identical on Windows and Linux checkouts. Git may
+    # materialize text files with different newline conventions, but the
+    # catalog digest must describe one immutable archive independent of the
+    # machine that built it.
+    if path.suffix.lower() in {".json", ".md", ".mjs", ".js", ".txt", ".license"}:
+        payload = payload.replace(b"\r\n", b"\n")
+    handle.writestr(info, payload)
 
 digest = hashlib.sha256(archive.read_bytes()).hexdigest()
 size = archive.stat().st_size

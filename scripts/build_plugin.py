@@ -10,9 +10,11 @@ from datetime import datetime
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
-if len(sys.argv) != 2:
-    raise SystemExit("usage: build_plugin.py <package-directory-name>")
-package_dir = root / "plugins" / sys.argv[1]
+package_name = sys.argv[1] if len(sys.argv) >= 2 else ""
+if len(sys.argv) not in (2, 3) or (len(sys.argv) == 3 and sys.argv[2] != "--stored"):
+    raise SystemExit("usage: build_plugin.py <package-directory-name> [--stored]")
+use_stored = len(sys.argv) == 3
+package_dir = root / "plugins" / package_name
 manifest_path = package_dir / "plugin.json"
 manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 version = manifest.get("version")
@@ -23,13 +25,13 @@ if not package_dir.is_dir():
 
 out = root / "dist"
 out.mkdir(exist_ok=True)
-archive = out / f"{sys.argv[1]}-{version}.zip"
-files = sorted(path for path in package_dir.rglob("*") if path.is_file())
-with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as handle:
+archive = out / f"{package_name}-{version}.zip"
+compression = zipfile.ZIP_STORED if use_stored else zipfile.ZIP_DEFLATED
+with zipfile.ZipFile(archive, "w", compression) as handle:
     for path in files:
         relative = path.relative_to(package_dir).as_posix()
         info = zipfile.ZipInfo(relative, date_time=(2020, 1, 1, 0, 0, 0))
-        info.compress_type = zipfile.ZIP_DEFLATED
+        info.compress_type = compression
         info.external_attr = 0o100644 << 16
         payload = path.read_bytes()
         # Keep release bytes identical on Windows and Linux checkouts. Git may

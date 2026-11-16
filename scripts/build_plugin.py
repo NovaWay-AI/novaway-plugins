@@ -26,6 +26,7 @@ if not package_dir.is_dir():
 out = root / "dist"
 out.mkdir(exist_ok=True)
 archive = out / f"{package_name}-{version}.zip"
+files = sorted(path for path in package_dir.rglob("*") if path.is_file())
 compression = zipfile.ZIP_STORED if use_stored else zipfile.ZIP_DEFLATED
 with zipfile.ZipFile(archive, "w", compression) as handle:
     for path in files:

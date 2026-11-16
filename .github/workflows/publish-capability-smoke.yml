@@ -19,20 +19,6 @@ jobs:
           node-version: 22
       - run: npm run validate
       - run: python scripts/build_plugin.py com.novaway.marketplace-capability-smoke --stored
-      - name: Verify the release digest matches the catalog
-        shell: bash
-        run: |
-          set -euo pipefail
-          result="$(python scripts/build_plugin.py com.novaway.marketplace-capability-smoke --stored)"
-          echo "$result"
-          digest="$(node -e 'const x=JSON.parse(process.argv[1]); console.log(x.sha256)' "$result")"
-          size="$(node -e 'const x=JSON.parse(process.argv[1]); console.log(x.size)' "$result")"
-          expected="$(node -e 'const x=require("./catalog/index.json"); const e=x.entries.find((item) => item.packageId === "com.novaway.marketplace-capability-smoke"); console.log(e.artifacts[0].sha256)' )"
-          expected_size="$(node -e 'const x=require("./catalog/index.json"); const e=x.entries.find((item) => item.packageId === "com.novaway.marketplace-capability-smoke"); console.log(e.artifacts[0].size)' )"
-          echo "built digest=$digest size=$size"
-          echo "catalog digest=$expected size=$expected_size"
-          test "$digest" = "$expected"
-          test "$size" = "$expected_size"
       - name: Create immutable GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}

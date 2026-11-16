@@ -2,9 +2,9 @@
   "$schema": "../../catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "marketplace-capability-smoke",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "kind": "declarative",
-  "description": "Official end-to-end fixture proving that marketplace Agents, Skills, Tools and Commands are usable after installation.",
+  "description": "Official executable fixture proving marketplace Agents, Skills, Tools, Commands, Interceptors, Providers, Office, Surfaces and Previewers are usable after installation.",
   "engines": {
     "novaway": ">=0.0.0"
   },
@@ -12,8 +12,14 @@
     "developer-tools",
     "testing"
   ],
-  "capabilities": {},
-  "activationEvents": ["onStartup"],
+  "capabilities": {
+    "ui": [
+      "office-engine"
+    ]
+  },
+  "activationEvents": [
+    "onStartup"
+  ],
   "contributes": {
     "tools": [
       {
@@ -22,9 +28,13 @@
         "parameters": {
           "type": "object",
           "properties": {
-            "text": { "type": "string" }
+            "text": {
+              "type": "string"
+            }
           },
-          "required": ["text"],
+          "required": [
+            "text"
+          ],
           "additionalProperties": false
         },
         "entry": "./tools/capability-echo.mjs"
@@ -35,11 +45,17 @@
         "id": "capability-reviewer",
         "description": "Reviews a request and returns a concise, evidence-based plan.",
         "mode": "subagent",
-        "prompt": { "file": "./agents/capability-reviewer.md" },
-        "tools": ["marketplace-capability-smoke_capability-echo"]
+        "prompt": {
+          "file": "./agents/capability-reviewer.md"
+        },
+        "tools": [
+          "marketplace-capability-smoke_capability-echo"
+        ]
       }
     ],
-    "skills": ["./skills"],
+    "skills": [
+      "./skills"
+    ],
     "commands": [
       {
         "id": "capability-plan",
@@ -47,6 +63,47 @@
         "template": "Create a concise implementation plan for $ARGUMENTS",
         "argumentHint": "$ARGUMENTS",
         "agent": "marketplace-capability-smoke_capability-reviewer"
+      }
+    ],
+    "interceptors": "./interceptors.mjs",
+    "providers": [
+      "./provider.mjs"
+    ],
+    "officeEngines": [
+      {
+        "format": "novaway-capability",
+        "kind": "plaintext",
+        "extensions": [
+          ".nvcap"
+        ],
+        "entry": "./office.mjs"
+      }
+    ],
+    "surfaces": [
+      {
+        "slot": "sidebar.item",
+        "id": "capability-home",
+        "title": "Capability Smoke",
+        "icon": "archive",
+        "action": {
+          "type": "url",
+          "url": "https://novaway.ai/marketplace/capability-smoke"
+        }
+      }
+    ],
+    "previewers": [
+      {
+        "id": "capability-preview",
+        "match": {
+          "extension": [
+            ".nvcap"
+          ]
+        },
+        "render": {
+          "type": "iframe",
+          "url": "https://novaway.ai/marketplace/capability-preview"
+        },
+        "readOnly": true
       }
     ]
   }

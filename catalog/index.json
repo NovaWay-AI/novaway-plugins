@@ -9,7 +9,7 @@
     {
       "packageId": "com.novaway.marketplace-smoke",
       "name": "NovaWay Marketplace Smoke",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "description": "A small official Skill used to verify GitHub marketplace installation and consumption.",
       "author": "NovaWay-AI",
       "repository": "https://github.com/NovaWay-AI/novaway-plugins",
@@ -41,12 +41,12 @@
       "artifacts": [
         {
           "type": "github-release",
-          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-smoke-v0.1.0/com.novaway.marketplace-smoke-0.1.0.zip",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-smoke-v0.1.1/com.novaway.marketplace-smoke-0.1.1.zip",
           "repository": "NovaWay-AI/novaway-plugins",
-          "tag": "com.novaway.marketplace-smoke-v0.1.0",
-          "asset": "com.novaway.marketplace-smoke-0.1.0.zip",
-          "sha256": "fa1204d116fa004c9183755c564e1bd86a2265c72745de4e3ceb2ae81c6053ee",
-          "size": 1855
+          "tag": "com.novaway.marketplace-smoke-v0.1.1",
+          "asset": "com.novaway.marketplace-smoke-0.1.1.zip",
+          "sha256": "b003d4f13d09048d37b3460ceb91531fffbc06ae2023b8bc696924919e66c547",
+          "size": 1878
         }
       ]
     }

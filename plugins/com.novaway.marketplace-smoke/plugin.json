@@ -2,15 +2,20 @@
   "$schema": "../../catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "marketplace-smoke",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "kind": "declarative",
-  "description": "A small official Skill used to verify GitHub marketplace installation and consumption.",
+  "description": "A small official Skill used to verify GitHub marketplace installation, update, rollback and consumption.",
   "engines": {
     "novaway": ">=0.0.0"
   },
-  "categories": ["developer-tools", "testing"],
+  "categories": [
+    "developer-tools",
+    "testing"
+  ],
   "capabilities": {},
   "contributes": {
-    "skills": ["./skills"]
+    "skills": [
+      "./skills"
+    ]
   }
 }

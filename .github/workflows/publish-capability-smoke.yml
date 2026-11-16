@@ -26,3 +26,17 @@ jobs:
           version="$(node -e 'const x=require("./plugins/com.novaway.marketplace-capability-smoke/plugin.json"); console.log(x.version)')"
           tag="com.novaway.marketplace-capability-smoke-v${version}"
           gh release create "$tag" dist/com.novaway.marketplace-capability-smoke-"${version}".zip --title "$tag" --generate-notes
+      - name: Verify the published asset matches the catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(node -e 'const x=require("./plugins/com.novaway.marketplace-capability-smoke/plugin.json"); console.log(x.version)')"
+          asset="com.novaway.marketplace-capability-smoke-${version}.zip"
+          url="https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-capability-smoke-v${version}/${asset}"
+          curl --fail --location --silent --show-error "$url" -o "$RUNNER_TEMP/$asset"
+          actual_sha="$(sha256sum "$RUNNER_TEMP/$asset" | cut -d' ' -f1)"
+          actual_size="$(wc -c < "$RUNNER_TEMP/$asset")"
+          expected_sha="$(node -e 'const x=require("./catalog/index.json"); const e=x.entries.find((item) => item.packageId === "com.novaway.marketplace-capability-smoke"); console.log(e.artifacts[0].sha256)')"
+          expected_size="$(node -e 'const x=require("./catalog/index.json"); const e=x.entries.find((item) => item.packageId === "com.novaway.marketplace-capability-smoke"); console.log(e.artifacts[0].size)')"
+          test "$actual_sha" = "$expected_sha"
+          test "$actual_size" = "$expected_size"

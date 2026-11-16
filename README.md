@@ -15,7 +15,14 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 ## 当前状态
 
-仓库刚刚建立，当前先提交市场目录协议和仓库骨架。插件发布必须通过 manifest 校验、安装测试和真实消费者测试后才能进入 `stable` 目录。
+官方 stable 目录当前包含两个可安装版本线：
+
+- `com.novaway.marketplace-smoke@0.1.1`：真实 Skill 安装、激活和消费 fixture；
+- `com.novaway.marketplace-capability-smoke@0.1.0`：真实 Agent、Skill、Tool 和 Command 安装、激活、注册、消费与停用 fixture。
+
+第二个 fixture 的公开 Release 已通过 NovaWay 的 `Marketplace.installZip`、SHA-256、Plugin Host v2 discovery/activation 和真实消费者验收后才进入 stable。仅解析目录或成功下载不构成可用性证明。
+
+插件贡献必须遵守 NovaWay v2 manifest 契约：Agent 使用对象声明并提供 inline 或包内 prompt 文件，Skill 使用 `SKILL.md`，Tool 提供带静态 schema 的安全 entry，Command 提供可消费的模板声明。
 
 ## 目录入口
 

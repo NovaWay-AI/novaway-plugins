@@ -30,6 +30,7 @@ jobs:
           else
             gh release create "$tag" dist/com.novaway.marketplace-capability-smoke-"${version}".zip --title "$tag" --generate-notes
           fi
+          gh release upload "$tag" dist/com.novaway.marketplace-capability-smoke-"${version}".zip --clobber
       - name: Verify the published asset matches the catalog
         shell: bash
         run: |

@@ -1,0 +1,36 @@
+name: Publish capability smoke plugin
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run validate
+      - run: python scripts/build_plugin.py com.novaway.marketplace-capability-smoke
+      - name: Verify the release digest matches the catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          result="$(python scripts/build_plugin.py com.novaway.marketplace-capability-smoke)"
+          digest="$(node -e 'const x=JSON.parse(process.argv[1]); console.log(x.sha256)' "$result")"
+          size="$(node -e 'const x=JSON.parse(process.argv[1]); console.log(x.size)' "$result")"
+          expected="$(node -e 'const x=require("./catalog/index.json"); const e=x.entries.find((item) => item.packageId === "com.novaway.marketplace-capability-smoke"); console.log(e.artifacts[0].sha256)' )"
+          expected_size="$(node -e 'const x=require("./catalog/index.json"); const e=x.entries.find((item) => item.packageId === "com.novaway.marketplace-capability-smoke"); console.log(e.artifacts[0].size)' )"
+          test "$digest" = "$expected"
+          test "$size" = "$expected_size"
+      - name: Create immutable GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="$(node -e 'const x=require("./plugins/com.novaway.marketplace-capability-smoke/plugin.json"); console.log(x.version)')"
+          tag="com.novaway.marketplace-capability-smoke-v${version}"
+          gh release create "$tag" dist/com.novaway.marketplace-capability-smoke-"${version}".zip --title "$tag" --generate-notes

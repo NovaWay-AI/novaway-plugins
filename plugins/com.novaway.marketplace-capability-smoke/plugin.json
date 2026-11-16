@@ -1,0 +1,53 @@
+{
+  "$schema": "../../catalog/schema/manifest.schema.json",
+  "apiVersion": 2,
+  "name": "marketplace-capability-smoke",
+  "version": "0.1.0",
+  "kind": "declarative",
+  "description": "Official end-to-end fixture proving that marketplace Agents, Skills, Tools and Commands are usable after installation.",
+  "engines": {
+    "novaway": ">=0.0.0"
+  },
+  "categories": [
+    "developer-tools",
+    "testing"
+  ],
+  "capabilities": {},
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "tools": [
+      {
+        "id": "capability-echo",
+        "description": "Echo text from an installed marketplace plugin.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": { "type": "string" }
+          },
+          "required": ["text"],
+          "additionalProperties": false
+        },
+        "entry": "./tools/capability-echo.mjs"
+      }
+    ],
+    "agents": [
+      {
+        "id": "capability-reviewer",
+        "description": "Reviews a request and returns a concise, evidence-based plan.",
+        "mode": "subagent",
+        "prompt": { "file": "./agents/capability-reviewer.md" },
+        "tools": ["marketplace-capability-smoke_capability-echo"]
+      }
+    ],
+    "skills": ["./skills"],
+    "commands": [
+      {
+        "id": "capability-plan",
+        "description": "Create a plan using the installed capability smoke plugin.",
+        "template": "Create a concise implementation plan for $ARGUMENTS",
+        "argumentHint": "$ARGUMENTS",
+        "agent": "marketplace-capability-smoke_capability-reviewer"
+      }
+    ]
+  }
+}

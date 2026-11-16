@@ -1,6 +1,9 @@
 name: Publish capability smoke plugin
 
 on:
+  push:
+    tags:
+      - 'com.novaway.marketplace-capability-smoke-v*'
   workflow_dispatch:
 
 permissions:

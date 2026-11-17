@@ -26,12 +26,16 @@ if not package_dir.is_dir():
 out = root / "dist"
 out.mkdir(exist_ok=True)
 archive = out / f"{package_name}-{version}.zip"
-files = sorted(path for path in package_dir.rglob("*") if path.is_file())
+files = sorted(
+    (path for path in package_dir.rglob("*") if path.is_file()),
+    key=lambda path: path.relative_to(package_dir).as_posix(),
+)
 compression = zipfile.ZIP_STORED if use_stored else zipfile.ZIP_DEFLATED
 with zipfile.ZipFile(archive, "w", compression) as handle:
     for path in files:
         relative = path.relative_to(package_dir).as_posix()
         info = zipfile.ZipInfo(relative, date_time=(2020, 1, 1, 0, 0, 0))
+        info.create_system = 3
         info.compress_type = compression
         info.external_attr = 0o100644 << 16
         payload = path.read_bytes()
@@ -39,7 +43,7 @@ with zipfile.ZipFile(archive, "w", compression) as handle:
         # materialize text files with different newline conventions, but the
         # catalog digest must describe one immutable archive independent of the
         # machine that built it.
-        if path.suffix.lower() in {".json", ".md", ".mjs", ".js", ".txt", ".license"}:
+        if path.name.upper() == "LICENSE" or path.suffix.lower() in {".json", ".md", ".mjs", ".js", ".txt", ".license"}:
             payload = payload.replace(b"\r\n", b"\n")
         handle.writestr(info, payload)
 

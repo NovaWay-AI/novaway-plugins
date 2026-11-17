@@ -4,18 +4,12 @@ export default {
   runtimeType: "marketplace-smoke",
   capabilities: ["streaming", "pause", "resume", "cancellation"],
   supports: { streaming: true, pause: true, resume: true, cancellation: true },
-  async discover() { return { id: "capability-runtime", available: true } },
-  async start(input) {
-    let stopped = false
-    return {
-      id: `capability-run:${input.threadID}`,
-      type: "marketplace-smoke",
-      async start() {},
-      async send() {},
-      async next() { return { kind: "done", summary: "capability runtime completed" } },
-      async stop() { stopped = true; return { clean: stopped } },
-    }
-  },
-  events() { return { [Symbol.asyncIterator]: async function* () {} } },
-  dispose() {},
+  async discover() { return [{ id: "capability-runtime", available: true }] },
+  async start(input) { return { id: `capability-run:${input.runID}:${input.taskID}`, runID: input.runID, taskID: input.taskID } },
+  async send() {},
+  async *events() { yield { type: "completed", at: Date.now(), output: "marketplace capability complete" } },
+  async pause(handle) { return { checkpointID: `${handle.id}:checkpoint` } },
+  async resume() {},
+  async cancel() {},
+  async dispose() {},
 }

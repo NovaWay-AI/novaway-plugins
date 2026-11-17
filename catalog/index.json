@@ -420,6 +420,77 @@
           "size": 9570
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.marketplace-capability-smoke",
+      "name": "NovaWay Marketplace Capability Smoke",
+      "version": "0.3.1",
+      "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
+      "longDescription": "A first-party end-to-end capability fixture covering the remaining v2 contribution registries and their lifecycle cleanup.",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "developer-tools",
+        "testing"
+      ],
+      "tags": [
+        "official",
+        "agent",
+        "skill",
+        "tool",
+        "command",
+        "interceptor",
+        "provider",
+        "office",
+        "surface",
+        "previewer",
+        "fixture",
+        "super-agent"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills",
+        "tools",
+        "commands",
+        "interceptors",
+        "providers",
+        "office",
+        "surfaces",
+        "previewers",
+        "super-agent",
+        "agent-runtimes",
+        "strategies",
+        "task-kinds",
+        "verifiers",
+        "repair-strategies",
+        "agent-templates",
+        "policies"
+      ],
+      "permissions": [],
+      "releaseNotes": "Fixes the executable Agent Runtime adapter contract with real discover, start, events, pause, resume, cancel and dispose methods.",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-capability-smoke-v0.3.1/com.novaway.marketplace-capability-smoke-0.3.1.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.marketplace-capability-smoke-v0.3.1",
+          "asset": "com.novaway.marketplace-capability-smoke-0.3.1.zip",
+          "sha256": "085073e9b5bea97afaf03e459da0c7b96098ddf6ad15ae63d815c9bbefa04698",
+          "size": 9533
+        }
+      ]
     }
   ]
 }

@@ -5,22 +5,40 @@
     {
       "packageId": "com.novaway.marketplace-capability-smoke",
       "name": "marketplace-capability-smoke",
-      "version": "0.2.2",
-      "description": "Official executable fixture proving marketplace Agents, Skills, Tools, Commands, Interceptors, Providers, Office, Surfaces and Previewers are usable after installation.",
+      "version": "0.4.4",
+      "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
       "path": "plugins/com.novaway.marketplace-capability-smoke",
       "categories": [
         "developer-tools",
         "testing"
       ],
       "capabilities": [
+        "agentRuntimes",
+        "agentTemplates",
         "agents",
+        "channels",
         "commands",
+        "eventSources",
+        "fastPath",
+        "httpRoutes",
         "office",
         "previewers",
         "providers",
+        "publishDrivers",
+        "repairStrategies",
+        "routingPolicies",
+        "schedulers",
         "skills",
+        "superAgentPolicies",
+        "superAgentStrategies",
+        "superAgentSurfaces",
         "surfaces",
-        "tools"
+        "taskKinds",
+        "tools",
+        "triggers",
+        "verifiers",
+        "watchdogPolicies",
+        "workerTypes"
       ],
       "runtimeTargets": [
         "novaway-v2"

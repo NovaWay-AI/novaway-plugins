@@ -2,9 +2,9 @@
   "$schema": "../../catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "marketplace-capability-smoke",
-  "version": "0.2.2",
+  "version": "0.4.4",
   "kind": "declarative",
-  "description": "Official executable fixture proving marketplace Agents, Skills, Tools, Commands, Interceptors, Providers, Office, Surfaces and Previewers are usable after installation.",
+  "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
   "engines": {
     "novaway": ">=0.0.0"
   },
@@ -18,6 +18,9 @@
     ],
     "ui": [
       "office-engine"
+    ],
+    "publishDrivers": [
+      "capability-publisher"
     ]
   },
   "activationEvents": [
@@ -107,6 +110,179 @@
           "url": "https://novaway.ai/marketplace/capability-preview"
         },
         "readOnly": true
+      }
+    ],
+    "agentRuntimes": [
+      {
+        "id": "capability-runtime",
+        "version": "1.0.0",
+        "runtimeType": "marketplace-smoke",
+        "capabilities": [
+          "streaming",
+          "pause",
+          "resume",
+          "cancellation"
+        ],
+        "entry": "./super-agent/runtime.mjs",
+        "supports": {
+          "streaming": true,
+          "pause": true,
+          "resume": true,
+          "cancellation": true
+        }
+      }
+    ],
+    "superAgentStrategies": [
+      {
+        "id": "capability-strategy",
+        "version": "1.0.0",
+        "entry": "./super-agent/strategy.mjs",
+        "deterministic": true
+      }
+    ],
+    "taskKinds": [
+      {
+        "id": "capability-task",
+        "version": "1.0.0",
+        "entry": "./super-agent/task-kind.mjs",
+        "capabilities": [
+          "planning"
+        ]
+      }
+    ],
+    "verifiers": [
+      {
+        "id": "capability-verifier",
+        "version": "1.0.0",
+        "entry": "./super-agent/verifier.mjs",
+        "kinds": [
+          "capability-task"
+        ]
+      }
+    ],
+    "repairStrategies": [
+      {
+        "id": "capability-repair",
+        "version": "1.0.0",
+        "entry": "./super-agent/repair.mjs",
+        "failureKinds": [
+          "capability-failure"
+        ]
+      }
+    ],
+    "agentTemplates": [
+      {
+        "id": "capability-template",
+        "version": "1.0.0",
+        "title": "Capability Template",
+        "description": "A real installed Super-Agent template.",
+        "goal": "Verify installed marketplace capabilities.",
+        "tags": [
+          "marketplace",
+          "fixture"
+        ]
+      }
+    ],
+    "superAgentPolicies": [
+      {
+        "id": "capability-policy",
+        "version": "1.0.0",
+        "entry": "./super-agent/policy.mjs",
+        "capabilities": [
+          "planning"
+        ]
+      }
+    ],
+    "superAgentSurfaces": [
+      {
+        "id": "capability-super-agent-surface",
+        "slot": "session.panel",
+        "title": "Capability Super-Agent",
+        "render": {
+          "type": "iframe",
+          "url": "https://novaway.ai/marketplace/super-agent-capability"
+        }
+      }
+    ],
+    "mcpServers": {
+      "capability-mcp": {
+        "type": "remote",
+        "url": "https://novaway.ai/mcp/capability"
+      }
+    },
+    "outputStyles": "./extended/output-styles.mjs",
+    "lspServers": "./extended/lsp-servers.mjs",
+    "lifecycleHooks": "./extended/lifecycle-hooks.mjs",
+    "httpRoutes": [
+      {
+        "id": "capability-route",
+        "method": "GET",
+        "path": "/capability",
+        "entry": "./extended/http-route.mjs"
+      }
+    ],
+    "triggers": [
+      {
+        "id": "capability-trigger",
+        "kind": "event",
+        "entry": "./extended/trigger.mjs",
+        "thread": {
+          "mode": "reuse"
+        }
+      }
+    ],
+    "fastPath": [
+      {
+        "id": "capability-fast-path",
+        "entry": "./extended/fast-path.mjs"
+      }
+    ],
+    "routingPolicies": [
+      {
+        "id": "capability-routing",
+        "entry": "./extended/routing.mjs"
+      }
+    ],
+    "workerTypes": [
+      {
+        "id": "capability-worker",
+        "entry": "./extended/worker.mjs"
+      }
+    ],
+    "watchdogPolicies": [
+      {
+        "id": "capability-watchdog",
+        "entry": "./extended/watchdog.mjs"
+      }
+    ],
+    "channels": [
+      {
+        "id": "capability-channel",
+        "kind": "structured",
+        "entry": "./extended/channel.mjs"
+      }
+    ],
+    "storage": {
+      "namespace": "capability-smoke",
+      "migrations": "./extended/migrations.mjs"
+    },
+    "publishDrivers": [
+      "./extended/publish.mjs"
+    ],
+    "schedulers": [
+      {
+        "id": "capability-scheduler",
+        "schedule": {
+          "everyMs": 60000
+        },
+        "entry": "./extended/scheduler.mjs"
+      }
+    ],
+    "eventSources": [
+      {
+        "id": "capability-events",
+        "kind": "custom",
+        "entry": "./extended/event-source.mjs"
       }
     ]
   }

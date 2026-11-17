@@ -915,6 +915,96 @@
           "size": 16106
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.marketplace-capability-smoke",
+      "name": "NovaWay Marketplace Capability Smoke",
+      "version": "0.4.4",
+      "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
+      "longDescription": "A first-party end-to-end capability fixture covering the remaining v2 contribution registries and their lifecycle cleanup.",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "developer-tools",
+        "testing"
+      ],
+      "tags": [
+        "official",
+        "agent",
+        "skill",
+        "tool",
+        "command",
+        "interceptor",
+        "provider",
+        "office",
+        "surface",
+        "previewer",
+        "fixture",
+        "super-agent",
+        "mcp",
+        "lsp",
+        "automation",
+        "channel"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills",
+        "tools",
+        "commands",
+        "interceptors",
+        "providers",
+        "office",
+        "surfaces",
+        "previewers",
+        "super-agent",
+        "agent-runtimes",
+        "strategies",
+        "task-kinds",
+        "verifiers",
+        "repair-strategies",
+        "agent-templates",
+        "policies",
+        "mcp",
+        "output-styles",
+        "lsp",
+        "http-routes",
+        "triggers",
+        "fast-path",
+        "routing-policies",
+        "worker-types",
+        "watchdog-policies",
+        "channels",
+        "lifecycle-hooks",
+        "storage",
+        "publish-drivers",
+        "schedulers",
+        "event-sources"
+      ],
+      "permissions": [],
+      "releaseNotes": "Adds executable Output Style rendering and LSP probe consumers.",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-capability-smoke-v0.4.4/com.novaway.marketplace-capability-smoke-0.4.4.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.marketplace-capability-smoke-v0.4.4",
+          "asset": "com.novaway.marketplace-capability-smoke-0.4.4.zip",
+          "sha256": "ca84b65fe60b80cddbedfbb1db7c42ec3d179ba2dacb2f7ddbd407eefdb1ffed",
+          "size": 16227
+        }
+      ]
     }
   ]
 }

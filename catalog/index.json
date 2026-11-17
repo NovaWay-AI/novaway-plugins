@@ -1052,8 +1052,8 @@
           "repository": "NovaWay-AI/novaway-plugins",
           "tag": "com.novaway.office-suite-v0.1.0",
           "asset": "com.novaway.office-suite-0.1.0.zip",
-          "sha256": "23d90a28ceee0e532fbb526cb31ef8342207e857bc8abdbb9654626ee803611e",
-          "size": 31929376
+          "sha256": "5bfbf2c619bff50ff80b143eb4eccd67bde3e9feb3817d4e1fbf21511492c087",
+          "size": 31929239
         }
       ]
     },
@@ -1099,8 +1099,8 @@
           "repository": "NovaWay-AI/novaway-plugins",
           "tag": "com.novaway.ppt-master-v6.9.0",
           "asset": "com.novaway.ppt-master-6.9.0.zip",
-          "sha256": "5fcb7bcb169c98bd13fce940078743456c301b8db8f139a42098720372ec7326",
-          "size": 42943584
+          "sha256": "d344b07c09e68d64c6682bca9382a46658b6e56205832340e97e19a3672939af",
+          "size": 42564342
         }
       ]
     }

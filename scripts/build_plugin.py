@@ -43,7 +43,13 @@ with zipfile.ZipFile(archive, "w", compression) as handle:
         # materialize text files with different newline conventions, but the
         # catalog digest must describe one immutable archive independent of the
         # machine that built it.
-        if path.name.upper() == "LICENSE" or path.suffix.lower() in {".json", ".md", ".mjs", ".js", ".txt", ".license"}:
+        text_suffixes = {
+            ".json", ".md", ".mjs", ".cjs", ".js", ".ts", ".tsx", ".jsx", ".txt", ".license",
+            ".py", ".svg", ".html", ".htm", ".css", ".xml", ".yaml", ".yml", ".toml", ".csv",
+            ".cfg", ".ini", ".sh", ".bat", ".ps1", ".example", ".env", ".vue", ".rst",
+        }
+        text_names = {"LICENSE", "NOTICE", "README", ".gitkeep", ".gitignore", ".gitattributes", ".editorconfig"}
+        if path.name.upper() in text_names or path.suffix.lower() in text_suffixes:
             payload = payload.replace(b"\r\n", b"\n")
         handle.writestr(info, payload)
 

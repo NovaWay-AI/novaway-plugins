@@ -2,7 +2,7 @@
   "$schema": "../../catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "marketplace-capability-smoke",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "kind": "declarative",
   "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
   "engines": {
@@ -268,6 +268,22 @@
     },
     "publishDrivers": [
       "./extended/publish.mjs"
+    ],
+    "schedulers": [
+      {
+        "id": "capability-scheduler",
+        "schedule": {
+          "everyMs": 60000
+        },
+        "entry": "./extended/scheduler.mjs"
+      }
+    ],
+    "eventSources": [
+      {
+        "id": "capability-events",
+        "kind": "custom",
+        "entry": "./extended/event-source.mjs"
+      }
     ]
   }
 }

@@ -2,7 +2,7 @@
   "$schema": "../../catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "marketplace-capability-smoke",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "kind": "declarative",
   "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
   "engines": {

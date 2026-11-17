@@ -1005,6 +1005,104 @@
           "size": 16227
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.office-suite",
+      "name": "NovaWay Office Suite",
+      "version": "0.1.0",
+      "description": "NovaWay 办公助手：文档、演示、数据、视觉、网页、会议、资料、任务和沟通。",
+      "longDescription": "独立维护的 9 个办公 Agent 与 9 个 Skill。PPT 生成委托 NovaWay 定制的 PPT Master（ppt-master_ppt-master），不再使用宿主内置回退。需另行安装并启用 com.novaway.ppt-master。",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "office",
+        "productivity"
+      ],
+      "tags": [
+        "official",
+        "office",
+        "agent",
+        "skill"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills"
+      ],
+      "permissions": [],
+      "dependencies": {
+        "com.novaway.ppt-master": "6.9.0"
+      },
+      "releaseNotes": "首个独立办公助手包；9 个 Agent/Skill 从宿主内置迁出，PPT 统一委托定制 PPT Master。",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.office-suite-v0.1.0/com.novaway.office-suite-0.1.0.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.office-suite-v0.1.0",
+          "asset": "com.novaway.office-suite-0.1.0.zip",
+          "sha256": "23d90a28ceee0e532fbb526cb31ef8342207e857bc8abdbb9654626ee803611e",
+          "size": 31929376
+        }
+      ]
+    },
+    {
+      "packageId": "com.novaway.ppt-master",
+      "name": "PPT Master (NovaWay)",
+      "version": "6.9.0",
+      "description": "PPT Master：生成原生可编辑 PPTX、重建和美化演示文稿、创建模板与编辑现有 PPTX。",
+      "longDescription": "NovaWay 维护的 PPT Master 分支，保留内置浏览器预览适配（NOVAWAY_OPEN_IN_APP_BROWSER）与完整上游资源、许可证和署名。资源型技能含上万个图标/模板文件。",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "office",
+        "productivity"
+      ],
+      "tags": [
+        "official",
+        "office",
+        "skill",
+        "ppt"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "skills"
+      ],
+      "permissions": [],
+      "releaseNotes": "NovaWay 维护分支首次发布；保留本地浏览器适配与上游署名，资源完整。",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.ppt-master-v6.9.0/com.novaway.ppt-master-6.9.0.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.ppt-master-v6.9.0",
+          "asset": "com.novaway.ppt-master-6.9.0.zip",
+          "sha256": "5fcb7bcb169c98bd13fce940078743456c301b8db8f139a42098720372ec7326",
+          "size": 42943584
+        }
+      ]
     }
   ]
 }

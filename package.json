@@ -6,6 +6,7 @@
     "validate": "node scripts/validate.mjs && node scripts/index-local.mjs --check",
     "index:local": "node scripts/index-local.mjs",
     "build:smoke": "python scripts/build_plugin.py com.novaway.marketplace-smoke",
-    "build:office": "python scripts/build_plugin.py com.novaway.office-suite --stored"
+    "build:office": "python scripts/build_plugin.py com.novaway.office-suite --stored",
+    "build:ppt": "python scripts/build_plugin.py com.novaway.ppt-master --stored"
   }
 }

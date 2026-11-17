@@ -46,8 +46,9 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - 验证范围包含默认 Skill 权限、实际资源目录、停用、重新加载和卸载，不代表模型生成 Office 文件已经验收。
 - 当前没有迁出 `office_document_*`、`office_pptx_*`、`office_setup`、`pdf_create` 等宿主工具，也没有内置 Office MCP 可迁移；包不声明这些贡献。
 - PPT 生成统一调用 `plugins/com.novaway.ppt-master` 内的定制版本，完整 Skill ID 为 `ppt-master_ppt-master`；不再降级到自制 HTML → PPTX。两个插件需分别安装启用，安装办公助手包不会自动安装 PPT Master 或 Python 依赖。
-- 自制的 9 个办公 Agent 和 9 个 Skill 保留在本仓库独立维护；PPT Master 保留本地浏览器适配、完整上游资源及许可证。PPT Master 的 13,091 个资源文件超过当前 ZIP 安装器的 5,000 文件限制，尚未通过市场安装验收。
-- 尚未加入 stable，也未替换客户端内置办公入口。完整工具迁移、界面选路与真实产物验收后再发布。
+- 自制的 9 个办公 Agent 和 9 个 Skill 保留在本仓库独立维护；PPT Master 保留本地浏览器适配、完整上游资源及许可证。PPT Master 含 13,094 个资源文件，宿主 ZIP 安装器条目上限已调整为 20,000（下载 64 MB、解压 256 MB、路径/符号链接/中央目录校验不变），资源型技能可完整安装。
+- 两个包均已登记 `catalog/index.json` 与 `catalog/channels/stable.json`，通过 GitHub Release 发布不可变 artifact。打 tag `com.novaway.office-suite-v<version>` / `com.novaway.ppt-master-v<version>` 触发对应发布工作流，构建确定性 `--stored` ZIP 并校验摘要与目录一致。
+- 宿主已移除内置办公 Agent/Skill 注册与回退；办公场景仅路由到已激活的插件贡献，未安装时提示安装而非降级。真实模型生成 Office 文件的产物验收仍需在客户端单独进行。
 
 ## 发布原则
 

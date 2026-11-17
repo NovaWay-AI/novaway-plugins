@@ -1,0 +1,1 @@
+export default { id: "capability-trigger", async match(input) { return input?.type === "capability" }, normalize(input) { return { triggerID: "capability-trigger", payload: input, at: Date.now() } } }

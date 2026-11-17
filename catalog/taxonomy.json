@@ -12,6 +12,18 @@
     "previewers": "Previewer：文件预览",
     "interceptors": "Interceptor：执行拦截器"
   },
+  "marketTypes": {
+    "workbench": "工作台：一组可切换的场景 Agent 和工作流",
+    "agents": "智能体：可选择的助手角色",
+    "skills": "技能：按需加载的技能指引和资源",
+    "mcp": "MCP 连接器：外部服务和工具连接",
+    "tools": "工具：可执行的权限控制能力",
+    "commands": "命令：可调用的命令模板",
+    "providers": "模型提供商：模型和推理服务",
+    "ui": "桌面主题/UI：界面、主题和预览贡献",
+    "office": "Office 引擎：文档格式解析和编辑",
+    "interceptors": "拦截器：执行前后的自动处理"
+  },
   "categories": {
     "office": "办公",
     "productivity": "效率",

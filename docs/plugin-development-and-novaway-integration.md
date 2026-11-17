@@ -549,6 +549,17 @@ Windows 可以使用：
 
 `capabilities` 应从真实 `contributes` 生成，不能按插件名称猜测。每个 artifact 必须有 HTTPS URL、完整 SHA-256 和精确字节数。
 
+如需帮助用户按「工作台、智能体、技能、MCP 连接器、工具、桌面 UI」筛选，可在 catalog entry 增加 `marketTypes`。它是面向市场展示的稳定类型，不替代运行时 `capabilities`；例如办公工作台可以声明：
+
+```json
+{
+  "marketTypes": ["workbench", "agents", "skills"],
+  "capabilities": ["agents", "skills"]
+}
+```
+
+`marketTypes` 支持 `workbench`、`agents`、`skills`、`mcp`、`tools`、`commands`、`providers`、`ui`、`office` 和 `interceptors`。一个插件可以同时属于多个类型。
+
 ### Step 4：创建不可变 Release
 
 ```bash

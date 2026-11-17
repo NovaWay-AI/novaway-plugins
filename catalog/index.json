@@ -1055,6 +1055,11 @@
           "sha256": "5bfbf2c619bff50ff80b143eb4eccd67bde3e9feb3817d4e1fbf21511492c087",
           "size": 31929239
         }
+      ],
+      "marketTypes": [
+        "workbench",
+        "agents",
+        "skills"
       ]
     },
     {
@@ -1201,6 +1206,11 @@
           "sha256": "d0ce6d40c868576b6e067f1992c878582770b025482d6d5c0a13a7c375991fb5",
           "size": 31929592
         }
+      ],
+      "marketTypes": [
+        "workbench",
+        "agents",
+        "skills"
       ]
     }
   ]

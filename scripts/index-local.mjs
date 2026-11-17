@@ -59,6 +59,24 @@ for (const directory of (
     .filter(([, value]) => Array.isArray(value) && value.length > 0)
     .map(([key]) => kinds[key] ?? key)
     .sort();
+  const marketTypes = capabilities
+    .map((value) => (value === "surfaces" || value === "previewers" ? "ui" : value))
+    .filter((value) =>
+      ["agents", "skills", "mcp", "tools", "commands", "providers", "ui", "office", "interceptors"].includes(value),
+    );
+  if (
+    Array.isArray(manifest.contributes.agents) &&
+    manifest.contributes.agents.some(
+      (agent) =>
+        typeof agent === "object" &&
+        agent !== null &&
+        typeof agent.options === "object" &&
+        agent.options !== null &&
+        (agent.options.workbench || agent.options.modeGroup),
+    )
+  ) {
+    marketTypes.push("workbench");
+  }
   entries.push({
     packageId: directory.name,
     name: manifest.name,
@@ -67,6 +85,7 @@ for (const directory of (
     path: `plugins/${directory.name}`,
     categories: manifest.categories ?? [],
     capabilities,
+    marketTypes: [...new Set(marketTypes)],
     runtimeTargets: ["novaway-v2"],
   });
 }

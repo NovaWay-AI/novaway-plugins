@@ -34,7 +34,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 ## 分类与本地办公包
 
-`catalog/taxonomy.json` 分开维护能力类型（Skill、Agent、Tool、MCP 等）和用途（办公、开发、数据等）。一个插件可以有多种能力；能力从真实 `contributes` 生成，不按名称猜测。
+`catalog/taxonomy.json` 分开维护能力类型（Skill、Agent、Tool、MCP 等）、市场展示类型（工作台、智能体、技能、MCP 连接器、工具、桌面 UI 等）和用途（办公、开发、数据等）。一个插件可以有多种能力和展示类型；能力从真实 `contributes` 生成，市场展示类型用于帮助用户筛选，不按名称猜测。
 
 `catalog/local.json` 是本地源码包索引，不是可添加到客户端的远程安装源；它没有伪造未发布的 Release URL。运行 `node scripts/index-local.mjs` 更新，运行 `npm run validate` 校验源码引用及 stable 目录。
 

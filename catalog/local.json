@@ -40,6 +40,15 @@
         "watchdogPolicies",
         "workerTypes"
       ],
+      "marketTypes": [
+        "agents",
+        "commands",
+        "office",
+        "ui",
+        "providers",
+        "skills",
+        "tools"
+      ],
       "runtimeTargets": [
         "novaway-v2"
       ]
@@ -55,6 +64,9 @@
         "testing"
       ],
       "capabilities": [
+        "skills"
+      ],
+      "marketTypes": [
         "skills"
       ],
       "runtimeTargets": [
@@ -75,6 +87,11 @@
         "agents",
         "skills"
       ],
+      "marketTypes": [
+        "agents",
+        "skills",
+        "workbench"
+      ],
       "runtimeTargets": [
         "novaway-v2"
       ]
@@ -92,6 +109,9 @@
       "capabilities": [
         "skills"
       ],
+      "marketTypes": [
+        "skills"
+      ],
       "runtimeTargets": [
         "novaway-v2"
       ]
@@ -107,6 +127,9 @@
         "productivity"
       ],
       "capabilities": [
+        "skills"
+      ],
+      "marketTypes": [
         "skills"
       ],
       "runtimeTargets": [

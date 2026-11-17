@@ -40,7 +40,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 `plugins/com.novaway.office-suite` 是独立办公助手包，包含 9 个 Agent、9 个 Skill、Presenton 参考资源及原许可证。安装后的 ID 使用 `office-suite_` 命名空间，Agent 提示词、默认 Skill 与权限引用均指向插件贡献，避免测试误用内置同名能力。
 
-- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.1.0.zip`。
+- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.1.1.zip`。
 - NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts`。
 - 测试使用真实 ZIP、安装器、发现/激活、Agent/Skill 服务与 Skill 工具；仅下载传输被替换为本地字节，不访问远程 artifact。
 - 验证范围包含默认 Skill 权限、实际资源目录、停用、重新加载和卸载，不代表模型生成 Office 文件已经验收。

@@ -1,7 +1,7 @@
 {
   "apiVersion": 2,
   "name": "office-suite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NovaWay 办公助手：文档、演示、数据、视觉、网页、会议、资料、任务和沟通。",
   "kind": "declarative",
   "categories": [
@@ -35,6 +35,15 @@
           "displayName": "文档整理",
           "category": "办公模式",
           "modeGroup": "office",
+          "workbench": {
+            "id": "zen",
+            "name": "办公模式",
+            "shortName": "办公",
+            "icon": "Z",
+            "description": "文档、演示、表格、会议和资料处理工作台。",
+            "color": "var(--app-mode-zen)",
+            "foreground": "var(--app-mode-zen-foreground)"
+          },
           "scene": "document",
           "defaultSkill": "office-suite_office-document"
         }

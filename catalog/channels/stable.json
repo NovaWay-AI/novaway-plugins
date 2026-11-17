@@ -1151,6 +1151,57 @@
           "size": 2184336
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.office-suite",
+      "name": "NovaWay Office Suite",
+      "version": "0.1.1",
+      "description": "NovaWay 办公助手：文档、演示、数据、视觉、网页、会议、资料、任务和沟通。",
+      "longDescription": "独立维护的 9 个办公 Agent 与 9 个 Skill。PPT 生成委托 NovaWay 定制的 PPT Master（ppt-master_ppt-master），不再使用宿主内置回退。需另行安装并启用 com.novaway.ppt-master。",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "office",
+        "productivity"
+      ],
+      "tags": [
+        "official",
+        "office",
+        "agent",
+        "skill"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills"
+      ],
+      "permissions": [],
+      "dependencies": {
+        "com.novaway.ppt-master": "6.9.0"
+      },
+      "releaseNotes": "新增可由 NovaWay 动态识别的办公工作台元数据；安装后可在左上角切换办公模式。",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.office-suite-v0.1.1/com.novaway.office-suite-0.1.1.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.office-suite-v0.1.1",
+          "asset": "com.novaway.office-suite-0.1.1.zip",
+          "sha256": "d0ce6d40c868576b6e067f1992c878582770b025482d6d5c0a13a7c375991fb5",
+          "size": 31929592
+        }
+      ]
     }
   ]
 }

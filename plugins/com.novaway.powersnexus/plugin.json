@@ -1,0 +1,179 @@
+{
+  "apiVersion": 2,
+  "name": "powersnexus",
+  "version": "1.1.0",
+  "description": "PowersNexus 工程技能库：TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等经过验证的工作流。",
+  "kind": "declarative",
+  "categories": [
+    "development",
+    "workflow"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "skills": [
+      {
+        "id": "brainstorming",
+        "description": "Use for L1+ behavior or feature work after L0-L4 classification. Produces a design proportionate to task risk; L0 mechanical changes bypass this skill.",
+        "source": {
+          "file": "./skills/brainstorming/SKILL.md"
+        }
+      },
+      {
+        "id": "decision-expert",
+        "description": "当面临多个可选方案且各有利弊、需要基于置信度做结构化决策时使用。为候选方案分层评估并给出可追溯的决策依据。",
+        "source": {
+          "file": "./skills/decision-expert/SKILL.md"
+        }
+      },
+      {
+        "id": "diagnosing-superpowers",
+        "description": "Use when a powersnexus session went wrong and your human partner wants to know why — repeated work, ignored plans, stumbles, poor results, a skill that didn't fire, \"it took too long\", \"why is it so expensive\", \"what is it doing\" — or wants to build a bug report for the powersnexus maintainers, for the current session or a past one identified by id or path, on any harness.",
+        "source": {
+          "file": "./skills/diagnosing-superpowers/SKILL.md"
+        }
+      },
+      {
+        "id": "dispatching-parallel-agents",
+        "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+        "source": {
+          "file": "./skills/dispatching-parallel-agents/SKILL.md"
+        }
+      },
+      {
+        "id": "executing-plans",
+        "description": "Use when executing an implementation plan in the current session as the implementer yourself — your human partner chose inline execution, or no subagent tool is available",
+        "source": {
+          "file": "./skills/executing-plans/SKILL.md"
+        }
+      },
+      {
+        "id": "exploration",
+        "description": "为研究型、探索性工作设计的专用流程。当任务是调研、理解代码库、验证假设而非交付功能时使用。",
+        "source": {
+          "file": "./skills/exploration/SKILL.md"
+        }
+      },
+      {
+        "id": "finishing-a-development-branch",
+        "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+        "source": {
+          "file": "./skills/finishing-a-development-branch/SKILL.md"
+        }
+      },
+      {
+        "id": "frontend-quality",
+        "description": "在设计、实现或修改面向用户的网页、移动端界面、页面布局、组件样式或设计系统时使用。将产品目标转化为可验证的视觉契约，并在实现前后完成响应式、交互状态、可访问性和视觉审阅，避免功能正确但审美粗糙的界面。",
+        "source": {
+          "file": "./skills/frontend-quality/SKILL.md"
+        }
+      },
+      {
+        "id": "grill-me",
+        "description": "使用时机：用户说\"grill me / 盘问一下 / 帮我理清需求\"，或任务规模评估将小项目、个人项目、非编码工作（文档/PRD/数据分析/运营流程）路由到此技能时。用于把模糊想法、计划或设计拷问成无歧义、可验收的契约。",
+        "source": {
+          "file": "./skills/grill-me/SKILL.md"
+        }
+      },
+      {
+        "id": "openspec",
+        "description": "Manages artifact generation, delta specs, and change lifecycle for PowersNexus. Generates proposal, specs, design, and tasks documents in .novaway/powersnexus/changes/ directory.",
+        "source": {
+          "file": "./skills/openspec/SKILL.md"
+        }
+      },
+      {
+        "id": "receiving-code-review",
+        "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative agreement or blind implementation",
+        "source": {
+          "file": "./skills/receiving-code-review/SKILL.md"
+        }
+      },
+      {
+        "id": "red-team",
+        "description": "设计或实现完成后、合并前使用。派出安全、性能、边界条件等多个角度的并行审查子代理，专门寻找方案中的漏洞与风险。",
+        "source": {
+          "file": "./skills/red-team/SKILL.md"
+        }
+      },
+      {
+        "id": "requesting-code-review",
+        "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements",
+        "source": {
+          "file": "./skills/requesting-code-review/SKILL.md"
+        }
+      },
+      {
+        "id": "subagent-driven-development",
+        "description": "Use when executing implementation plans with independent tasks in the current session",
+        "source": {
+          "file": "./skills/subagent-driven-development/SKILL.md"
+        }
+      },
+      {
+        "id": "systematic-debugging",
+        "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+        "source": {
+          "file": "./skills/systematic-debugging/SKILL.md"
+        }
+      },
+      {
+        "id": "task-size-assessor",
+        "description": "任务规模评估器，自动识别任务规模并推荐 L0-L4 五级流程",
+        "source": {
+          "file": "./skills/task-size-assessor/SKILL.md"
+        }
+      },
+      {
+        "id": "test-driven-development",
+        "description": "Use when implementing any feature or bugfix, before writing implementation code",
+        "source": {
+          "file": "./skills/test-driven-development/SKILL.md"
+        }
+      },
+      {
+        "id": "ui-ux-pro-max",
+        "description": "在构建或重做网页、移动端界面、仪表盘、营销页、表单、导航、图表或设计系统时使用。基于本地 UI/UX Pro Max 设计知识库生成与检索视觉方向、色彩、排版、布局、交互、无障碍和框架实践；在实现前为 frontend-quality 提供可追溯的设计依据。",
+        "source": {
+          "file": "./skills/ui-ux-pro-max/SKILL.md"
+        }
+      },
+      {
+        "id": "using-git-worktrees",
+        "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback",
+        "source": {
+          "file": "./skills/using-git-worktrees/SKILL.md"
+        }
+      },
+      {
+        "id": "using-powersnexus",
+        "description": "Use when starting a coding session or choosing a workflow - classifies work by L0-L4 and activates only the smallest directly responsible skill set",
+        "source": {
+          "file": "./skills/using-powersnexus/SKILL.md"
+        }
+      },
+      {
+        "id": "verification-before-completion",
+        "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence before assertions always",
+        "source": {
+          "file": "./skills/verification-before-completion/SKILL.md"
+        }
+      },
+      {
+        "id": "writing-plans",
+        "description": "Use when you have a spec or requirements for a multi-step task, before touching code",
+        "source": {
+          "file": "./skills/writing-plans/SKILL.md"
+        }
+      },
+      {
+        "id": "writing-skills",
+        "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment",
+        "source": {
+          "file": "./skills/writing-skills/SKILL.md"
+        }
+      }
+    ]
+  }
+}

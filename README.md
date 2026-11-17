@@ -50,6 +50,15 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - 两个包均已登记 `catalog/index.json` 与 `catalog/channels/stable.json`，通过 GitHub Release 发布不可变 artifact。打 tag `com.novaway.office-suite-v<version>` / `com.novaway.ppt-master-v<version>` 触发对应发布工作流，构建确定性 `--stored` ZIP 并校验摘要与目录一致。
 - 宿主已移除内置办公 Agent/Skill 注册与回退；办公场景仅路由到已激活的插件贡献，未安装时提示安装而非降级。真实模型生成 Office 文件的产物验收仍需在客户端单独进行。
 
+## PowersNexus 技能库
+
+`plugins/com.novaway.powersnexus` 是 NovaWay 维护的 PowersNexus（superpowers 分支）工程技能库，包含 23 个 declarative Skill（TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等），保留上游 MIT 许可证与署名。安装后的 Skill 使用 `powersnexus_` 命名空间。
+
+- 构建：`npm run build:powersnexus`，生成 `dist/com.novaway.powersnexus-1.1.0.zip`。
+- NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_POWERSNEXUS_ARCHIVE=<ZIP绝对路径> bun test test/plugin/powersnexus-marketplace.test.ts`。
+- 该包已从宿主内置默认种子（`DEFAULT_GLOBAL_PLUGINS` 的 Gitee git 种子）迁移为市场插件；宿主不再自动补种，需从市场安装启用。
+- 打 tag `com.novaway.powersnexus-v<version>` 触发发布工作流，构建确定性 `--stored` ZIP 并校验摘要与目录一致。
+
 ## 发布原则
 
 - 已发布版本不可变；

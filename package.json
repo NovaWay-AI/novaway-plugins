@@ -7,6 +7,7 @@
     "index:local": "node scripts/index-local.mjs",
     "build:smoke": "python scripts/build_plugin.py com.novaway.marketplace-smoke",
     "build:office": "python scripts/build_plugin.py com.novaway.office-suite --stored",
-    "build:ppt": "python scripts/build_plugin.py com.novaway.ppt-master --stored"
+    "build:ppt": "python scripts/build_plugin.py com.novaway.ppt-master --stored",
+    "build:powersnexus": "python scripts/build_plugin.py com.novaway.powersnexus --stored"
   }
 }

@@ -1103,6 +1103,54 @@
           "size": 42564342
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.powersnexus",
+      "name": "PowersNexus",
+      "version": "1.1.0",
+      "description": "PowersNexus 工程技能库：TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等经过验证的工作流。",
+      "longDescription": "NovaWay 维护的 PowersNexus（superpowers 分支）技能库，23 个 declarative Skill，保留上游 MIT 许可证与署名。安装后使用 powersnexus_ 命名空间。",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "development",
+        "workflow"
+      ],
+      "tags": [
+        "official",
+        "skill",
+        "tdd",
+        "debugging",
+        "workflow"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "skills"
+      ],
+      "permissions": [],
+      "releaseNotes": "从内置默认种子迁移为市场插件；23 个技能 declarative 贡献，真实安装/激活/消费验收后进入 stable。",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.powersnexus-v1.1.0/com.novaway.powersnexus-1.1.0.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.powersnexus-v1.1.0",
+          "asset": "com.novaway.powersnexus-1.1.0.zip",
+          "sha256": "7819a3010658d098c39851b669229227cbb06d247ec5b8476e3e667f10063bf8",
+          "size": 2184559
+        }
+      ]
     }
   ]
 }

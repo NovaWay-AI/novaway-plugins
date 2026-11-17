@@ -1,0 +1,61 @@
+# PowersNexus Skills
+
+A collection of agentic skills for software development workflows. Each skill guides the agent through a specific phase of the development process.
+
+## Planning & Design
+
+| Skill | Description |
+|-------|-------------|
+| [brainstorming](brainstorming/) | Use for L1+ behavior or feature work after L0-L4 classification - explores user intent, requirements and design before implementation |
+| [writing-plans](writing-plans/) | Use when you have a spec or requirements for a multi-step task, before touching code |
+| [openspec](openspec/) | Manages artifact generation, delta specs, and change lifecycle for PowersNexus |
+| [ui-ux-pro-max](ui-ux-pro-max/) | Use for UI/UX design intelligence: local design-system generation and framework-aware visual guidance |
+| [frontend-quality](frontend-quality/) | Use for user-facing interface work to define a visual contract and verify responsive, accessible, polished delivery |
+
+## Development
+
+| Skill | Description |
+|-------|-------------|
+| [subagent-driven-development](subagent-driven-development/) | Use when executing implementation plans with independent tasks in the current session |
+| [executing-plans](executing-plans/) | Use when you have a written implementation plan to execute in a separate session with review checkpoints |
+| [test-driven-development](test-driven-development/) | Use when implementing any feature or bugfix, before writing implementation code |
+| [dispatching-parallel-agents](dispatching-parallel-agents/) | Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies |
+
+## Quality & Review
+
+| Skill | Description |
+|-------|-------------|
+| [requesting-code-review](requesting-code-review/) | Use when completing tasks, implementing major features, or before merging to verify work meets requirements |
+| [receiving-code-review](receiving-code-review/) | Use when receiving code review feedback, before implementing suggestions |
+| [verification-before-completion](verification-before-completion/) | Use when about to claim work is complete, fixed, or passing, before committing or creating PRs |
+
+## Support & Utilities
+
+| Skill | Description |
+|-------|-------------|
+| [using-powersnexus](using-powersnexus/) | Use when starting any conversation - establishes how to find and use skills |
+| [grill-me](grill-me/) | 需求拷问入口：小项目、个人项目、非编码工作（文档/PRD/数据/运营）的轻量澄清，零文档副作用；也可在用户说 "grill me/盘问一下" 时主动触发 |
+| [using-git-worktrees](using-git-worktrees/) | Use when starting feature work that needs isolation from current workspace |
+| [finishing-a-development-branch](finishing-a-development-branch/) | Use when implementation is complete, all tests pass, and you need to decide how to integrate the work |
+| [systematic-debugging](systematic-debugging/) | Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes |
+| [writing-skills](writing-skills/) | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+
+## Typical Workflow
+
+1. **using-powersnexus** - Initialize skills context at session start
+2. **brainstorming** - Explore requirements and design
+3. **openspec** - Generate proposal, specs, design, and tasks
+4. **ui-ux-pro-max** - Generate and query local design intelligence for user-interface work
+5. **frontend-quality** - Define and review the visual contract when the change includes a user interface
+6. **writing-plans** - Create detailed implementation plan
+7. **test-driven-development** - Implement with tests
+8. **subagent-driven-development** - Execute tasks with subagents
+9. **requesting-code-review** - Verify work quality
+10. **finishing-a-development-branch** - Complete and merge
+
+## Documentation
+
+Each skill has its own `SKILL.md` file with detailed instructions and workflow guidance. Some skills also include:
+- Scripts for automation
+- Prompt templates for subagents
+- Examples and reference materials

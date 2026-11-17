@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "capabilities": {
+    "skills": "Skill：按需加载的技能指引和资源",
+    "agents": "Agent：可选择的助手角色",
+    "tools": "Tool：可执行且通过权限控制的工具",
+    "mcp": "MCP：真实服务连接和工具发现",
+    "commands": "Command：可调用的命令模板",
+    "office": "Office Engine：文档格式解析和编辑引擎",
+    "providers": "Provider：模型供应商",
+    "surfaces": "UI Surface：界面贡献",
+    "previewers": "Previewer：文件预览",
+    "interceptors": "Interceptor：执行拦截器"
+  },
+  "categories": {
+    "office": "办公",
+    "productivity": "效率",
+    "developer-tools": "开发工具",
+    "testing": "测试",
+    "design": "设计",
+    "data": "数据",
+    "communication": "沟通"
+  },
+  "rules": [
+    "capabilities 描述实际贡献类型；categories 描述用途；一个包可有多种能力。",
+    "缺少真实执行入口或服务配置时不得标记 tools、mcp 或 office。",
+    "stable 目录只列已发布且具备真实消费者验收的不可变 artifact。",
+    "taxonomy 是展示词表，不是禁止第三方增加分类或贡献类型的白名单。"
+  ]
+}

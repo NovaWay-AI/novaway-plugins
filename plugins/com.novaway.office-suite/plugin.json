@@ -1,0 +1,316 @@
+{
+  "apiVersion": 2,
+  "name": "office-suite",
+  "version": "0.1.0",
+  "description": "NovaWay 办公助手：文档、演示、数据、视觉、网页、会议、资料、任务和沟通。",
+  "kind": "declarative",
+  "categories": [
+    "office",
+    "productivity"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "agents": [
+      {
+        "id": "office-document",
+        "description": "办公模式 文档整理员工。用于写作、改写、审稿、方案、报告、周报、月报和结构化文档交付。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-document.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-document": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "文档整理",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "document",
+          "defaultSkill": "office-suite_office-document"
+        }
+      },
+      {
+        "id": "office-ppt",
+        "description": "办公模式 PPT生成员工。用于汇报大纲、页级故事线、页面文案、图表建议和演讲备注。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-ppt.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-ppt": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow",
+            "ppt-master_ppt-master": "allow"
+          }
+        },
+        "options": {
+          "displayName": "PPT生成",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "ppt",
+          "defaultSkill": "office-suite_office-ppt"
+        }
+      },
+      {
+        "id": "office-data",
+        "description": "办公模式 表格分析员工。用于 CSV/Excel 数据清洗、透视、趋势归因、图表建议和分析报告。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-data.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-data": "allow",
+            "office-suite_office-knowledge": "allow"
+          }
+        },
+        "options": {
+          "displayName": "表格分析",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "data",
+          "defaultSkill": "office-suite_office-data"
+        }
+      },
+      {
+        "id": "office-design",
+        "description": "办公模式 视觉设计员工。用于海报、封面、配图、品牌色板和视觉规范生成。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-design.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-design": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "视觉设计",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "design",
+          "defaultSkill": "office-suite_office-design"
+        }
+      },
+      {
+        "id": "office-web",
+        "description": "办公模式 网页看板员工。用于 HTML 数据看板、项目追踪页、客户工具页和演示站点。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-web.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-web": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "网页看板",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "web",
+          "defaultSkill": "office-suite_office-web"
+        }
+      },
+      {
+        "id": "office-meeting",
+        "description": "办公模式 AI 会议员工。用于会议纪要、决议、行动项、负责人、截止时间、风险和会后跟进。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-meeting.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-meeting": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "AI 会议",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "meeting",
+          "defaultSkill": "office-suite_office-meeting"
+        }
+      },
+      {
+        "id": "office-knowledge",
+        "description": "办公模式 AI 资料库员工。用于资料摘要、多文档对比、知识索引、FAQ 和可复用项目知识沉淀。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-knowledge.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "AI 资料库",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "knowledge",
+          "defaultSkill": "office-suite_office-knowledge"
+        }
+      },
+      {
+        "id": "office-task",
+        "description": "办公模式 AI 任务员工。用于目标拆解、优先级、周计划、风险看板、依赖和执行节奏。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-task.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-task": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "AI 任务",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "task",
+          "defaultSkill": "office-suite_office-task"
+        }
+      },
+      {
+        "id": "office-communication",
+        "description": "办公模式 AI 沟通员工。用于邮件、回复、通知、商务表达、中英双语和语气改写。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/office-communication.txt"
+        },
+        "permission": {
+          "*": "ask",
+          "question": "allow",
+          "read": "allow",
+          "skill": {
+            "*": "deny",
+            "office-suite_office-communication": "allow",
+            "office-suite_office-knowledge": "allow",
+            "office-suite_office-data": "allow"
+          }
+        },
+        "options": {
+          "displayName": "AI 沟通",
+          "category": "办公模式",
+          "modeGroup": "office",
+          "scene": "communication",
+          "defaultSkill": "office-suite_office-communication"
+        }
+      }
+    ],
+    "skills": [
+      {
+        "id": "office-document",
+        "description": "Use when NovaWay office mode needs AI document writing, rewriting, review, reports, plans, PRD drafts, weekly/monthly reports, or structured Markdown deliverables.",
+        "source": {
+          "file": "./skills/office-document/SKILL.md"
+        }
+      },
+      {
+        "id": "office-ppt",
+        "description": "Use when NovaWay office mode needs AI PPT outlines, page-by-page content, presentation storylines, speaker notes, visual suggestions, proposals, or project reports.",
+        "source": {
+          "file": "./skills/office-ppt/SKILL.md"
+        }
+      },
+      {
+        "id": "office-data",
+        "description": "Use when NovaWay office mode needs CSV/Excel data cleaning, pivot analysis, trend attribution, chart recommendations, or evidence-backed analysis reports.",
+        "source": {
+          "file": "./skills/office-data/SKILL.md"
+        }
+      },
+      {
+        "id": "office-design",
+        "description": "Use when NovaWay office mode needs posters, social covers, visual assets, brand palettes, icon drafts, or executable visual specs.",
+        "source": {
+          "file": "./skills/office-design/SKILL.md"
+        }
+      },
+      {
+        "id": "office-web",
+        "description": "Use when NovaWay office mode needs HTML dashboards, project tracker pages, customer tools, data pages, or single-page demo sites.",
+        "source": {
+          "file": "./skills/office-web/SKILL.md"
+        }
+      },
+      {
+        "id": "office-meeting",
+        "description": "Use when NovaWay office mode needs meeting minutes, decisions, action items, owners, deadlines, risks, or follow-up emails.",
+        "source": {
+          "file": "./skills/office-meeting/SKILL.md"
+        }
+      },
+      {
+        "id": "office-knowledge",
+        "description": "Use when NovaWay office mode needs knowledge-base summaries, document comparison, source indexing, FAQ generation, or reusable project knowledge.",
+        "source": {
+          "file": "./skills/office-knowledge/SKILL.md"
+        }
+      },
+      {
+        "id": "office-task",
+        "description": "Use when NovaWay office mode needs task breakdown, priorities, execution plans, weekly plans, risk boards, dependencies, or follow-up cadence.",
+        "source": {
+          "file": "./skills/office-task/SKILL.md"
+        }
+      },
+      {
+        "id": "office-communication",
+        "description": "Use when NovaWay office mode needs emails, replies, internal notices, collaboration messages, bilingual business communication, or tone rewriting.",
+        "source": {
+          "file": "./skills/office-communication/SKILL.md"
+        }
+      }
+    ]
+  }
+}

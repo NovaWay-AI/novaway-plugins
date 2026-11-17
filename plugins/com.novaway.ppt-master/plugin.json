@@ -1,0 +1,18 @@
+{
+  "apiVersion": 2,
+  "name": "ppt-master",
+  "version": "6.9.0",
+  "description": "PPT Master：生成原生可编辑 PPTX、重建和美化演示文稿、创建模板与编辑现有 PPTX。",
+  "kind": "declarative",
+  "categories": ["office", "productivity"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "skills": [
+      {
+        "id": "ppt-master",
+        "description": "Generate editable PPTX presentations, reconstruct or beautify slides, create reusable templates, and edit native PPTX with PPT Master.",
+        "source": { "file": "./skills/ppt-master/SKILL.md" }
+      }
+    ]
+  }
+}

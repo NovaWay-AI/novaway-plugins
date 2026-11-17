@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/hugohe3/ppt-master",
+  "commit": "3af3e8ef774c4d67ee57e1306d9256d08c9ee1bf",
+  "version": "6.9.0",
+  "sourceDirectory": "skills/ppt-master",
+  "maintenance": "NovaWay-maintained fork; preserve local changes when updating upstream",
+  "modifiedFiles": [
+    "skills/ppt-master/scripts/server_common.py"
+  ],
+  "changes": [
+    "Honor NOVAWAY_OPEN_IN_APP_BROWSER so preview URLs are delegated to the NovaWay browser pane."
+  ]
+}

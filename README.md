@@ -32,6 +32,23 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - 首方插件：`plugins/<package-id>/`
 - 测试 fixture：`fixtures/`
 
+## 分类与本地办公包
+
+`catalog/taxonomy.json` 分开维护能力类型（Skill、Agent、Tool、MCP 等）和用途（办公、开发、数据等）。一个插件可以有多种能力；能力从真实 `contributes` 生成，不按名称猜测。
+
+`catalog/local.json` 是本地源码包索引，不是可添加到客户端的远程安装源；它没有伪造未发布的 Release URL。运行 `node scripts/index-local.mjs` 更新，运行 `npm run validate` 校验源码引用及 stable 目录。
+
+`plugins/com.novaway.office-suite` 是独立办公助手包，包含 9 个 Agent、9 个 Skill、Presenton 参考资源及原许可证。安装后的 ID 使用 `office-suite_` 命名空间，Agent 提示词、默认 Skill 与权限引用均指向插件贡献，避免测试误用内置同名能力。
+
+- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.1.0.zip`。
+- NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts`。
+- 测试使用真实 ZIP、安装器、发现/激活、Agent/Skill 服务与 Skill 工具；仅下载传输被替换为本地字节，不访问远程 artifact。
+- 验证范围包含默认 Skill 权限、实际资源目录、停用、重新加载和卸载，不代表模型生成 Office 文件已经验收。
+- 当前没有迁出 `office_document_*`、`office_pptx_*`、`office_setup`、`pdf_create` 等宿主工具，也没有内置 Office MCP 可迁移；包不声明这些贡献。
+- PPT 生成统一调用 `plugins/com.novaway.ppt-master` 内的定制版本，完整 Skill ID 为 `ppt-master_ppt-master`；不再降级到自制 HTML → PPTX。两个插件需分别安装启用，安装办公助手包不会自动安装 PPT Master 或 Python 依赖。
+- 自制的 9 个办公 Agent 和 9 个 Skill 保留在本仓库独立维护；PPT Master 保留本地浏览器适配、完整上游资源及许可证。PPT Master 的 13,091 个资源文件超过当前 ZIP 安装器的 5,000 文件限制，尚未通过市场安装验收。
+- 尚未加入 stable，也未替换客户端内置办公入口。完整工具迁移、界面选路与真实产物验收后再发布。
+
 ## 发布原则
 
 - 已发布版本不可变；

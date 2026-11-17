@@ -649,6 +649,94 @@
           "size": 14576
         }
       ]
+    },
+    {
+      "packageId": "com.novaway.marketplace-capability-smoke",
+      "name": "NovaWay Marketplace Capability Smoke",
+      "version": "0.4.1",
+      "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
+      "longDescription": "A first-party end-to-end capability fixture covering the remaining v2 contribution registries and their lifecycle cleanup.",
+      "author": "NovaWay-AI",
+      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "categories": [
+        "developer-tools",
+        "testing"
+      ],
+      "tags": [
+        "official",
+        "agent",
+        "skill",
+        "tool",
+        "command",
+        "interceptor",
+        "provider",
+        "office",
+        "surface",
+        "previewer",
+        "fixture",
+        "super-agent",
+        "mcp",
+        "lsp",
+        "automation",
+        "channel"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "release"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills",
+        "tools",
+        "commands",
+        "interceptors",
+        "providers",
+        "office",
+        "surfaces",
+        "previewers",
+        "super-agent",
+        "agent-runtimes",
+        "strategies",
+        "task-kinds",
+        "verifiers",
+        "repair-strategies",
+        "agent-templates",
+        "policies",
+        "mcp",
+        "output-styles",
+        "lsp",
+        "http-routes",
+        "triggers",
+        "fast-path",
+        "routing-policies",
+        "worker-types",
+        "watchdog-policies",
+        "channels",
+        "lifecycle-hooks",
+        "storage",
+        "publish-drivers"
+      ],
+      "permissions": [],
+      "releaseNotes": "Adds a capability-gated Publish Driver with login and publish runtime consumers.",
+      "artifacts": [
+        {
+          "type": "github-release",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.marketplace-capability-smoke-v0.4.1/com.novaway.marketplace-capability-smoke-0.4.1.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.marketplace-capability-smoke-v0.4.1",
+          "asset": "com.novaway.marketplace-capability-smoke-0.4.1.zip",
+          "sha256": "9bfcf36efdd83cdbc0b0e258695559795f7547786f80b1f9e39bb1cb4a7c16cb",
+          "size": 15263
+        }
+      ]
     }
   ]
 }

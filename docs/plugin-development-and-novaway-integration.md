@@ -779,3 +779,31 @@ NovaWay 侧的相关实现：
 - `../novaway-coder/packages/novaway/src/plugin/runtime/host.ts`：激活、停用和资源释放；
 - `../novaway-coder/packages/novaway/src/server/routes/instance/httpapi/groups/extension.ts`：市场 HTTP API；
 - `../novaway-coder/packages/app/src/components/settings-market-catalog.tsx`：Web/Desktop 市场 UI。
+
+## 11. Claude / ZCode 插件兼容性
+
+NovaWay 可以从 Claude 和 ZCode 市场源导入并安装常见的声明式插件，但这不是对第三方私有运行时的完全承诺。市场适配器会把常见的 `Skill`、`Agent`、`Command`、基础 `MCP` 和部分 `Tool` 贡献归一化到 NovaWay v2，并继续经过权限、能力声明和资源路径校验。
+
+| 来源和能力 | 兼容性 |
+| --- | --- |
+| Claude Skill、Command、常规 Agent、基础 MCP | 基础兼容，安装后使用 NovaWay 命名空间 |
+| Claude 私有 runtime、私有 API、特殊 settings | 不保证，需要适配 |
+| Claude 特殊 hooks 或交互协议 | 部分兼容，可能只保留声明式部分 |
+| ZCode 普通 ZIP Skill | 基础兼容，按 SHA-256 校验后安装 |
+| ZCode Agent、Command、MCP | 取决于 manifest 是否能映射到 NovaWay v2 |
+| ZCode 私有 componentTypes、UI 和 runtime | 需要适配，不会绕过 NovaWay 权限边界 |
+
+安装前应在详情中核对来源、版本、声明能力和权限。无法映射的专有运行时不会被当作原生 NovaWay 能力执行；插件仍然必须通过 capability gate 和用户权限检查。
+
+## 12. 插件头像和目录展示元数据
+
+目录条目可以声明 `displayName`、`displayNameI18n`、`icon` 和 `screenshots`。头像必须使用 HTTPS URL；`data:`、`file:`、`javascript:` 和 HTTP 地址会被目录解析器丢弃。推荐把 SVG 或 PNG 放在插件仓库的 `assets/icon.svg`，再在 catalog 中填写稳定的 raw GitHub URL：
+
+```json
+{
+  "displayName": "办公工作台",
+  "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.office-suite/assets/icon.svg"
+}
+```
+
+市场卡片优先显示目录头像，网络失败或头像无效时自动回退到 NovaWay 生成式图标。头像不是插件执行入口，不会改变插件权限或可信等级。

@@ -38,7 +38,7 @@
       }
     },
     "capabilities": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
-    "marketTypes": { "type": "array", "items": { "enum": ["workbench", "agents", "skills", "mcp", "tools", "commands", "providers", "ui", "office", "interceptors"] }, "uniqueItems": true },
+    "marketTypes": { "type": "array", "items": { "enum": ["workbench", "agents", "skills", "mcp", "tools", "commands", "theme", "other", "providers", "ui", "office", "interceptors"] }, "uniqueItems": true },
     "permissions": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
     "dependencies": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
     "releaseNotes": { "type": "string" },

@@ -40,7 +40,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 ## 分类与本地办公包
 
-`catalog/taxonomy.json` 分开维护能力类型（Skill、Agent、Tool、MCP 等）、市场展示类型（工作台、智能体、技能、MCP 连接器、工具、桌面 UI 等）和用途（办公、开发、数据等）。一个插件可以有多种能力和展示类型；能力从真实 `contributes` 生成，市场展示类型用于帮助用户筛选，不按名称猜测。
+`catalog/taxonomy.json` 分开维护能力类型（Skill、Agent、Tool、MCP 等）、市场展示类型（工作台、智能体、技能、MCP 连接器、工具、主题、其他等）和用途（办公、开发、数据等）。一个插件可以有多种能力和展示类型；能力从真实 `contributes` 生成，市场展示类型用于帮助用户筛选，不按名称猜测。
 
 `catalog/local.json` 是本地源码包索引，不是可添加到客户端的远程安装源；它没有伪造未发布的 Release URL。运行 `node scripts/index-local.mjs` 更新，运行 `npm run validate` 校验源码引用及 stable 目录。
 
@@ -53,7 +53,8 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - Creova/forge 是宿主核心模式。办公工作台只是聚焦视图；在 Manifest capability 和宿主安全边界内，Creova 可以直接发现并自主调用已安装的 Office Agent、Skill、Tool、Command 和内置 PPT Master。
 - 宿主已移除内置办公 Agent/Skill 注册与回退；办公场景仅路由到已激活的插件贡献，未安装时提示安装而非降级。真实模型生成 Office 文件的产物验收仍需在客户端单独进行。
 
-## PowersNexus 技能库
+每个官方插件目录都可以在 `assets/icon.svg` 提供头像，并在 catalog 条目中配置 HTTPS `icon` 地址。客户端优先加载该头像，加载失败时回退到 NovaWay 自动图标；头像只影响展示，不会改变插件权限。
+
 
 `plugins/com.novaway.powersnexus` 是 NovaWay 维护的 PowersNexus（superpowers 分支）工程技能库，包含 23 个 declarative Skill（TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等），保留上游 MIT 许可证与署名。安装后的 Skill 使用 `powersnexus_` 命名空间。
 

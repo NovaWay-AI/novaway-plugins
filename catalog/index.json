@@ -15,6 +15,7 @@
       "author": "NovaWay-AI",
       "repository": "https://github.com/NovaWay-AI/novaway-plugins",
       "license": "MIT",
+      "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.office-suite/assets/icon.svg",
       "categories": [
         "office",
         "productivity"
@@ -83,6 +84,7 @@
       "author": "NovaWay-AI",
       "repository": "https://github.com/NovaWay-AI/novaway-plugins",
       "license": "MIT",
+      "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.powersnexus/assets/icon.svg",
       "categories": [
         "development",
         "workflow"

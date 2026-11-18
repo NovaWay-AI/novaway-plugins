@@ -517,6 +517,12 @@ Windows 可以使用：
 {
   "packageId": "com.acme.weather",
   "name": "Acme Weather",
+  "displayName": "天气助手",
+  "displayNameI18n": {
+    "zh-CN": "天气助手",
+    "zh-TW": "天氣助手",
+    "en": "Acme Weather"
+  },
   "version": "1.0.0",
   "description": "...",
   "author": "Acme",
@@ -546,6 +552,8 @@ Windows 可以使用：
   ]
 }
 ```
+
+`name` 是目录中的默认/英文名称；`displayName` 和 `displayNameI18n` 是市场卡片使用的用户可见名称。请保留稳定的英文 `packageId`，不要用中文替换它，因为安装记录、依赖、更新匹配、卸载路径和运行时命名空间都依赖 `packageId`。NovaWay 会按当前语言优先选择 `displayNameI18n`，然后回退到 `displayName`、`name` 和 `packageId`。
 
 `capabilities` 应从真实 `contributes` 生成，不能按插件名称猜测。每个 artifact 必须有 HTTPS URL、完整 SHA-256 和精确字节数。
 

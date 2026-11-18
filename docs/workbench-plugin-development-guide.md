@@ -182,7 +182,7 @@ com.acme.short-drama/
 
 ```json
 {
-  "$schema": "https://github.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
+  "$schema": "https://gitee.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "short-drama",
   "version": "1.0.0",

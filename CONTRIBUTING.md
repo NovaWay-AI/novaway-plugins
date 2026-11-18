@@ -10,7 +10,7 @@
 - contribution 和权限声明；
 - 可复现的构建或打包方式；
 - 安装、启用、停用和真实消费者测试；
-- 版本化的 GitHub Release artifact。
+- 版本化的 Gitee archive artifact。
 
 目录中的条目不是手工广告位。插件只有通过 schema、权限、安全和消费者覆盖检查后，才能进入 stable 频道。
 

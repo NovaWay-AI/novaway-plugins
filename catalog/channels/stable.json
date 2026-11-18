@@ -3,7 +3,7 @@
   "marketId": "novaway-official",
   "name": "NovaWay Official Plugins",
   "channel": "stable",
-  "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+  "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
   "generatedAt": null,
   "entries": [
     {
@@ -13,9 +13,9 @@
       "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 文档技能和内置 PPT Master。",
       "longDescription": "完整办公工作台，包含 9 个办公 Agent、14 个 Office Skill（含 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能）、PPT Master 原生 PPTX 能力、Tool 和 Command。安装后动态出现办公模式，Creova 也可以直接调用其已授权贡献。",
       "author": "NovaWay-AI",
-      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
       "license": "MIT (NovaWay) / Apache-2.0 (Anthropic skills)",
-      "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.office-suite/assets/icon.svg",
+      "icon": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/plugins/com.novaway.office-suite/assets/icon.svg",
       "categories": [
         "office",
         "productivity"
@@ -39,7 +39,7 @@
         "novaway-v2"
       ],
       "packageFormats": [
-        "release"
+        "zip"
       ],
       "compatibility": {
         "minNovaWayApi": "0.0.0",
@@ -57,8 +57,8 @@
       "releaseNotes": "集成 Anthropic 官方 DOCX、PDF、PPTX、XLSX Agent Skills；保留上游许可证和脚本，并为办公 Agent 增加按文件类型的技能路由。PPT 最终生成仍由内置 PPT Master 执行。",
       "artifacts": [
         {
-          "type": "github-release",
-          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.office-suite-v0.3.1/com.novaway.office-suite-0.3.1.zip",
+          "type": "archive",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/artifacts/com.novaway.office-suite-0.3.1.zip",
           "repository": "NovaWay-AI/novaway-plugins",
           "tag": "com.novaway.office-suite-v0.3.1",
           "asset": "com.novaway.office-suite-0.3.1.zip",
@@ -87,9 +87,9 @@
       "description": "PowersNexus 工程技能库：TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等经过验证的工作流。",
       "longDescription": "NovaWay 维护的 PowersNexus（superpowers 分支）技能库，23 个 declarative Skill，保留上游 MIT 许可证与署名。安装后使用 powersnexus_ 命名空间。",
       "author": "NovaWay-AI",
-      "repository": "https://github.com/NovaWay-AI/novaway-plugins",
+      "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
       "license": "MIT",
-      "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.powersnexus/assets/icon.svg",
+      "icon": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/plugins/com.novaway.powersnexus/assets/icon.svg",
       "categories": [
         "development",
         "workflow"
@@ -105,7 +105,7 @@
         "novaway-v2"
       ],
       "packageFormats": [
-        "release"
+        "zip"
       ],
       "compatibility": {
         "minNovaWayApi": "0.0.0",
@@ -119,8 +119,8 @@
       "releaseNotes": "从内置默认种子迁移为市场插件；23 个技能 declarative 贡献，真实安装/激活/消费验收后进入 stable。",
       "artifacts": [
         {
-          "type": "github-release",
-          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.powersnexus-v1.1.0/com.novaway.powersnexus-1.1.0.zip",
+          "type": "archive",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/artifacts/com.novaway.powersnexus-1.1.0.zip",
           "repository": "NovaWay-AI/novaway-plugins",
           "tag": "com.novaway.powersnexus-v1.1.0",
           "asset": "com.novaway.powersnexus-1.1.0.zip",

@@ -8,4 +8,4 @@
 - 真实消费者覆盖检查；
 - 本地安装 fixture；
 - catalog/index.json 生成；
-- GitHub Release 发布。
+- Gitee archive 发布。

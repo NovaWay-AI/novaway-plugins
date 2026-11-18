@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
+  "$id": "https://gitee.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
   "title": "NovaWay Plugin Manifest",
   "type": "object",
   "required": ["apiVersion", "name", "kind", "contributes"],

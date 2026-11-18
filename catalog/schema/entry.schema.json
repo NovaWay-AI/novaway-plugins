@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/entry.schema.json",
+  "$id": "https://gitee.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/entry.schema.json",
   "title": "NovaWay Market Entry",
   "type": "object",
   "additionalProperties": false,

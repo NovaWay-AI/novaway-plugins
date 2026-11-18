@@ -19,7 +19,7 @@
 
 1. 从官方 catalog 读取插件元数据；
 2. 展示插件、分类、能力、兼容性、权限和 SHA-256；
-3. 通过 HTTPS 下载不可变 GitHub Release ZIP；
+3. 通过 HTTPS 下载不可变 Gitee archive ZIP；
 4. 校验 SHA-256、下载大小、ZIP 路径、重复项、软链接和 POSIX 节点；
 5. staging 后原子安装；
 6. Plugin Host v2 发现、校验、激活并注册贡献；
@@ -31,13 +31,13 @@
 官方目录入口：
 
 ```text
-https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/catalog/index.json
+https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/catalog/index.json
 ```
 
 官方插件仓库：
 
 ```text
-https://github.com/NovaWay-AI/novaway-plugins
+https://gitee.com/NovaWay-AI/novaway-plugins
 ```
 
 ### 1.1 已有验收证据
@@ -108,7 +108,7 @@ my-plugin/
 
 ```json
 {
-  "$schema": "https://github.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
+  "$schema": "https://gitee.com/NovaWay-AI/novaway-plugins/blob/main/catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "acme-weather",
   "version": "1.0.0",
@@ -415,7 +415,7 @@ novaway marketplace operations --operation-id <operation-id> --json
 
 ```text
 NovaWay Official
-https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/catalog/index.json
+https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/catalog/index.json
 ```
 
 安装时应确认：
@@ -635,7 +635,7 @@ bun run verify:plugins
 NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts --timeout 300000
 ```
 
-此测试不是普通单元测试：它使用真实 Office ZIP、安装器和 Plugin Host 生命周期；本地验收通过后，再将同一个 ZIP 发布到 GitHub Release 并核对 catalog 摘要。
+此测试不是普通单元测试：它使用真实 Office ZIP、安装器和 Plugin Host 生命周期；本地验收通过后，再将同一个 ZIP 发布到 Gitee archive 并核对 catalog 摘要。
 
 ### App 浏览器验收
 
@@ -802,7 +802,7 @@ NovaWay 可以从 Claude 和 ZCode 市场源导入并安装常见的声明式插
 ```json
 {
   "displayName": "办公工作台",
-  "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.office-suite/assets/icon.svg"
+  "icon": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/plugins/com.novaway.office-suite/assets/icon.svg"
 }
 ```
 

@@ -8,8 +8,8 @@ NovaWay 的公开官方插件市场仓库。
 - NovaWay 官方插件；
 - 插件 manifest 和 schema；
 - 可控 fixture 与兼容性测试；
-- GitHub Release 制品和 SHA-256；
-- 目录生成与发布工作流。
+- Gitee archive 制品和 SHA-256；
+- 目录生成与 Gitee archive 发布流程。
 
 NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 artifact 信息下载并校验插件，然后交给对应的 Plugin Runtime 安装和激活。
 
@@ -26,7 +26,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - `com.novaway.office-suite@0.3.0`：完整办公工作台，包含 9 个 Agent、14 个 Office Skill（含 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能）、Tool、Command 和内置 PPT Master；
 - `com.novaway.powersnexus@1.1.0`：工程技能库。
 
-两个 Smoke 测试插件已经从源码、stable/local catalog、Release artifact、发布 workflow 和公开验收入口全部移除，不再作为市场插件展示。
+两个 Smoke 测试插件已经从源码、stable/local catalog、Release artifact、发布流程 和公开验收入口全部移除，不再作为市场插件展示。
 
 插件贡献必须遵守 NovaWay v2 manifest 契约：Agent 使用对象声明并提供 inline 或包内 prompt 文件，Skill 使用 `SKILL.md`，Tool 提供带静态 schema 的安全 entry，Command 提供可消费的模板声明。
 
@@ -61,12 +61,12 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - 构建：`npm run build:powersnexus`，生成 `dist/com.novaway.powersnexus-1.1.0.zip`。
 - NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_POWERSNEXUS_ARCHIVE=<ZIP绝对路径> bun test test/plugin/powersnexus-marketplace.test.ts`。
 - 该包已从宿主内置默认种子（`DEFAULT_GLOBAL_PLUGINS` 的 Gitee git 种子）迁移为市场插件；宿主不再自动补种，需从市场安装启用。
-- 打 tag `com.novaway.powersnexus-v<version>` 触发发布工作流，构建确定性 `--stored` ZIP 并校验摘要与目录一致。
+- 构建确定性 `--stored` ZIP，将归档放入 `artifacts/` 并校验摘要与目录一致。
 
 ## 发布原则
 
 - 已发布版本不可变；
-- 生产安装优先使用 GitHub Release asset；
+- 生产安装优先使用 Gitee archive；
 - 每个 artifact 必须有 SHA-256；
 - catalog 由 CI 根据 manifest 和发布信息生成；
 - 没有真实生产消费者的能力不得标记为 stable；

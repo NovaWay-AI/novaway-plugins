@@ -5,13 +5,13 @@
 ## 内置能力
 
 - 9 个办公 Primary Agent：文档整理、PPT 生成、表格分析、视觉设计、网页看板、AI 会议、AI 资料库、AI 任务、AI 沟通；
-- 14 个 Office Skill：9 个办公 Skill、PPT Master，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能；
-- `ppt-master`：PPT Master 原生可编辑 PPTX 生成、重建、美化、模板和编辑资源；
+- 14 个 Office Skill：9 个办公 Skill、PPT Workflow（上游 PPT Master），以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能；
+- `ppt-workflow`：PPT Master 原生可编辑 PPTX 生成、重建、美化、模板和编辑资源；
 - `workbench-status`：验证工作台贡献已经被实时注册；
 - `office-workbench-check`：验证命令；
 - 动态工作台元数据：`office` 分组、办公图标、颜色和中文产品名称。
 
-PPT Master 的上游资源、许可证和来源信息保存在本插件的 `skills/ppt-master/`、`skills/ppt-master/LICENSE`、`skills/ppt-master/SPONSORS*.md`、`ppt-master-upstream.json` 中。PPT Master 不再是单独的市场插件，也不需要另行安装。运行时 ID 为 `office-suite_ppt-master`。
+PPT Master 的上游资源、许可证和来源信息保存在本插件的 `skills/ppt-workflow/`、`skills/ppt-workflow/LICENSE`、`skills/ppt-workflow/SPONSORS*.md`、`ppt-master-upstream.json` 中。PPT Master 不再是单独的市场插件，也不需要另行安装。运行时 ID 为 `office-suite_ppt-workflow`。
 
 ## Creova 使用方式
 
@@ -22,7 +22,7 @@ Creova/forge 是 NovaWay 的宿主核心模式。办公工作台只是聚焦办�
 1. 安装前模式切换器只有 Creova；
 2. 安装并激活后，模式切换器实时出现“办公”；
 3. Creova 和办公模式都能看到对应的办公 Agent；
-4. `office-suite_ppt-master` 可以直接加载，且不存在单独 `com.novaway.ppt-master` 市场包；
+4. `office-suite_ppt-workflow` 可以直接加载，且不存在单独 `com.novaway.ppt-master` 市场包；
 5. `workbench-status` 和 `office-workbench-check` 可被真实消费者调用；
 6. 停用或卸载 Office Suite 后，办公模式、办公 Agent、办公 Skill、Tool、Command 和 PPT Master 同时实时消失，当前模式回退到 Creova。
 
@@ -32,11 +32,11 @@ Creova/forge 是 NovaWay 的宿主核心模式。办公工作台只是聚焦办�
 npm run build:office
 ```
 
-构建产物是 `dist/com.novaway.office-suite-0.3.0.zip`。
+构建产物是 `dist/com.novaway.office-suite-0.3.1.zip`。
 
 ## Anthropic 官方办公技能
 
-0.3.0 起，Office Suite 集成了 `anthropic-docx`、`anthropic-pdf`、`anthropic-pptx` 和 `anthropic-xlsx` 四个官方 Agent Skill，来源为 `anthropics/skills`。它们补充文件格式、解析、编辑、公式、渲染和交付检查规范；办公 Agent 仍负责业务目标、内容结构和路由，PPT 最终生成仍由内置 `ppt-master` 执行。
+0.3.1 起，Office Suite 集成了 `anthropic-docx`、`anthropic-pdf`、`anthropic-pptx` 和 `anthropic-xlsx` 四个官方 Agent Skill，来源为 `anthropics/skills`。它们补充文件格式、解析、编辑、公式、渲染和交付检查规范；办公 Agent 仍负责业务目标、内容结构和路由，PPT 最终生成仍由内置 `ppt-workflow` 执行。
 
 每个技能目录保留上游 `LICENSE.txt` 及必要脚本。官方技能可能依赖 Python 包、Node 包、LibreOffice、Poppler 或系统命令；NovaWay 不会在未授权时自动联网安装依赖，也不会默认把用户文档上传到第三方服务。依赖不可用时，Agent 必须说明限制，不得伪造文件已经生成或校验通过。
 

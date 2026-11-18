@@ -11,6 +11,6 @@
     "Honor NOVAWAY_OPEN_IN_APP_BROWSER so preview URLs are delegated to the NovaWay browser pane."
   ],
   "package": "com.novaway.office-suite",
-  "bundledSkillId": "ppt-master",
+  "bundledSkillId": "ppt-workflow",
   "distribution": "Bundled in Office Workbench; no separate marketplace install."
 }

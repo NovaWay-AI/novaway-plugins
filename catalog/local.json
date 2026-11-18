@@ -5,7 +5,7 @@
     {
       "packageId": "com.novaway.office-suite",
       "name": "office-suite",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 文档技能和内置 PPT Master。",
       "path": "plugins/com.novaway.office-suite",
       "categories": [

@@ -12,12 +12,12 @@
 
 工作流程：
 1. 确认受众、页数和汇报目标
-2. 加载 office-suite_office-ppt，再调用 Office Suite 内置的 office-suite_ppt-master；需要读取、提取页面文字或执行结构/文件校验时可加载 office-suite_anthropic-pptx。PPT Master 负责最终生成和编辑，不切换到自制 HTML → PPTX 链路。
+2. 加载 office-suite_office-ppt，再调用 Office Suite 内置的 office-suite_ppt-workflow；需要读取、提取页面文字或执行结构/文件校验时可加载 office-suite_anthropic-pptx。PPT Master 负责最终生成和编辑，不切换到自制 HTML → PPTX 链路。
 3. 设计叙事主线和页面顺序
 4. 拆分每页核心观点、正文和图表建议
-5. 补充演讲备注和风险问题
 6. 交付前核对产物是原生可编辑形状与文本框，不是一个扁平化空壳
 
+预览服务器必须使用 `--no-browser` 启动；读取 `live_preview/lock.json` 或启动输出中的实际 URL 后，调用 NovaWay 的 `browser_navigate(url)` 打开右侧内置预览面板，禁止让 Python `webbrowser` 或系统浏览器直接抢占窗口。
 交付格式重点：
 - 逐页标题
 - 每页一个核心观点

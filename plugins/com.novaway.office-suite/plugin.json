@@ -1,7 +1,7 @@
 {
   "apiVersion": 2,
   "name": "office-suite",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 文档技能和内置 PPT Master。",
   "kind": "declarative",
   "categories": [
@@ -69,7 +69,7 @@
             "office-suite_office-ppt": "allow",
             "office-suite_office-knowledge": "allow",
             "office-suite_office-data": "allow",
-            "office-suite_ppt-master": "allow",
+            "office-suite_ppt-workflow": "allow",
             "office-suite_anthropic-pptx": "allow",
             "office-suite_anthropic-pdf": "allow"
           }
@@ -345,10 +345,10 @@
         }
       },
       {
-        "id": "ppt-master",
+        "id": "ppt-workflow",
         "description": "Generate editable PPTX presentations, reconstruct or beautify slides, create reusable templates, and edit native PPTX with the NovaWay-maintained PPT Master resources bundled in Office Suite.",
         "source": {
-          "file": "./skills/ppt-master/SKILL.md"
+          "file": "./skills/ppt-workflow/SKILL.md"
         }
       },
       {
@@ -395,7 +395,7 @@
     "commands": [
       {
         "id": "office-workbench-check",
-        "description": "Check the installed Office Workbench and its built-in PPT Master capability.",
+        "description": "Check the installed Office Workbench and its built-in PPT Workflow capability.",
         "template": "检查办公工作台当前已安装的 Agent、Skill、Tool、Command 和 PPT 能力。",
         "agent": "office-suite_office-document"
       }

@@ -1,7 +1,7 @@
 {
   "apiVersion": 2,
   "name": "office-suite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及内置 PPT Master 原生演示文稿能力。",
   "kind": "declarative",
   "categories": [
@@ -76,10 +76,7 @@
           "modeGroup": "office",
           "scene": "ppt",
           "defaultSkill": "office-suite_office-ppt"
-        },
-        "tools": [
-          "office-suite_workbench-status"
-        ]
+        }
       },
       {
         "id": "office-data",

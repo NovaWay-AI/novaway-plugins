@@ -32,4 +32,4 @@ Creova/forge 是 NovaWay 的宿主核心模式。办公工作台只是聚焦办�
 npm run build:office
 ```
 
-构建产物是 `dist/com.novaway.office-suite-0.2.0.zip`。
+构建产物是 `dist/com.novaway.office-suite-0.2.1.zip`。

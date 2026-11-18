@@ -23,7 +23,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 官方 stable 目录当前包含两个可安装官方工作流：
 
-- `com.novaway.office-suite@0.2.0`：完整办公工作台，包含 Agent、Skill、Tool、Command 和内置 PPT Master；
+- `com.novaway.office-suite@0.2.1`：完整办公工作台，包含 Agent、Skill、Tool、Command 和内置 PPT Master；
 - `com.novaway.powersnexus@1.1.0`：工程技能库。
 
 两个 Smoke 测试插件已经从源码、stable/local catalog、Release artifact、发布 workflow 和公开验收入口全部移除，不再作为市场插件展示。
@@ -46,7 +46,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 `plugins/com.novaway.office-suite` 是完整办公工作台，包含 9 个 Agent、9 个办公 Skill、内置 PPT Master Skill、一个安全 Tool 和一个 Command，并声明动态 `office` 工作台元数据。安装后的贡献使用 `office-suite_` 命名空间。
 
-- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.2.0.zip`。
+- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.2.1.zip`。
 - NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts`。
 - 测试使用真实 ZIP、安装器、发现/激活、Agent/Skill/Tool/Command 服务与停用流程；仅下载传输被替换为本地字节，不访问远程 artifact。
 - PPT Master 的 13,091 个资源文件、上游许可证、署名和来源元数据随 Office Suite 一起发布，技能运行时 ID 为 `office-suite_ppt-master`；不再存在 `com.novaway.ppt-master` 独立市场条目，也不需要单独安装。

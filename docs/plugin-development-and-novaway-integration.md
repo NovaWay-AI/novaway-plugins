@@ -3,7 +3,7 @@
 > 文档版本：v2 / 2026-11-17  
 > 适用仓库：`../novaway-coder`（宿主）与当前仓库（官方市场）
 
-本文覆盖插件开发、在本地接入 NovaWay、发布到官方市场，以及安装后的验收流程。规范以代码为准：
+本文覆盖插件开发、在本地接入 NovaWay、发布到官方市场，以及安装后的验收流程。若目标是开发包含多个 Agent、Skill、Tool、Prompt 和动态工作模式的完整产品化工作台，请先阅读：[`workbench-plugin-development-guide.md`](./workbench-plugin-development-guide.md)。规范以代码为准：
 
 - Manifest 类型：`../novaway-coder/packages/plugin-api/src/manifest.ts`
 - Contribution 类型：`../novaway-coder/packages/plugin-api/src/contributions.ts`、`../novaway-coder/packages/plugin-api/src/superagent.ts`

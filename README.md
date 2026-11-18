@@ -13,7 +13,13 @@ NovaWay 的公开官方插件市场仓库。
 
 NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 artifact 信息下载并校验插件，然后交给对应的 Plugin Runtime 安装和激活。
 
-## 当前状态
+## 开发文档
+
+- [完整工作台插件开发指南](docs/workbench-plugin-development-guide.md)：从产品设计、Manifest、Agent、Skill、Tool、Command、MCP、UI、权限、本地调试、动态模式验收到市场发布的完整流程。
+- [通用插件开发与 NovaWay 对接指南](docs/plugin-development-and-novaway-integration.md)：Manifest v2、贡献类型、运行时、市场目录和公共 artifact 验收。
+
+工作台不是宿主里静态写死的模式。插件需要在 Primary Agent 的 `options` 中声明 `modeGroup` 和 `workbench` 元数据；安装并激活后，NovaWay 会实时将它加入左上角工作模式切换器，停用或卸载后自动移除。
+
 
 官方 stable 目录当前包含两个可安装版本线：
 

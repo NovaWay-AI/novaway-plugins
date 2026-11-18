@@ -721,8 +721,7 @@ python scripts/build_plugin.py com.acme.short-drama
 
 ```bash
 cd /path/to/novaway-coder/packages/novaway
-NOVAWAY_PUBLIC_MARKETPLACE_E2E=1 \
-  bun test test/server/marketplace-capability-public.test.ts --timeout 120000
+NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts --timeout 300000
 ```
 
 工作台插件还应检查：catalog 包含 `marketTypes: ["workbench", ...]`、中文 display name、正确 SHA-256/size、安装后 workbench 元数据可见、左上角实时出现、卸载后实时消失。
@@ -935,10 +934,11 @@ APP_MODES.push({ id: "short-drama", ... })
 plugins/com.novaway.office-suite/plugin.json
 ```
 
-官方能力验证 fixture：
+官方工作台验收实现：
 
 ```text
-plugins/com.novaway.marketplace-capability-smoke/plugin.json
+plugins/com.novaway.office-suite/plugin.json
+plugins/com.novaway.office-suite/tools/workbench-status.mjs
 ```
 
 通用插件对接指南：

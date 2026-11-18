@@ -21,12 +21,12 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 工作台不是宿主里静态写死的模式。插件需要在 Primary Agent 的 `options` 中声明 `modeGroup` 和 `workbench` 元数据；安装并激活后，NovaWay 会实时将它加入左上角工作模式切换器，停用或卸载后自动移除。
 
 
-官方 stable 目录当前包含两个可安装版本线：
+官方 stable 目录当前包含两个可安装官方工作流：
 
-- `com.novaway.marketplace-smoke@0.1.1`：真实 Skill 安装、激活和消费 fixture；
-- `com.novaway.marketplace-capability-smoke@0.1.0`：真实 Agent、Skill、Tool 和 Command 安装、激活、注册、消费与停用 fixture。
+- `com.novaway.office-suite@0.2.0`：完整办公工作台，包含 Agent、Skill、Tool、Command 和内置 PPT Master；
+- `com.novaway.powersnexus@1.1.0`：工程技能库。
 
-第二个 fixture 的公开 Release 已通过 NovaWay 的 `Marketplace.installZip`、SHA-256、Plugin Host v2 discovery/activation 和真实消费者验收后才进入 stable。仅解析目录或成功下载不构成可用性证明。
+两个 Smoke 测试插件已经从源码、stable/local catalog、Release artifact、发布 workflow 和公开验收入口全部移除，不再作为市场插件展示。
 
 插件贡献必须遵守 NovaWay v2 manifest 契约：Agent 使用对象声明并提供 inline 或包内 prompt 文件，Skill 使用 `SKILL.md`，Tool 提供带静态 schema 的安全 entry，Command 提供可消费的模板声明。
 
@@ -44,16 +44,13 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 `catalog/local.json` 是本地源码包索引，不是可添加到客户端的远程安装源；它没有伪造未发布的 Release URL。运行 `node scripts/index-local.mjs` 更新，运行 `npm run validate` 校验源码引用及 stable 目录。
 
-`plugins/com.novaway.office-suite` 是独立办公助手包，包含 9 个 Agent、9 个 Skill、Presenton 参考资源及原许可证。安装后的 ID 使用 `office-suite_` 命名空间，Agent 提示词、默认 Skill 与权限引用均指向插件贡献，避免测试误用内置同名能力。
+`plugins/com.novaway.office-suite` 是完整办公工作台，包含 9 个 Agent、9 个办公 Skill、内置 PPT Master Skill、一个安全 Tool 和一个 Command，并声明动态 `office` 工作台元数据。安装后的贡献使用 `office-suite_` 命名空间。
 
-- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.1.1.zip`。
+- 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.2.0.zip`。
 - NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts`。
-- 测试使用真实 ZIP、安装器、发现/激活、Agent/Skill 服务与 Skill 工具；仅下载传输被替换为本地字节，不访问远程 artifact。
-- 验证范围包含默认 Skill 权限、实际资源目录、停用、重新加载和卸载，不代表模型生成 Office 文件已经验收。
-- 当前没有迁出 `office_document_*`、`office_pptx_*`、`office_setup`、`pdf_create` 等宿主工具，也没有内置 Office MCP 可迁移；包不声明这些贡献。
-- PPT 生成统一调用 `plugins/com.novaway.ppt-master` 内的定制版本，完整 Skill ID 为 `ppt-master_ppt-master`；不再降级到自制 HTML → PPTX。两个插件需分别安装启用，安装办公助手包不会自动安装 PPT Master 或 Python 依赖。
-- 自制的 9 个办公 Agent 和 9 个 Skill 保留在本仓库独立维护；PPT Master 保留本地浏览器适配、完整上游资源及许可证。PPT Master 含 13,094 个资源文件，宿主 ZIP 安装器条目上限已调整为 20,000（下载 64 MB、解压 256 MB、路径/符号链接/中央目录校验不变），资源型技能可完整安装。
-- 两个包均已登记 `catalog/index.json` 与 `catalog/channels/stable.json`，通过 GitHub Release 发布不可变 artifact。打 tag `com.novaway.office-suite-v<version>` / `com.novaway.ppt-master-v<version>` 触发对应发布工作流，构建确定性 `--stored` ZIP 并校验摘要与目录一致。
+- 测试使用真实 ZIP、安装器、发现/激活、Agent/Skill/Tool/Command 服务与停用流程；仅下载传输被替换为本地字节，不访问远程 artifact。
+- PPT Master 的 13,091 个资源文件、上游许可证、署名和来源元数据随 Office Suite 一起发布，技能运行时 ID 为 `office-suite_ppt-master`；不再存在 `com.novaway.ppt-master` 独立市场条目，也不需要单独安装。
+- Creova/forge 是宿主核心模式。办公工作台只是聚焦视图；在 Manifest capability 和宿主安全边界内，Creova 可以直接发现并自主调用已安装的 Office Agent、Skill、Tool、Command 和内置 PPT Master。
 - 宿主已移除内置办公 Agent/Skill 注册与回退；办公场景仅路由到已激活的插件贡献，未安装时提示安装而非降级。真实模型生成 Office 文件的产物验收仍需在客户端单独进行。
 
 ## PowersNexus 技能库

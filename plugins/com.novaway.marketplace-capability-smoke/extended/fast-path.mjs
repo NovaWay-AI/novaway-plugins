@@ -1,1 +1,0 @@
-export default { id: "capability-fast-path", async when() { return true }, async handle(_event, ctx) { await ctx.record("capability fast path"); return { handled: true, summary: "capability fast path" } } }

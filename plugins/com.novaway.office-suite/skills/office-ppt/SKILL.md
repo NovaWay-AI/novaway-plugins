@@ -10,7 +10,7 @@ description: Generate, revise and review editable presentations from documents, 
 ## 执行
 
 1. 确认受众、目标、资料、页数、交付格式以及用户是否提供模板。区分事实、推断与待确认数据。
-2. 核对可用技能中存在 `ppt-master_ppt-master`，通过 skill 工具按此完整名称加载。它来自 `com.novaway.ppt-master`，不是宿主另行安装的上游同名 `ppt-master`。
+2. 核对可用技能中存在 `office-suite_ppt-master`，通过 skill 工具按此完整名称加载。它来自 `com.novaway.office-suite` 内置的 PPT Master 资源，不是宿主另行安装的上游同名 `ppt-master`。
 3. 未安装或被禁用时，说明需要安装或启用定制 PPT Master；未经授权不要安装插件。只可交付明确标记“未导出 PPTX”的页级草稿，不切换到自制 HTML → PPTX 或宿主 `novaway office-ppt` 链路。
 4. 按 PPT Master 返回的绝对资源目录、路由、确认节点与质量门执行。需要 Python 时使用宿主提供的隔离解释器和依赖准备流程，不猜测源码路径或修改系统 Python。
 5. 让 PPT Master 决定生成、重建、美化、创建模板或原生编辑的具体流程；不要提前生成另一条路线的 HTML、SVG 或中间文件。保留其许可证和署名检查，不绕过失败检查。

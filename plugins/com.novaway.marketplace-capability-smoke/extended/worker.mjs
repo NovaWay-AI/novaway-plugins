@@ -1,1 +1,0 @@
-export default { id: "capability-worker", async start() { return { id: "capability-worker-handle", async start() {}, async send() {}, async next() { return { kind: "done", summary: "capability worker" } }, async stop() { return { clean: true } } } } }

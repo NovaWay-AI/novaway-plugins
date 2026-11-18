@@ -42,20 +42,18 @@ https://github.com/NovaWay-AI/novaway-plugins
 
 ### 1.1 已有验收证据
 
-- 当前仓库：`npm run validate` 已通过，当前目录包含 18 个稳定目录条目和 5 个本地包索引条目。
+- 当前仓库：`npm run validate` 已通过，当前目录包含 2 个稳定目录条目和 2 个本地包索引条目。
 - 当前工作区公共能力验收：
 
   ```text
   cd ../novaway-coder/packages/novaway
-  NOVAWAY_PUBLIC_MARKETPLACE_E2E=1 bun test test/server/marketplace-capability-public.test.ts
-  1 pass, 0 fail, 96 expect()
+NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts
+  1 pass, 0 fail, 126 expect()
   ```
 
   该测试使用不可变公开 artifact，校验目录、版本、大小、SHA-256，经过真实 `Marketplace.installZip`、Plugin Host v2 激活，并消费已发布能力。
 
 - 核心 Host/Runtime 回归：`106 tests / 105 pass / 1 skip / 0 fail`。
-- 浏览器市场生命周期证据见：`../novaway-coder/docs/plugin-marketplace-browser-evidence-2026-11-16.json`。
-- 全能力公共验收证据见：`../novaway-coder/docs/plugin-marketplace-capability-evidence-2026-11-16.json`。
 - 总体验收报告见：`../novaway-coder/docs/plugin-marketplace-final-acceptance.md`。
 
 ### 1.2 仍然要注意的事项
@@ -63,7 +61,7 @@ https://github.com/NovaWay-AI/novaway-plugins
 - 当前 `novaway-coder` 工作树有大量未提交修改；上面的测试证明当前源码链路可用，**不等于这些修改已经形成新的正式 NovaWay Release**。
 - 已发布版本不可覆盖。任何代码、Manifest、权限或 artifact 改动都必须增加版本并创建新的 Release。
 - `catalog/index.json` 可以保留历史版本；发布的 ZIP、版本和 digest 都是不可变的。
-- `PPT Master` 当前包含 13,094 个资源文件，ZIP 安装器的条目上限已调整为 20,000，资源包可以走完整安装链路；但“插件能安装”不等于“模型已经生成了正确的 Office/PPT 产物”，后者仍需单独做客户端产物验收。
+- `PPT Master` 当前包含 13,091 个资源文件，ZIP 安装器的条目上限已调整为 20,000，资源包可以走完整安装链路；但“插件能安装”不等于“模型已经生成了正确的 Office/PPT 产物”，后者仍需单独做客户端产物验收。
 - `kind: code` / `kind: mixed` 虽然已经进入 v2 类型契约，但当前公开市场的统一安装验收路径以 `kind: declarative` 为准。第三方市场插件应使用声明式 Manifest，并通过 `entry` 加载受控的包内模块；不要仅因为 Schema 接受 `main` 就认为代码型插件已经可从市场激活。
 
 ---
@@ -253,7 +251,7 @@ export default (api) => ({
 ```
 
 实际项目应使用 `AbortSignal`、限制结果大小、为写操作请求权限，并避免把 token 或完整用户输入写入日志。官方 fixture 可参考：
-`plugins/com.novaway.marketplace-capability-smoke/tools/capability-echo.mjs`。
+`plugins/com.novaway.office-suite/tools/workbench-status.mjs`。
 
 ### 5.2 拦截器和声明式 entry
 
@@ -634,11 +632,10 @@ bun run verify:plugins
 ### 公共 artifact 验收
 
 ```bash
-NOVAWAY_PUBLIC_MARKETPLACE_E2E=1 \
-  bun test test/server/marketplace-capability-public.test.ts --timeout 120000
+NOVAWAY_OFFICE_PLUGIN_ARCHIVE=<ZIP绝对路径> bun test test/plugin/office-marketplace.test.ts --timeout 300000
 ```
 
-此测试不是普通单元测试：它访问公开 catalog 和 Release，适合在发布后执行，不适合在离线 CI 中作为唯一测试。
+此测试不是普通单元测试：它使用真实 Office ZIP、安装器和 Plugin Host 生命周期；本地验收通过后，再将同一个 ZIP 发布到 GitHub Release 并核对 catalog 摘要。
 
 ### App 浏览器验收
 
@@ -760,16 +757,15 @@ installed → discovered → active/registered → usable
 官方仓库中的最小可执行 fixture：
 
 ```text
-plugins/com.novaway.marketplace-smoke
-plugins/com.novaway.marketplace-capability-smoke
+plugins/com.novaway.office-suite
 ```
 
 尤其建议阅读：
 
-- `plugins/com.novaway.marketplace-capability-smoke/plugin.json`
-- `plugins/com.novaway.marketplace-capability-smoke/tools/capability-echo.mjs`
-- `plugins/com.novaway.marketplace-capability-smoke/skills/SKILL.md`
-- `plugins/com.novaway.marketplace-capability-smoke/extended/`
+- `plugins/com.novaway.office-suite/plugin.json`
+- `plugins/com.novaway.office-suite/tools/workbench-status.mjs`
+- `plugins/com.novaway.office-suite/skills/ppt-master/SKILL.md`
+- `plugins/com.novaway.office-suite/README.md`
 - `scripts/build_plugin.py`
 - `scripts/validate.mjs`
 - `CONTRIBUTING.md`

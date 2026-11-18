@@ -3,81 +3,10 @@
   "channel": "local",
   "entries": [
     {
-      "packageId": "com.novaway.marketplace-capability-smoke",
-      "name": "marketplace-capability-smoke",
-      "version": "0.4.4",
-      "description": "Official executable fixture proving all published NovaWay v2 marketplace contributions are usable after installation.",
-      "path": "plugins/com.novaway.marketplace-capability-smoke",
-      "categories": [
-        "developer-tools",
-        "testing"
-      ],
-      "capabilities": [
-        "agentRuntimes",
-        "agentTemplates",
-        "agents",
-        "channels",
-        "commands",
-        "eventSources",
-        "fastPath",
-        "httpRoutes",
-        "office",
-        "previewers",
-        "providers",
-        "publishDrivers",
-        "repairStrategies",
-        "routingPolicies",
-        "schedulers",
-        "skills",
-        "superAgentPolicies",
-        "superAgentStrategies",
-        "superAgentSurfaces",
-        "surfaces",
-        "taskKinds",
-        "tools",
-        "triggers",
-        "verifiers",
-        "watchdogPolicies",
-        "workerTypes"
-      ],
-      "marketTypes": [
-        "agents",
-        "commands",
-        "office",
-        "ui",
-        "providers",
-        "skills",
-        "tools"
-      ],
-      "runtimeTargets": [
-        "novaway-v2"
-      ]
-    },
-    {
-      "packageId": "com.novaway.marketplace-smoke",
-      "name": "marketplace-smoke",
-      "version": "0.1.1",
-      "description": "A small official Skill used to verify GitHub marketplace installation, update, rollback and consumption.",
-      "path": "plugins/com.novaway.marketplace-smoke",
-      "categories": [
-        "developer-tools",
-        "testing"
-      ],
-      "capabilities": [
-        "skills"
-      ],
-      "marketTypes": [
-        "skills"
-      ],
-      "runtimeTargets": [
-        "novaway-v2"
-      ]
-    },
-    {
       "packageId": "com.novaway.office-suite",
       "name": "office-suite",
-      "version": "0.1.1",
-      "description": "NovaWay 办公助手：文档、演示、数据、视觉、网页、会议、资料、任务和沟通。",
+      "version": "0.2.0",
+      "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及内置 PPT Master 原生演示文稿能力。",
       "path": "plugins/com.novaway.office-suite",
       "categories": [
         "office",
@@ -85,11 +14,15 @@
       ],
       "capabilities": [
         "agents",
-        "skills"
+        "commands",
+        "skills",
+        "tools"
       ],
       "marketTypes": [
         "agents",
+        "commands",
         "skills",
+        "tools",
         "workbench"
       ],
       "runtimeTargets": [
@@ -105,26 +38,6 @@
       "categories": [
         "development",
         "workflow"
-      ],
-      "capabilities": [
-        "skills"
-      ],
-      "marketTypes": [
-        "skills"
-      ],
-      "runtimeTargets": [
-        "novaway-v2"
-      ]
-    },
-    {
-      "packageId": "com.novaway.ppt-master",
-      "name": "ppt-master",
-      "version": "6.9.0",
-      "description": "PPT Master：生成原生可编辑 PPTX、重建和美化演示文稿、创建模板与编辑现有 PPTX。",
-      "path": "plugins/com.novaway.ppt-master",
-      "categories": [
-        "office",
-        "productivity"
       ],
       "capabilities": [
         "skills"

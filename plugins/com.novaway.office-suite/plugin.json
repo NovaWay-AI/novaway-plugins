@@ -1,8 +1,8 @@
 {
   "apiVersion": 2,
   "name": "office-suite",
-  "version": "0.1.1",
-  "description": "NovaWay 办公助手：文档、演示、数据、视觉、网页、会议、资料、任务和沟通。",
+  "version": "0.2.0",
+  "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及内置 PPT Master 原生演示文稿能力。",
   "kind": "declarative",
   "categories": [
     "office",
@@ -46,7 +46,10 @@
           },
           "scene": "document",
           "defaultSkill": "office-suite_office-document"
-        }
+        },
+        "tools": [
+          "office-suite_workbench-status"
+        ]
       },
       {
         "id": "office-ppt",
@@ -64,7 +67,7 @@
             "office-suite_office-ppt": "allow",
             "office-suite_office-knowledge": "allow",
             "office-suite_office-data": "allow",
-            "ppt-master_ppt-master": "allow"
+            "office-suite_ppt-master": "allow"
           }
         },
         "options": {
@@ -73,7 +76,10 @@
           "modeGroup": "office",
           "scene": "ppt",
           "defaultSkill": "office-suite_office-ppt"
-        }
+        },
+        "tools": [
+          "office-suite_workbench-status"
+        ]
       },
       {
         "id": "office-data",
@@ -319,7 +325,38 @@
         "source": {
           "file": "./skills/office-communication/SKILL.md"
         }
+      },
+      {
+        "id": "ppt-master",
+        "description": "Generate editable PPTX presentations, reconstruct or beautify slides, create reusable templates, and edit native PPTX with the NovaWay-maintained PPT Master resources bundled in Office Suite.",
+        "source": {
+          "file": "./skills/ppt-master/SKILL.md"
+        }
+      }
+    ],
+    "tools": [
+      {
+        "id": "workbench-status",
+        "description": "Report the installed Office Workbench capabilities and its integrated PPT Master skill.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "entry": "./tools/workbench-status.mjs"
+      }
+    ],
+    "commands": [
+      {
+        "id": "office-workbench-check",
+        "description": "Check the installed Office Workbench and its built-in PPT Master capability.",
+        "template": "检查办公工作台当前已安装的 Agent、Skill、Tool、Command 和 PPT 能力。",
+        "agent": "office-suite_office-document"
       }
     ]
+  },
+  "$schema": "../../catalog/schema/manifest.schema.json",
+  "engines": {
+    "novaway": ">=0.0.0"
   }
 }

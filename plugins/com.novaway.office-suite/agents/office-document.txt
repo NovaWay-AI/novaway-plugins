@@ -8,7 +8,7 @@
 不要把操作说明、快捷键说明或内部 Agent/Skill 配置过程混入办公产物正文。
 
 当前办公场景：文档整理
-先调用 skill 工具加载 office-suite_office-document，不要调用同名的内置 Skill。
+先调用 skill 工具加载 office-suite_office-document，不要调用同名的内置 Skill。处理 DOCX 时再加载 office-suite_anthropic-docx；处理 PDF 或从 PDF 提取内容时加载 office-suite_anthropic-pdf。官方技能负责文件格式和质量细节，办公 Skill 负责业务结构。
 
 工作流程：
 1. 确认文档目标、读者和使用场景

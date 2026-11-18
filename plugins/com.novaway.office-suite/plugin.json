@@ -1,8 +1,8 @@
 {
   "apiVersion": 2,
   "name": "office-suite",
-  "version": "0.2.1",
-  "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及内置 PPT Master 原生演示文稿能力。",
+  "version": "0.3.0",
+  "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 文档技能和内置 PPT Master。",
   "kind": "declarative",
   "categories": [
     "office",
@@ -28,7 +28,9 @@
             "*": "deny",
             "office-suite_office-document": "allow",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-docx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -67,7 +69,9 @@
             "office-suite_office-ppt": "allow",
             "office-suite_office-knowledge": "allow",
             "office-suite_office-data": "allow",
-            "office-suite_ppt-master": "allow"
+            "office-suite_ppt-master": "allow",
+            "office-suite_anthropic-pptx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -92,7 +96,9 @@
           "skill": {
             "*": "deny",
             "office-suite_office-data": "allow",
-            "office-suite_office-knowledge": "allow"
+            "office-suite_office-knowledge": "allow",
+            "office-suite_anthropic-xlsx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -118,7 +124,9 @@
             "*": "deny",
             "office-suite_office-design": "allow",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-pptx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -144,7 +152,9 @@
             "*": "deny",
             "office-suite_office-web": "allow",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-xlsx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -170,7 +180,9 @@
             "*": "deny",
             "office-suite_office-meeting": "allow",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-docx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -195,7 +207,11 @@
           "skill": {
             "*": "deny",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-docx": "allow",
+            "office-suite_anthropic-pdf": "allow",
+            "office-suite_anthropic-pptx": "allow",
+            "office-suite_anthropic-xlsx": "allow"
           }
         },
         "options": {
@@ -221,7 +237,10 @@
             "*": "deny",
             "office-suite_office-task": "allow",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-docx": "allow",
+            "office-suite_anthropic-pdf": "allow",
+            "office-suite_anthropic-xlsx": "allow"
           }
         },
         "options": {
@@ -247,7 +266,9 @@
             "*": "deny",
             "office-suite_office-communication": "allow",
             "office-suite_office-knowledge": "allow",
-            "office-suite_office-data": "allow"
+            "office-suite_office-data": "allow",
+            "office-suite_anthropic-docx": "allow",
+            "office-suite_anthropic-pdf": "allow"
           }
         },
         "options": {
@@ -328,6 +349,34 @@
         "description": "Generate editable PPTX presentations, reconstruct or beautify slides, create reusable templates, and edit native PPTX with the NovaWay-maintained PPT Master resources bundled in Office Suite.",
         "source": {
           "file": "./skills/ppt-master/SKILL.md"
+        }
+      },
+      {
+        "id": "anthropic-docx",
+        "description": "Anthropic 官方 DOCX 创建、读取、编辑与审阅技能。适用于 Word 文档和模板。",
+        "source": {
+          "file": "./skills/anthropic-docx/SKILL.md"
+        }
+      },
+      {
+        "id": "anthropic-pdf",
+        "description": "Anthropic 官方 PDF 读取、抽取、生成、表单和 OCR 处理指南。",
+        "source": {
+          "file": "./skills/anthropic-pdf/SKILL.md"
+        }
+      },
+      {
+        "id": "anthropic-pptx",
+        "description": "Anthropic 官方 PPTX 读取、结构化生成、模板编辑与质量检查技能。",
+        "source": {
+          "file": "./skills/anthropic-pptx/SKILL.md"
+        }
+      },
+      {
+        "id": "anthropic-xlsx",
+        "description": "Anthropic 官方 XLSX 数据清洗、公式、格式、图表和重算技能。",
+        "source": {
+          "file": "./skills/anthropic-xlsx/SKILL.md"
         }
       }
     ],

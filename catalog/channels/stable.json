@@ -9,12 +9,12 @@
     {
       "packageId": "com.novaway.office-suite",
       "name": "NovaWay Office Workbench",
-      "version": "0.2.1",
-      "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及内置 PPT Master 原生演示文稿能力。",
-      "longDescription": "完整办公工作台，包含 9 个办公 Agent、9 个办公 Skill、PPT Master 原生 PPTX 能力、Tool 和 Command。安装后动态出现办公模式，Creova 也可以直接调用其已授权贡献。",
+      "version": "0.3.0",
+      "description": "NovaWay 办公工作台：文档、演示、数据、视觉、网页、会议、资料、任务、沟通，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX 文档技能和内置 PPT Master。",
+      "longDescription": "完整办公工作台，包含 9 个办公 Agent、14 个 Office Skill（含 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能）、PPT Master 原生 PPTX 能力、Tool 和 Command。安装后动态出现办公模式，Creova 也可以直接调用其已授权贡献。",
       "author": "NovaWay-AI",
       "repository": "https://github.com/NovaWay-AI/novaway-plugins",
-      "license": "MIT",
+      "license": "MIT (NovaWay) / Apache-2.0 (Anthropic skills)",
       "icon": "https://raw.githubusercontent.com/NovaWay-AI/novaway-plugins/main/plugins/com.novaway.office-suite/assets/icon.svg",
       "categories": [
         "office",
@@ -28,7 +28,12 @@
         "skill",
         "tool",
         "command",
-        "ppt"
+        "ppt",
+        "docx",
+        "pdf",
+        "pptx",
+        "xlsx",
+        "anthropic"
       ],
       "runtimeTargets": [
         "novaway-v2"
@@ -49,16 +54,16 @@
       ],
       "permissions": [],
       "dependencies": {},
-      "releaseNotes": "修复 PPT 生成员工的工具白名单：安装后可使用文件读写、Shell/Python 和 Office PPTX 工具执行 PPT Master 工作流。",
+      "releaseNotes": "集成 Anthropic 官方 DOCX、PDF、PPTX、XLSX Agent Skills；保留上游许可证和脚本，并为办公 Agent 增加按文件类型的技能路由。PPT 最终生成仍由内置 PPT Master 执行。",
       "artifacts": [
         {
           "type": "github-release",
-          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.office-suite-v0.2.1/com.novaway.office-suite-0.2.1.zip",
+          "url": "https://github.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.office-suite-v0.3.0/com.novaway.office-suite-0.3.0.zip",
           "repository": "NovaWay-AI/novaway-plugins",
-          "tag": "com.novaway.office-suite-v0.2.1",
-          "asset": "com.novaway.office-suite-0.2.1.zip",
-          "sha256": "14b43760a7215e3f11e28ef1918720eda5fb67b84efa3bea11b37d2b7ce883f1",
-          "size": 74497110
+          "tag": "com.novaway.office-suite-v0.3.0",
+          "asset": "com.novaway.office-suite-0.3.0.zip",
+          "sha256": "9e04f5ef5fbeb66419c3c58b189a78b2a6e32bf5725bec5a815a53e10b45731c",
+          "size": 78140517
         }
       ],
       "marketTypes": [

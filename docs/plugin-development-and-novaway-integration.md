@@ -764,7 +764,7 @@ plugins/com.novaway.office-suite
 
 - `plugins/com.novaway.office-suite/plugin.json`
 - `plugins/com.novaway.office-suite/tools/workbench-status.mjs`
-- `plugins/com.novaway.office-suite/skills/ppt-master/SKILL.md`
+- `plugins/com.novaway.office-suite/skills/ppt-workflow/SKILL.md`
 - `plugins/com.novaway.office-suite/README.md`
 - `scripts/build_plugin.py`
 - `scripts/validate.mjs`
@@ -797,7 +797,7 @@ NovaWay 可以从 Claude 和 ZCode 市场源导入并安装常见的声明式插
 
 ## 12. 插件头像和目录展示元数据
 
-目录条目可以声明 `displayName`、`displayNameI18n`、`icon` 和 `screenshots`。头像必须使用 HTTPS URL；`data:`、`file:`、`javascript:` 和 HTTP 地址会被目录解析器丢弃。推荐把 SVG 或 PNG 放在插件仓库的 `assets/icon.svg`，再在 catalog 中填写稳定的 raw GitHub URL：
+目录条目可以声明 `displayName`、`displayNameI18n`、`icon` 和 `screenshots`。头像必须使用 HTTPS URL；`data:`、`file:`、`javascript:` 和 HTTP 地址会被目录解析器丢弃。推荐把 SVG 或 PNG 放在插件仓库的 `assets/icon.svg`，再在 catalog 中填写稳定的 Gitee raw URL：
 
 ```json
 {

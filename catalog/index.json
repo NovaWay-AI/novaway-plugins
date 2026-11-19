@@ -81,6 +81,66 @@
       }
     },
     {
+      "packageId": "com.novaway.mcp-suite",
+      "name": "NovaWay MCP Suite",
+      "version": "1.0.0",
+      "description": "NovaWay 官方 MCP 基础连接器：浏览器、Context7、记忆、顺序思考和腾讯文档。",
+      "longDescription": "将 NovaWay 宿主原本内置的 MCP 默认配置迁移为官方插件。安装后动态提供浏览器、Context7、Memory、Sequential Thinking 和腾讯文档连接器；用户可以在 MCP 页面独立启用、停用和管理。",
+      "author": "NovaWay-AI",
+      "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "icon": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/plugins/com.novaway.mcp-suite/assets/icon.svg",
+      "categories": [
+        "productivity",
+        "development"
+      ],
+      "tags": [
+        "official",
+        "mcp",
+        "browser",
+        "context7",
+        "memory",
+        "workflow"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "zip"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "mcp"
+      ],
+      "permissions": [],
+      "dependencies": {},
+      "releaseNotes": "将默认 MCP 配置迁移为可独立安装、启用和停用的 MCP Suite 插件。",
+      "artifacts": [
+        {
+          "type": "archive",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.mcp-suite-v1.0.0/com.novaway.mcp-suite-1.0.0.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.mcp-suite-v1.0.0",
+          "asset": "com.novaway.mcp-suite-1.0.0.zip",
+          "sha256": "230644cdfaed718965c3d43beb797b57d7fd2c17f95258404b6bf1714783be9a",
+          "size": 3325
+        }
+      ],
+      "marketTypes": [
+        "mcp"
+      ],
+      "displayName": "MCP 基础连接器",
+      "displayNameI18n": {
+        "zh-CN": "MCP 基础连接器",
+        "zh-TW": "MCP 基礎連接器",
+        "en": "MCP Suite"
+      }
+    },
+    {
       "packageId": "com.novaway.powersnexus",
       "name": "PowersNexus",
       "version": "1.1.0",

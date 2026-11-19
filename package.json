@@ -7,6 +7,7 @@
     "index:local": "node scripts/index-local.mjs",
     "build:office": "python scripts/build_plugin.py com.novaway.office-suite --stored",
     "build:powersnexus": "python scripts/build_plugin.py com.novaway.powersnexus --stored",
-    "build:agency": "python scripts/build_plugin.py com.novaway.agency-agents --stored"
+    "build:agency": "python scripts/build_plugin.py com.novaway.agency-agents --stored",
+    "build:mcp": "python scripts/build_plugin.py com.novaway.mcp-suite --stored"
   }
 }

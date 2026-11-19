@@ -21,9 +21,10 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 工作台不是宿主里静态写死的模式。插件需要在 Primary Agent 的 `options` 中声明 `modeGroup` 和 `workbench` 元数据；安装并激活后，NovaWay 会实时将它加入左上角工作模式切换器，停用或卸载后自动移除。
 
 
-官方 stable 目录当前包含三个可安装官方工作流：
+官方 stable 目录当前包含四个可安装官方工作流：
 
 - `com.novaway.agency-agents@1.0.0`：184 个 Agency AI 员工 Agent，覆盖研究、设计、工程、产品、项目、营销、销售与专项能力；
+- `com.novaway.mcp-suite@1.0.0`：官方 MCP 基础连接器，包含浏览器、Context7、Memory、Sequential Thinking 和腾讯文档；
 - `com.novaway.office-suite@0.3.1`：完整办公工作台，包含 9 个 Agent、14 个 Office Skill（含 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能）、Tool、Command 和内置 PPT Workflow；
 - `com.novaway.powersnexus@1.1.0`：工程技能库。
 
@@ -51,6 +52,10 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_AGENCY_AGENTS_ARCHIVE=<ZIP绝对路径> bun test test/plugin/agency-marketplace.test.ts`。
 - Agent 的中文显示名、分类、主 Agent / 子 Agent 角色、提示词和 AI 员工页面元数据全部来自插件 manifest 与包内 prompt 文件；未安装或停用插件时，宿主不再提供这些内置 Agent。
 
+`plugins/com.novaway.mcp-suite` 是从 NovaWay 宿主默认配置迁移出的 MCP 插件，包含浏览器、Context7、Memory、Sequential Thinking 和腾讯文档连接器。安装后 MCP 由插件运行时动态注册，宿主不再写入默认 MCP 配置。
+
+- 构建：`npm run build:mcp`，生成 `dist/com.novaway.mcp-suite-1.0.0.zip`。
+- 腾讯文档使用环境变量 `TENCENT_DOCS_TOKEN`。
 `plugins/com.novaway.office-suite` 是完整办公工作台，包含 9 个 Agent、14 个 Office Skill（9 个 NovaWay 办公 Skill、内置 PPT Master，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX Skill）、一个安全 Tool 和一个 Command，并声明动态 `office` 工作台元数据。安装后的贡献使用 `office-suite_` 命名空间。
 
 - 构建：`npm run build:office`，生成 `dist/com.novaway.office-suite-0.3.1.zip`。

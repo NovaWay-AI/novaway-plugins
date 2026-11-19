@@ -1,0 +1,46 @@
+{
+  "apiVersion": 2,
+  "name": "mcp-suite",
+  "version": "1.0.0",
+  "description": "NovaWay 官方 MCP 基础连接器：浏览器、Context7、记忆、顺序思考和腾讯文档。",
+  "kind": "declarative",
+  "categories": ["productivity", "development"],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "mcpServers": {
+      "browser": {
+        "type": "local",
+        "command": ["npx", "-y", "@playwright/mcp"],
+        "eager": true
+      },
+      "context7": {
+        "type": "local",
+        "command": ["npx", "-y", "@upstash/context7-mcp"],
+        "eager": true
+      },
+      "memory": {
+        "type": "local",
+        "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+        "eager": true
+      },
+      "sequential-thinking": {
+        "type": "local",
+        "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"],
+        "eager": true
+      },
+      "tencent-docs": {
+        "type": "remote",
+        "url": "https://docs.qq.com/openapi/mcp",
+        "headers": {
+          "Authorization": "{env:TENCENT_DOCS_TOKEN}"
+        },
+        "oauth": false,
+        "eager": true
+      }
+    }
+  },
+  "$schema": "../../catalog/schema/manifest.schema.json",
+  "engines": {
+    "novaway": ">=0.0.0"
+  }
+}

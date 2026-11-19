@@ -23,6 +23,22 @@
       ]
     },
     {
+      "packageId": "com.novaway.mcp-suite",
+      "name": "mcp-suite",
+      "version": "1.0.0",
+      "description": "NovaWay 官方 MCP 基础连接器：浏览器、Context7、记忆、顺序思考和腾讯文档。",
+      "path": "plugins/com.novaway.mcp-suite",
+      "categories": [
+        "productivity",
+        "development"
+      ],
+      "capabilities": [],
+      "marketTypes": [],
+      "runtimeTargets": [
+        "novaway-v2"
+      ]
+    },
+    {
       "packageId": "com.novaway.office-suite",
       "name": "office-suite",
       "version": "0.3.1",

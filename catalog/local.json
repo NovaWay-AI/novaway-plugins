@@ -68,7 +68,7 @@
     {
       "packageId": "com.novaway.powersnexus",
       "name": "powersnexus",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "description": "PowersNexus 工程技能库：TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等经过验证的工作流。",
       "path": "plugins/com.novaway.powersnexus",
       "categories": [

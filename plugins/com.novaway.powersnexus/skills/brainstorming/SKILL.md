@@ -82,8 +82,8 @@ L1 已按“渐进执行规则”完成简短假设后直接进入实现和聚�
 ### Phase 1: Design
 4. **Offer the visual companion just-in-time** — NOT upfront. The first time a question would genuinely be clearer shown than described, offer it then (its own message); on approval its browser tab opens for you. If no visual question ever arises, never offer it. See the Visual Companion section below.
 5. **Ask clarifying questions** — MAXIMUM 8 questions total. Focus on: purpose, constraints, success criteria; prioritize the most critical questions first.
-   - **第一条消息（唯一开场定义）** — 跳过流程说明（用户可以要求直接开工），直接发**一个开放问题**：单个句子，锚定具体时刻或画面（如"你最希望这个功能在什么时刻被用到？"）。不附带选项菜单。Phase 0 的上下文探查与 task-size 初评是这条消息之前的后台动作，不占消息、不发菜单。
-   - **开放优先（上游 v7 对话纪律）** — 需求理解阶段用**纯文本开放问题**（见 The Process 的「对话纪律」一节），因为用户自己的话里带着选项给不出的意图；只有用户卡住、或问题本身是封闭选择（方案比选、路径选择、确认类）时，才用 `question` 工具提供 2-4 个选项。"你随便猜"或"你觉得呢"时，给出可被纠正的具体假设，而不是再抛问题。
+   - **第一条消息（唯一开场定义）** — 跳过流程说明（用户可以要求直接开工），直接调用 `question` 工具提出**一个开放问题**：单个句子，锚定具体时刻或画面。传 `options: []`，让用户自由输入答案。Phase 0 的上下文探查与 task-size 初评是这条消息之前的后台动作，不占消息、不发菜单。
+   - **统一交互（NovaWay question 合同）** — 任何需要用户回答、澄清、选择或拍板的问题都必须调用 `question` 工具，不得在普通文本中提出问题后停止。开放式问题使用 `options: []`，让用户在自定义输入框中自由回答；封闭式问题提供 2-4 个选项。"你随便猜"或"你觉得呢"时，给出可被纠正的具体假设，而不是再抛问题。
 6. **Propose 2-3 approaches** — Use the `question` tool to present approaches with trade-offs and your recommendation (use decision expert framework). User must select one approach before proceeding.
 7. **Present design** — in sections scaled to their complexity. 默认在每段后使用 `question` 工具获取批准；已有自动本地交付授权时，在不涉及外部或不可逆操作的前提下记录设计并连续推进，只有关键未知项才提问。
 
@@ -157,8 +157,8 @@ digraph brainstorming {
 
 **先弄清需求，再提方案。** 用户往往还没想清楚自己要什么；好的问题帮他们想清楚。理解了 why，你替他们做的那上百个隐含决定才会与他们的意图一致。
 
-- **开放优先：** 先用开放问题让他们描述。他们自己的话里带着选项给不出的意图。卡住或明确要选项时，才提供短菜单。
-- **单句问题：** 每条消息以一个问题收尾——单个句子，不挂一串示例答案。用平实语言，贴近对方词汇水平，绝不用流程黑话。
+- **统一交互：** 先让用户描述目标和场景。只要需要用户回答，就调用 `question` 工具；开放式问题传 `options: []`，不要把问题写成普通文本后结束。
+- **单句问题：** 每次 `question` 调用只问一个问题——单个句子，不挂一串示例答案。开放式问题使用空选项数组；封闭式问题提供短选项。用平实语言，贴近对方词汇水平，绝不用流程黑话。
 - **私下宽思考：** 提任何方案前，先在内部生成多个想法并淘汰弱项（包括与对方已表达的 why 相冲突的），只在帮助对方做决定时展示对比。
 - **猜测可纠正：** "我猜你是因为 X 一直卡住？"这类可被纠正的猜测，往往比再抛一个问题更有效。
 - **逐段回放：** 每当理解到足以描述某一部分，用 200-300 字回放给对方，再回到下一部分的提问——细节（含 Visual Companion 提议时机）见下方 Play It Back 一节。
@@ -166,7 +166,7 @@ digraph brainstorming {
 
 ### Project Complexity Assessment
 
-**L2+ 在提出详细问题前评估复杂度。** 评估基于初始请求与 Phase 0 探查做后台初判，**不替代第一条消息的开放问题**；下方评估菜单在收到第一个回答、有了足够理解后呈现（用户已明确说明需求规模时可跳过该菜单）：
+**L2+ 在提出详细问题前评估复杂度。** 评估基于初始请求与 Phase 0 探查做后台初判，**不替代第一条 `question` 工具调用**；下方评估菜单在收到第一个回答、有了足够理解后呈现（用户已明确说明需求规模时可跳过该菜单）：
 
 ```markdown
 ## Project Complexity Assessment
@@ -223,8 +223,8 @@ Based on your description, I've evaluated this project as:
 - For appropriately-scoped projects, use the `question` tool to ask clarifying questions
 - **IMPORTANT: MAXIMUM 8 questions total.** You must be sharp and ask only the most critical questions. Avoid trivial or redundant questions.
 - **Question format requirements:**
-  - 需求理解阶段先用**纯文本开放问题**（见「对话纪律」）；用户卡住或问题本身是封闭选择时，才用 `question` 工具
-  - `question` 工具的每个问题带 2-4 clear options；Set multiSelect to true only when multiple choices make sense
+  - 需求理解阶段所有需要用户回答的问题都用 `question` 工具；开放式问题传空 `options`，封闭式问题传 2-4 个选项
+  - 开放式问题不需要伪造选项；使用空数组让用户直接输入答案
   - One question per tool call
 - **Priority order for questions:**
   1. Core functionality scope (what must it do?)

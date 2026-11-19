@@ -134,6 +134,65 @@
         "zh-TW": "PowersNexus 工程技能庫",
         "en": "PowersNexus Engineering Skills"
       }
+    },
+    {
+      "packageId": "com.novaway.agency-agents",
+      "name": "NovaWay Agency Agents",
+      "version": "1.0.0",
+      "description": "NovaWay AI 员工 Agency Agents：184 个专业 Agent，覆盖研究、设计、工程、产品、项目、营销、销售与专项能力。",
+      "longDescription": "从 NovaWay 内置 AI 员工迁移而来的官方插件。安装后动态提供 184 个主 Agent 与子 Agent，并保留中文显示名、分类、提示词、角色模式和 AI 员工页面元数据；外部贡献使用 agency-agents_ 命名空间。",
+      "author": "NovaWay-AI",
+      "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "icon": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/plugins/com.novaway.agency-agents/assets/icon.svg",
+      "categories": [
+        "productivity",
+        "agents"
+      ],
+      "tags": [
+        "official",
+        "agent",
+        "ai-employee",
+        "agency",
+        "productivity"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "zip"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents"
+      ],
+      "permissions": [],
+      "dependencies": {},
+      "releaseNotes": "将 184 个 Agency AI 员工从 NovaWay 内置实现迁移为可独立安装、启用和停用的 declarative Agent 插件。",
+      "artifacts": [
+        {
+          "type": "archive",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.agency-agents-v1.0.0/com.novaway.agency-agents-1.0.0.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.agency-agents-v1.0.0",
+          "asset": "com.novaway.agency-agents-1.0.0.zip",
+          "sha256": "c456e8ba7e7da42238830ecf05d8691eb35bafcf0a1844f37454d127d573f912",
+          "size": 2649605
+        }
+      ],
+      "marketTypes": [
+        "agents"
+      ],
+      "displayName": "Agency AI 员工",
+      "displayNameI18n": {
+        "zh-CN": "Agency AI 员工",
+        "zh-TW": "Agency AI 員工",
+        "en": "Agency AI Employees"
+      }
     }
   ]
 }

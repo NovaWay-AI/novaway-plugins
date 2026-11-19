@@ -21,8 +21,9 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 工作台不是宿主里静态写死的模式。插件需要在 Primary Agent 的 `options` 中声明 `modeGroup` 和 `workbench` 元数据；安装并激活后，NovaWay 会实时将它加入左上角工作模式切换器，停用或卸载后自动移除。
 
 
-官方 stable 目录当前包含两个可安装官方工作流：
+官方 stable 目录当前包含三个可安装官方工作流：
 
+- `com.novaway.agency-agents@1.0.0`：184 个 Agency AI 员工 Agent，覆盖研究、设计、工程、产品、项目、营销、销售与专项能力；
 - `com.novaway.office-suite@0.3.1`：完整办公工作台，包含 9 个 Agent、14 个 Office Skill（含 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能）、Tool、Command 和内置 PPT Workflow；
 - `com.novaway.powersnexus@1.1.0`：工程技能库。
 
@@ -43,6 +44,12 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 `catalog/taxonomy.json` 分开维护能力类型（Skill、Agent、Tool、MCP 等）、市场展示类型（工作台、智能体、技能、MCP 连接器、工具、主题、其他等）和用途（办公、开发、数据等）。一个插件可以有多种能力和展示类型；能力从真实 `contributes` 生成，市场展示类型用于帮助用户筛选，不按名称猜测。
 
 `catalog/local.json` 是本地源码包索引，不是可添加到客户端的远程安装源；它没有伪造未发布的 Release URL。运行 `node scripts/index-local.mjs` 更新，运行 `npm run validate` 校验源码引用及 stable 目录。
+
+`plugins/com.novaway.agency-agents` 是从 NovaWay 宿主内置实现迁移出的官方 AI 员工包，包含 184 个 declarative Agent。安装后的 Agent 使用 `agency-agents_` 命名空间，例如 `agency-agents_agents-orchestrator`；旧的未命名空间配置会由宿主兼容解析。
+
+- 构建：`npm run build:agency`，生成 `dist/com.novaway.agency-agents-1.0.0.zip`。
+- NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_AGENCY_AGENTS_ARCHIVE=<ZIP绝对路径> bun test test/plugin/agency-marketplace.test.ts`。
+- Agent 的中文显示名、分类、主 Agent / 子 Agent 角色、提示词和 AI 员工页面元数据全部来自插件 manifest 与包内 prompt 文件；未安装或停用插件时，宿主不再提供这些内置 Agent。
 
 `plugins/com.novaway.office-suite` 是完整办公工作台，包含 9 个 Agent、14 个 Office Skill（9 个 NovaWay 办公 Skill、内置 PPT Master，以及 Anthropic 官方 DOCX/PDF/PPTX/XLSX Skill）、一个安全 Tool 和一个 Command，并声明动态 `office` 工作台元数据。安装后的贡献使用 `office-suite_` 命名空间。
 

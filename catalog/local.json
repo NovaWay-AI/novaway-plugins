@@ -3,6 +3,26 @@
   "channel": "local",
   "entries": [
     {
+      "packageId": "com.novaway.agency-agents",
+      "name": "agency-agents",
+      "version": "1.0.0",
+      "description": "NovaWay AI 员工 Agency Agents：184 个覆盖研究、设计、工程、产品、项目、营销、销售与专项能力的专业 Agent。",
+      "path": "plugins/com.novaway.agency-agents",
+      "categories": [
+        "productivity",
+        "agents"
+      ],
+      "capabilities": [
+        "agents"
+      ],
+      "marketTypes": [
+        "agents"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ]
+    },
+    {
       "packageId": "com.novaway.office-suite",
       "name": "office-suite",
       "version": "0.3.1",

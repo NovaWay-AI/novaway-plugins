@@ -1,0 +1,4636 @@
+{
+  "apiVersion": 2,
+  "name": "agency-agents",
+  "version": "1.0.0",
+  "description": "NovaWay AI 员工 Agency Agents：184 个覆盖研究、设计、工程、产品、项目、营销、销售与专项能力的专业 Agent。",
+  "kind": "declarative",
+  "categories": [
+    "productivity",
+    "agents"
+  ],
+  "activationEvents": [
+    "onStartup"
+  ],
+  "contributes": {
+    "agents": [
+      {
+        "id": "academic-anthropologist",
+        "description": "内置学术研究 AI 员工，适合处理人类学研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/academic/academic-anthropologist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "人类学研究员",
+          "category": "学术研究",
+          "agencyCategory": "academic",
+          "agencyPath": "academic/academic-anthropologist.md",
+          "originalDescription": "Expert in cultural systems, rituals, kinship, belief systems, and ethnographic method — builds culturally coherent societies that feel lived-in rather than invented",
+          "vibe": "No culture is random — every practice is a solution to a problem you might not see yet",
+          "emoji": "🌍"
+        },
+        "color": "#D97706"
+      },
+      {
+        "id": "academic-geographer",
+        "description": "内置学术研究 AI 员工，适合处理地理学研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/academic/academic-geographer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "地理学研究员",
+          "category": "学术研究",
+          "agencyCategory": "academic",
+          "agencyPath": "academic/academic-geographer.md",
+          "originalDescription": "Expert in physical and human geography, climate systems, cartography, and spatial analysis — builds geographically coherent worlds where terrain, climate, resources, and settlement patterns make scientific sense",
+          "vibe": "Geography is destiny — where you are determines who you become",
+          "emoji": "🗺️"
+        },
+        "color": "#059669"
+      },
+      {
+        "id": "academic-historian",
+        "description": "内置学术研究 AI 员工，适合处理历史学研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/academic/academic-historian.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "历史学研究员",
+          "category": "学术研究",
+          "agencyCategory": "academic",
+          "agencyPath": "academic/academic-historian.md",
+          "originalDescription": "Expert in historical analysis, periodization, material culture, and historiography — validates historical coherence and enriches settings with authentic period detail grounded in primary and secondary sources",
+          "vibe": "History doesn't repeat, but it rhymes — and I know all the verses",
+          "emoji": "📚"
+        },
+        "color": "#B45309"
+      },
+      {
+        "id": "academic-narratologist",
+        "description": "内置学术研究 AI 员工，适合处理叙事学研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/academic/academic-narratologist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "叙事学研究员",
+          "category": "学术研究",
+          "agencyCategory": "academic",
+          "agencyPath": "academic/academic-narratologist.md",
+          "originalDescription": "Expert in narrative theory, story structure, character arcs, and literary analysis — grounds advice in established frameworks from Propp to Campbell to modern narratology",
+          "vibe": "Every story is an argument — I help you find what yours is really saying",
+          "emoji": "📜"
+        },
+        "color": "#8B5CF6"
+      },
+      {
+        "id": "academic-psychologist",
+        "description": "内置学术研究 AI 员工，适合处理心理学研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/academic/academic-psychologist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "心理学研究员",
+          "category": "学术研究",
+          "agencyCategory": "academic",
+          "agencyPath": "academic/academic-psychologist.md",
+          "originalDescription": "Expert in human behavior, personality theory, motivation, and cognitive patterns — builds psychologically credible characters and interactions grounded in clinical and research frameworks",
+          "vibe": "People don't do things for no reason — I find the reason",
+          "emoji": "🧠"
+        },
+        "color": "#EC4899"
+      },
+      {
+        "id": "design-brand-guardian",
+        "description": "内置设计 AI 员工，适合处理品牌守护者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-brand-guardian.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "品牌守护者",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-brand-guardian.md",
+          "originalDescription": "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning",
+          "vibe": "Your brand's fiercest protector and most passionate advocate.",
+          "emoji": "🎨"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "design-image-prompt-engineer",
+        "description": "内置设计 AI 员工，适合处理图像提示词工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-image-prompt-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "图像提示词工程师",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-image-prompt-engineer.md",
+          "originalDescription": "Expert photography prompt engineer specializing in crafting detailed, evocative prompts for AI image generation. Masters the art of translating visual concepts into precise language that produces stunning, professional-quality photography through generative AI tools.",
+          "vibe": "Translates visual concepts into precise prompts that produce stunning AI photography.",
+          "emoji": "📷"
+        },
+        "color": "amber"
+      },
+      {
+        "id": "design-inclusive-visuals-specialist",
+        "description": "内置设计 AI 员工，适合处理包容性视觉专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-inclusive-visuals-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "包容性视觉专家",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-inclusive-visuals-specialist.md",
+          "originalDescription": "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical images and video.",
+          "vibe": "Defeats systemic AI biases to generate culturally accurate, affirming imagery.",
+          "emoji": "🌈"
+        },
+        "color": "#4DB6AC"
+      },
+      {
+        "id": "design-ui-designer",
+        "description": "内置设计 AI 员工，适合处理UI设计师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-ui-designer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "UI设计师",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-ui-designer.md",
+          "originalDescription": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Creates beautiful, consistent, accessible user interfaces that enhance UX and reflect brand identity",
+          "vibe": "Creates beautiful, consistent, accessible interfaces that feel just right.",
+          "emoji": "🎨"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "design-ux-architect",
+        "description": "内置设计 AI 员工，适合处理UX架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-ux-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "UX架构师",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-ux-architect.md",
+          "originalDescription": "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance",
+          "vibe": "Gives developers solid foundations, CSS systems, and clear implementation paths.",
+          "emoji": "📐"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "design-ux-researcher",
+        "description": "内置设计 AI 员工，适合处理UX研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-ux-researcher.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "UX研究员",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-ux-researcher.md",
+          "originalDescription": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights. Provides actionable research findings that improve product usability and user satisfaction",
+          "vibe": "Validates design decisions with real user data, not assumptions.",
+          "emoji": "🔬"
+        },
+        "color": "green"
+      },
+      {
+        "id": "design-visual-storyteller",
+        "description": "内置设计 AI 员工，适合处理视觉Storyteller相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-visual-storyteller.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "视觉Storyteller",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-visual-storyteller.md",
+          "originalDescription": "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design. Specializes in transforming complex information into engaging visual stories that connect with audiences and drive emotional engagement.",
+          "vibe": "Transforms complex information into visual narratives that move people.",
+          "emoji": "🎬"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "design-whimsy-injector",
+        "description": "内置设计 AI 员工，适合处理趣味设计Injector相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/design/design-whimsy-injector.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "趣味设计Injector",
+          "category": "设计",
+          "agencyCategory": "design",
+          "agencyPath": "design/design-whimsy-injector.md",
+          "originalDescription": "Expert creative specialist focused on adding personality, delight, and playful elements to brand experiences. Creates memorable, joyful interactions that differentiate brands through unexpected moments of whimsy",
+          "vibe": "Adds the unexpected moments of delight that make brands unforgettable.",
+          "emoji": "✨"
+        },
+        "color": "pink"
+      },
+      {
+        "id": "engineering-ai-data-remediation-engineer",
+        "description": "内置工程开发 AI 员工，适合处理AI数据修复工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-ai-data-remediation-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "AI数据修复工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-ai-data-remediation-engineer.md",
+          "originalDescription": "Specialist in self-healing data pipelines — uses air-gapped local SLMs and semantic clustering to automatically detect, classify, and fix data anomalies at scale. Focuses exclusively on the remediation layer: intercepting bad data, generating deterministic fix logic via Ollama, and guaranteeing zero data loss. Not a general data engineer — a surgical specialist for when your data is broken and the pipeline can't stop.",
+          "vibe": "Fixes your broken data with surgical AI precision — no rows left behind.",
+          "emoji": "🧬"
+        },
+        "color": "green"
+      },
+      {
+        "id": "engineering-ai-engineer",
+        "description": "内置工程开发 AI 员工，适合处理AI工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-ai-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "AI工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-ai-engineer.md",
+          "originalDescription": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems. Focused on building intelligent features, data pipelines, and AI-powered applications with emphasis on practical, scalable solutions.",
+          "vibe": "Turns ML models into production features that actually scale.",
+          "emoji": "🤖"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "engineering-autonomous-optimization-architect",
+        "description": "内置工程开发 AI 员工，适合处理自主优化架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-autonomous-optimization-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "自主优化架构师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-autonomous-optimization-architect.md",
+          "originalDescription": "Intelligent system governor that continuously shadow-tests APIs for performance while enforcing strict financial and security guardrails against runaway costs.",
+          "vibe": "The system governor that makes things faster without bankrupting you.",
+          "emoji": "⚡"
+        },
+        "color": "#673AB7"
+      },
+      {
+        "id": "engineering-backend-architect",
+        "description": "内置工程开发 AI 员工，适合处理后端架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-backend-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "后端架构师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-backend-architect.md",
+          "originalDescription": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure. Builds robust, secure, performant server-side applications and microservices",
+          "vibe": "Designs the systems that hold everything up — databases, APIs, cloud, scale.",
+          "emoji": "🏗️"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "engineering-cms-developer",
+        "description": "内置工程开发 AI 员工，适合处理CMS开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-cms-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "CMS开发者",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-cms-developer.md",
+          "originalDescription": "Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS implementation",
+          "emoji": "🧱"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "engineering-code-reviewer",
+        "description": "内置工程开发 AI 员工，适合处理代码审查员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-code-reviewer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "代码审查员",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-code-reviewer.md",
+          "originalDescription": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance — not style preferences.",
+          "vibe": "Reviews code like a mentor, not a gatekeeper. Every comment teaches something.",
+          "emoji": "👁️"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "engineering-codebase-onboarding-engineer",
+        "description": "内置工程开发 AI 员工，适合处理代码库入门工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-codebase-onboarding-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "代码库入门工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-codebase-onboarding-engineer.md",
+          "originalDescription": "Expert developer onboarding specialist who helps new engineers understand unfamiliar codebases fast by reading source code, tracing code paths, and stating only facts grounded in the code.",
+          "vibe": "Gets new developers productive faster by reading the code, tracing the paths, and stating the facts. Nothing extra.",
+          "emoji": "🧭"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "engineering-data-engineer",
+        "description": "内置工程开发 AI 员工，适合处理数据工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-data-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "数据工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-data-engineer.md",
+          "originalDescription": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure. Masters ETL/ELT, Apache Spark, dbt, streaming systems, and cloud data platforms to turn raw data into trusted, analytics-ready assets.",
+          "vibe": "Builds the pipelines that turn raw data into trusted, analytics-ready assets.",
+          "emoji": "🔧"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "engineering-database-optimizer",
+        "description": "内置工程开发 AI 员工，适合处理数据库优化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-database-optimizer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "数据库优化专家",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-database-optimizer.md",
+          "originalDescription": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning for PostgreSQL, MySQL, and modern databases like Supabase and PlanetScale.",
+          "vibe": "Indexes, query plans, and schema design — databases that don't wake you at 3am.",
+          "emoji": "🗄️"
+        },
+        "color": "amber"
+      },
+      {
+        "id": "engineering-devops-automator",
+        "description": "内置工程开发 AI 员工，适合处理DevOps自动化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-devops-automator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "DevOps自动化专家",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-devops-automator.md",
+          "originalDescription": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations",
+          "vibe": "Automates infrastructure so your team ships faster and sleeps better.",
+          "emoji": "⚙️"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "engineering-email-intelligence-engineer",
+        "description": "内置工程开发 AI 员工，适合处理邮件智能工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-email-intelligence-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "邮件智能工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-email-intelligence-engineer.md",
+          "originalDescription": "Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems",
+          "vibe": "Turns messy MIME into reasoning-ready context because raw email is noise and your agent deserves signal",
+          "emoji": "📧"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "engineering-embedded-firmware-engineer",
+        "description": "内置工程开发 AI 员工，适合处理嵌入式固件工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-embedded-firmware-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "嵌入式固件工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-embedded-firmware-engineer.md",
+          "originalDescription": "Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5/nRF Connect SDK, FreeRTOS, Zephyr",
+          "vibe": "Writes production-grade firmware for hardware that can't afford to crash.",
+          "emoji": "🔩"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "engineering-feishu-integration-developer",
+        "description": "内置工程开发 AI 员工，适合处理飞书集成开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-feishu-integration-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "飞书集成开发者",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-feishu-integration-developer.md",
+          "originalDescription": "Full-stack integration expert specializing in the Feishu (Lark) Open Platform — proficient in Feishu bots, mini programs, approval workflows, Bitable (multidimensional spreadsheets), interactive message cards, Webhooks, SSO authentication, and workflow automation, building enterprise-grade collaboration and automation solutions within the Feishu ecosystem.",
+          "vibe": "Builds enterprise integrations on the Feishu (Lark) platform — bots, approvals, data sync, and SSO — so your team's workflows run on autopilot.",
+          "emoji": "🔗"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "engineering-filament-optimization-specialist",
+        "description": "内置工程开发 AI 员工，适合处理Filament优化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-filament-optimization-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Filament优化专家",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-filament-optimization-specialist.md",
+          "originalDescription": "Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency. Focuses on impactful structural changes — not just cosmetic tweaks.",
+          "vibe": "Pragmatic perfectionist — streamlines complex admin environments.",
+          "emoji": "🔧"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "engineering-frontend-developer",
+        "description": "内置工程开发 AI 员工，适合处理前端开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-frontend-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "前端开发者",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-frontend-developer.md",
+          "originalDescription": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization",
+          "vibe": "Builds responsive, accessible web apps with pixel-perfect precision.",
+          "emoji": "🖥️"
+        },
+        "color": "cyan"
+      },
+      {
+        "id": "engineering-git-workflow-master",
+        "description": "内置工程开发 AI 员工，适合处理Git工作流Master相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-git-workflow-master.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Git工作流Master",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-git-workflow-master.md",
+          "originalDescription": "Expert in Git workflows, branching strategies, and version control best practices including conventional commits, rebasing, worktrees, and CI-friendly branch management.",
+          "vibe": "Clean history, atomic commits, and branches that tell a story.",
+          "emoji": "🌿"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "engineering-incident-response-commander",
+        "description": "内置工程开发 AI 员工，适合处理故障响应响应Commander相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-incident-response-commander.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "故障响应响应Commander",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-incident-response-commander.md",
+          "originalDescription": "Expert incident commander specializing in production incident management, structured response coordination, post-mortem facilitation, SLO/SLI tracking, and on-call process design for reliable engineering organizations.",
+          "vibe": "Turns production chaos into structured resolution.",
+          "emoji": "🚨"
+        },
+        "color": "#e63946"
+      },
+      {
+        "id": "engineering-minimal-change-engineer",
+        "description": "内置工程开发 AI 员工，适合处理最小改动Change工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-minimal-change-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "最小改动Change工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-minimal-change-engineer.md",
+          "originalDescription": "Engineering specialist focused on minimum-viable diffs — fixes only what was asked, refuses scope creep, prefers three similar lines over a premature abstraction. The discipline that prevents bug-fix PRs from becoming refactor avalanches.",
+          "vibe": "The smallest diff that solves the problem — every extra line is a liability.",
+          "emoji": "🪡"
+        },
+        "color": "slate"
+      },
+      {
+        "id": "engineering-mobile-app-builder",
+        "description": "内置工程开发 AI 员工，适合处理移动端应用构建专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-mobile-app-builder.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "移动端应用构建专家",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-mobile-app-builder.md",
+          "originalDescription": "Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks",
+          "vibe": "Ships native-quality apps on iOS and Android, fast.",
+          "emoji": "📲"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "engineering-rapid-prototyper",
+        "description": "内置工程开发 AI 员工，适合处理快速Prototyper相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-rapid-prototyper.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "快速Prototyper",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-rapid-prototyper.md",
+          "originalDescription": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks",
+          "vibe": "Turns an idea into a working prototype before the meeting's over.",
+          "emoji": "⚡"
+        },
+        "color": "green"
+      },
+      {
+        "id": "engineering-security-engineer",
+        "description": "内置工程开发 AI 员工，适合处理安全工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-security-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "安全工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-security-engineer.md",
+          "originalDescription": "Expert application security engineer specializing in threat modeling, vulnerability assessment, secure code review, security architecture design, and incident response for modern web, API, and cloud-native applications.",
+          "vibe": "Models threats, reviews code, hunts vulnerabilities, and designs security architecture that actually holds under adversarial pressure.",
+          "emoji": "🔒"
+        },
+        "color": "red"
+      },
+      {
+        "id": "engineering-senior-developer",
+        "description": "内置工程开发 AI 员工，适合处理高级开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-senior-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "高级开发者",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-senior-developer.md",
+          "originalDescription": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration",
+          "vibe": "Premium full-stack craftsperson — Laravel, Livewire, Three.js, advanced CSS.",
+          "emoji": "💎"
+        },
+        "color": "green"
+      },
+      {
+        "id": "engineering-software-architect",
+        "description": "内置工程开发 AI 员工，适合处理软件架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-software-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "软件架构师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-software-architect.md",
+          "originalDescription": "Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical decision-making for scalable, maintainable systems.",
+          "vibe": "Designs systems that survive the team that built them. Every decision has a trade-off — name it.",
+          "emoji": "🏛️"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "engineering-solidity-smart-contract-engineer",
+        "description": "内置工程开发 AI 员工，适合处理Solidity智能Contract工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-solidity-smart-contract-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Solidity智能Contract工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-solidity-smart-contract-engineer.md",
+          "originalDescription": "Expert Solidity developer specializing in EVM smart contract architecture, gas optimization, upgradeable proxy patterns, DeFi protocol development, and security-first contract design across Ethereum and L2 chains.",
+          "vibe": "Battle-hardened Solidity developer who lives and breathes the EVM.",
+          "emoji": "⛓️"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "engineering-sre",
+        "description": "内置工程开发 AI 员工，适合处理SRE相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-sre.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "SRE",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-sre.md",
+          "originalDescription": "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reduction for production systems at scale.",
+          "vibe": "Reliability is a feature. Error budgets fund velocity — spend them wisely.",
+          "emoji": "🛡️"
+        },
+        "color": "#e63946"
+      },
+      {
+        "id": "engineering-technical-writer",
+        "description": "内置工程开发 AI 员工，适合处理技术撰写专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-technical-writer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "技术撰写专家",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-technical-writer.md",
+          "originalDescription": "Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms complex engineering concepts into clear, accurate, and engaging docs that developers actually read and use.",
+          "vibe": "Writes the docs that developers actually read and use.",
+          "emoji": "📚"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "engineering-threat-detection-engineer",
+        "description": "内置工程开发 AI 员工，适合处理威胁Detection工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-threat-detection-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "威胁Detection工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-threat-detection-engineer.md",
+          "originalDescription": "Expert detection engineer specializing in SIEM rule development, MITRE ATT&CK coverage mapping, threat hunting, alert tuning, and detection-as-code pipelines for security operations teams.",
+          "vibe": "Builds the detection layer that catches attackers after they bypass prevention.",
+          "emoji": "🎯"
+        },
+        "color": "#7b2d8e"
+      },
+      {
+        "id": "engineering-voice-ai-integration-engineer",
+        "description": "内置工程开发 AI 员工，适合处理语音AI集成工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-voice-ai-integration-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "语音AI集成工程师",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-voice-ai-integration-engineer.md",
+          "originalDescription": "Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services — from raw audio ingestion through preprocessing, transcript cleanup, subtitle generation, speaker diarization, and structured downstream integration into apps, APIs, and CMS platforms.",
+          "vibe": "Turns raw audio into structured, production-ready text that machines and humans can actually use.",
+          "emoji": "🎙️"
+        },
+        "color": "violet"
+      },
+      {
+        "id": "engineering-wechat-mini-program-developer",
+        "description": "内置工程开发 AI 员工，适合处理微信MiniProgram开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/engineering/engineering-wechat-mini-program-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "微信MiniProgram开发者",
+          "category": "工程开发",
+          "agencyCategory": "engineering",
+          "agencyPath": "engineering/engineering-wechat-mini-program-developer.md",
+          "originalDescription": "Expert WeChat Mini Program developer specializing in 小程序 development with WXML/WXSS/WXS, WeChat API integration, payment systems, subscription messaging, and the full WeChat ecosystem.",
+          "vibe": "Builds performant Mini Programs that thrive in the WeChat ecosystem.",
+          "emoji": "💬"
+        },
+        "color": "green"
+      },
+      {
+        "id": "finance-bookkeeper-controller",
+        "description": "内置财务 AI 员工，适合处理记账控制专员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/finance/finance-bookkeeper-controller.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "记账控制专员",
+          "category": "财务",
+          "agencyCategory": "finance",
+          "agencyPath": "finance/finance-bookkeeper-controller.md",
+          "originalDescription": "Expert bookkeeper and controller specializing in day-to-day accounting operations, financial reconciliations, month-end close processes, and internal controls. Ensures the accuracy, completeness, and timeliness of financial records while maintaining GAAP compliance and audit readiness at all times.",
+          "vibe": "Every penny accounted for, every close on time — the backbone of financial trust.",
+          "emoji": "📒"
+        },
+        "color": "green"
+      },
+      {
+        "id": "finance-financial-analyst",
+        "description": "内置财务 AI 员工，适合处理财务分析师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/finance/finance-financial-analyst.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "财务分析师",
+          "category": "财务",
+          "agencyCategory": "finance",
+          "agencyPath": "finance/finance-financial-analyst.md",
+          "originalDescription": "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support. Transforms raw financial data into actionable business intelligence that drives strategic planning, investment decisions, and operational optimization.",
+          "vibe": "Turns spreadsheets into strategy — every number tells a story, every model drives a decision.",
+          "emoji": "📊"
+        },
+        "color": "green"
+      },
+      {
+        "id": "finance-fpa-analyst",
+        "description": "内置财务 AI 员工，适合处理FP&A分析师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/finance/finance-fpa-analyst.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "FP&A分析师",
+          "category": "财务",
+          "agencyCategory": "finance",
+          "agencyPath": "finance/finance-fpa-analyst.md",
+          "originalDescription": "Expert Financial Planning & Analysis (FP&A) analyst specializing in budgeting, variance analysis, financial planning, rolling forecasts, and strategic decision support. Bridges the gap between the numbers and the business narrative to drive operational performance and strategic resource allocation.",
+          "vibe": "The budget whisperer — turns plans into numbers and numbers into action.",
+          "emoji": "📈"
+        },
+        "color": "green"
+      },
+      {
+        "id": "finance-investment-researcher",
+        "description": "内置财务 AI 员工，适合处理投资研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/finance/finance-investment-researcher.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "投资研究员",
+          "category": "财务",
+          "agencyCategory": "finance",
+          "agencyPath": "finance/finance-investment-researcher.md",
+          "originalDescription": "Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation. Conducts rigorous fundamental and quantitative analysis to identify investment opportunities, assess risks, and support data-driven portfolio decisions across public equities, private markets, and alternative assets.",
+          "vibe": "Digs deeper than the consensus — finds alpha in the footnotes and risks in the narratives.",
+          "emoji": "🔍"
+        },
+        "color": "green"
+      },
+      {
+        "id": "finance-tax-strategist",
+        "description": "内置财务 AI 员工，适合处理税务策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/finance/finance-tax-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "税务策略师",
+          "category": "财务",
+          "agencyCategory": "finance",
+          "agencyPath": "finance/finance-tax-strategist.md",
+          "originalDescription": "Expert tax strategist specializing in tax optimization, multi-jurisdictional compliance, transfer pricing, and strategic tax planning. Navigates complex tax codes to minimize liability while ensuring full regulatory compliance across local, state, federal, and international tax regimes.",
+          "vibe": "Finds every legal dollar of savings in the tax code — compliance is the floor, optimization is the mission.",
+          "emoji": "🏛️"
+        },
+        "color": "green"
+      },
+      {
+        "id": "blender-addon-engineer",
+        "description": "内置blender AI 员工，适合处理Blender插件工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/blender/blender-addon-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Blender插件工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/blender/blender-addon-engineer.md",
+          "originalDescription": "Blender tooling specialist - Builds Python add-ons, asset validators, exporters, and pipeline automations that turn repetitive DCC work into reliable one-click workflows",
+          "vibe": "Turns repetitive Blender pipeline work into reliable one-click tools that artists actually use.",
+          "emoji": "🧩"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "game-audio-engineer",
+        "description": "内置游戏开发 AI 员工，适合处理游戏音频工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/game-audio-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "游戏音频工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/game-audio-engineer.md",
+          "originalDescription": "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performance budgeting across all game engines",
+          "vibe": "Makes every gunshot, footstep, and musical cue feel alive in the game world.",
+          "emoji": "🎵"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "game-designer",
+        "description": "内置游戏开发 AI 员工，适合处理游戏设计师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/game-designer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "游戏设计师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/game-designer.md",
+          "originalDescription": "Systems and mechanics architect - Masters GDD authorship, player psychology, economy balancing, and gameplay loop design across all engines and genres",
+          "vibe": "Thinks in loops, levers, and player motivations to architect compelling gameplay.",
+          "emoji": "🎮"
+        },
+        "color": "yellow"
+      },
+      {
+        "id": "godot-gameplay-scripter",
+        "description": "内置godot AI 员工，适合处理Godot玩法脚本工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/godot/godot-gameplay-scripter.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Godot玩法脚本工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/godot/godot-gameplay-scripter.md",
+          "originalDescription": "Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects",
+          "vibe": "Builds Godot 4 gameplay systems with the discipline of a software architect.",
+          "emoji": "🎯"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "godot-multiplayer-engineer",
+        "description": "内置godot AI 员工，适合处理Godot多人联机工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/godot/godot-multiplayer-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Godot多人联机工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/godot/godot-multiplayer-engineer.md",
+          "originalDescription": "Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games",
+          "vibe": "Masters Godot's MultiplayerAPI to make real-time netcode feel seamless.",
+          "emoji": "🌐"
+        },
+        "color": "violet"
+      },
+      {
+        "id": "godot-shader-developer",
+        "description": "内置godot AI 员工，适合处理Godot着色器开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/godot/godot-shader-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Godot着色器开发者",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/godot/godot-shader-developer.md",
+          "originalDescription": "Godot 4 visual effects specialist - Masters the Godot Shading Language (GLSL-like), VisualShader editor, CanvasItem and Spatial shaders, post-processing, and performance optimization for 2D/3D effects",
+          "vibe": "Bends light and pixels through Godot's shading language to create stunning effects.",
+          "emoji": "💎"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "level-designer",
+        "description": "内置游戏开发 AI 员工，适合处理关卡设计师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/level-designer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "关卡设计师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/level-designer.md",
+          "originalDescription": "Spatial storytelling and flow specialist - Masters layout theory, pacing architecture, encounter design, and environmental narrative across all game engines",
+          "vibe": "Treats every level as an authored experience where space tells the story.",
+          "emoji": "🗺️"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "narrative-designer",
+        "description": "内置游戏开发 AI 员工，适合处理叙事设计师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/narrative-designer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "叙事设计师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/narrative-designer.md",
+          "originalDescription": "Story systems and dialogue architect - Masters GDD-aligned narrative design, branching dialogue, lore architecture, and environmental storytelling across all game engines",
+          "vibe": "Architects story systems where narrative and gameplay are inseparable.",
+          "emoji": "📖"
+        },
+        "color": "red"
+      },
+      {
+        "id": "roblox-avatar-creator",
+        "description": "内置roblox-studio AI 员工，适合处理RobloxAvatar创作者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/roblox-studio/roblox-avatar-creator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "RobloxAvatar创作者",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/roblox-studio/roblox-avatar-creator.md",
+          "originalDescription": "Roblox UGC and avatar pipeline specialist - Masters Roblox's avatar system, UGC item creation, accessory rigging, texture standards, and the Creator Marketplace submission pipeline",
+          "vibe": "Masters the UGC pipeline from rigging to Creator Marketplace submission.",
+          "emoji": "👤"
+        },
+        "color": "fuchsia"
+      },
+      {
+        "id": "roblox-experience-designer",
+        "description": "内置roblox-studio AI 员工，适合处理Roblox体验设计师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/roblox-studio/roblox-experience-designer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Roblox体验设计师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/roblox-studio/roblox-experience-designer.md",
+          "originalDescription": "Roblox platform UX and monetization specialist - Masters engagement loop design, DataStore-driven progression, Roblox monetization systems (Passes, Developer Products, UGC), and player retention for Roblox experiences",
+          "vibe": "Designs engagement loops and monetization systems that keep players coming back.",
+          "emoji": "🎪"
+        },
+        "color": "lime"
+      },
+      {
+        "id": "roblox-systems-scripter",
+        "description": "内置roblox-studio AI 员工，适合处理Roblox系统脚本工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/roblox-studio/roblox-systems-scripter.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Roblox系统脚本工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/roblox-studio/roblox-systems-scripter.md",
+          "originalDescription": "Roblox platform engineering specialist - Masters Luau, the client-server security model, RemoteEvents/RemoteFunctions, DataStore, and module architecture for scalable Roblox experiences",
+          "vibe": "Builds scalable Roblox experiences with rock-solid Luau and client-server security.",
+          "emoji": "🔧"
+        },
+        "color": "rose"
+      },
+      {
+        "id": "technical-artist",
+        "description": "内置游戏开发 AI 员工，适合处理技术Artist相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/technical-artist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "技术Artist",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/technical-artist.md",
+          "originalDescription": "Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine asset optimization",
+          "vibe": "The bridge between artistic vision and engine reality.",
+          "emoji": "🎨"
+        },
+        "color": "pink"
+      },
+      {
+        "id": "unity-architect",
+        "description": "内置unity AI 员工，适合处理Unity架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unity/unity-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unity架构师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unity/unity-architect.md",
+          "originalDescription": "Data-driven modularity specialist - Masters ScriptableObjects, decoupled systems, and single-responsibility component design for scalable Unity projects",
+          "vibe": "Designs data-driven, decoupled Unity systems that scale without spaghetti.",
+          "emoji": "🏛️"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "unity-editor-tool-developer",
+        "description": "内置unity AI 员工，适合处理Unity编辑器工具开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unity/unity-editor-tool-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unity编辑器工具开发者",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unity/unity-editor-tool-developer.md",
+          "originalDescription": "Unity editor automation specialist - Masters custom EditorWindows, PropertyDrawers, AssetPostprocessors, ScriptedImporters, and pipeline automation that saves teams hours per week",
+          "vibe": "Builds custom Unity editor tools that save teams hours every week.",
+          "emoji": "🛠️"
+        },
+        "color": "gray"
+      },
+      {
+        "id": "unity-multiplayer-engineer",
+        "description": "内置unity AI 员工，适合处理Unity多人联机工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unity/unity-multiplayer-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unity多人联机工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unity/unity-multiplayer-engineer.md",
+          "originalDescription": "Networked gameplay specialist - Masters Netcode for GameObjects, Unity Gaming Services (Relay/Lobby), client-server authority, lag compensation, and state synchronization",
+          "vibe": "Makes networked Unity gameplay feel local through smart sync and prediction.",
+          "emoji": "🔗"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "unity-shader-graph-artist",
+        "description": "内置unity AI 员工，适合处理Unity着色器图谱Artist相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unity/unity-shader-graph-artist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unity着色器图谱Artist",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unity/unity-shader-graph-artist.md",
+          "originalDescription": "Visual effects and material specialist - Masters Unity Shader Graph, HLSL, URP/HDRP rendering pipelines, and custom pass authoring for real-time visual effects",
+          "vibe": "Crafts real-time visual magic through Shader Graph and custom render passes.",
+          "emoji": "✨"
+        },
+        "color": "cyan"
+      },
+      {
+        "id": "unreal-multiplayer-architect",
+        "description": "内置unreal-engine AI 员工，适合处理Unreal多人联机架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unreal-engine/unreal-multiplayer-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unreal多人联机架构师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unreal-engine/unreal-multiplayer-architect.md",
+          "originalDescription": "Unreal Engine networking specialist - Masters Actor replication, GameMode/GameState architecture, server-authoritative gameplay, network prediction, and dedicated server setup for UE5",
+          "vibe": "Architects server-authoritative Unreal multiplayer that feels lag-free.",
+          "emoji": "🌐"
+        },
+        "color": "red"
+      },
+      {
+        "id": "unreal-systems-engineer",
+        "description": "内置unreal-engine AI 员工，适合处理Unreal系统工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unreal-engine/unreal-systems-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unreal系统工程师",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unreal-engine/unreal-systems-engineer.md",
+          "originalDescription": "Performance and hybrid architecture specialist - Masters C++/Blueprint continuum, Nanite geometry, Lumen GI, and Gameplay Ability System for AAA-grade Unreal Engine projects",
+          "vibe": "Masters the C++/Blueprint continuum for AAA-grade Unreal Engine projects.",
+          "emoji": "⚙️"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "unreal-technical-artist",
+        "description": "内置unreal-engine AI 员工，适合处理Unreal技术Artist相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unreal-engine/unreal-technical-artist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unreal技术Artist",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unreal-engine/unreal-technical-artist.md",
+          "originalDescription": "Unreal Engine visual pipeline specialist - Masters the Material Editor, Niagara VFX, Procedural Content Generation, and the art-to-engine pipeline for UE5 projects",
+          "vibe": "Bridges Niagara VFX, Material Editor, and PCG into polished UE5 visuals.",
+          "emoji": "🎨"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "unreal-world-builder",
+        "description": "内置unreal-engine AI 员工，适合处理Unreal世界构建专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/game-development/unreal-engine/unreal-world-builder.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Unreal世界构建专家",
+          "category": "游戏开发",
+          "agencyCategory": "game-development",
+          "agencyPath": "game-development/unreal-engine/unreal-world-builder.md",
+          "originalDescription": "Open-world and environment specialist - Masters UE5 World Partition, Landscape, procedural foliage, HLOD, and large-scale level streaming for seamless open-world experiences",
+          "vibe": "Builds seamless open worlds with World Partition, Nanite, and procedural foliage.",
+          "emoji": "🌍"
+        },
+        "color": "green"
+      },
+      {
+        "id": "marketing-agentic-search-optimizer",
+        "description": "内置营销 AI 员工，适合处理智能体搜索优化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-agentic-search-optimizer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "智能体搜索优化专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-agentic-search-optimizer.md",
+          "originalDescription": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents",
+          "vibe": "While everyone else is optimizing to get cited by AI, this agent makes sure AI can actually do the thing on your site",
+          "emoji": "🤖"
+        },
+        "color": "#0891B2"
+      },
+      {
+        "id": "marketing-ai-citation-strategist",
+        "description": "内置营销 AI 员工，适合处理AI引用策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-ai-citation-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "AI引用策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-ai-citation-strategist.md",
+          "originalDescription": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations",
+          "vibe": "Figures out why the AI recommends your competitor and rewires the signals so it recommends you instead",
+          "emoji": "🔮"
+        },
+        "color": "#6D28D9"
+      },
+      {
+        "id": "marketing-app-store-optimizer",
+        "description": "内置营销 AI 员工，适合处理应用Store优化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-app-store-optimizer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "应用Store优化专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-app-store-optimizer.md",
+          "originalDescription": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability",
+          "vibe": "Gets your app found, downloaded, and loved in the store.",
+          "emoji": "📱"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "marketing-baidu-seo-specialist",
+        "description": "内置营销 AI 员工，适合处理百度SEO专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-baidu-seo-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "百度SEO专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-baidu-seo-specialist.md",
+          "originalDescription": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market.",
+          "vibe": "Masters Baidu's algorithm so your brand ranks in China's search ecosystem.",
+          "emoji": "🇨🇳"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "marketing-bilibili-content-strategist",
+        "description": "内置营销 AI 员工，适合处理B站内容策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-bilibili-content-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "B站内容策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-bilibili-content-strategist.md",
+          "originalDescription": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform.",
+          "vibe": "Speaks fluent danmaku and grows your brand on B站.",
+          "emoji": "🎬"
+        },
+        "color": "pink"
+      },
+      {
+        "id": "marketing-book-co-author",
+        "description": "内置营销 AI 员工，适合处理图书联合Author相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-book-co-author.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "图书联合Author",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-book-co-author.md",
+          "originalDescription": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters.",
+          "vibe": "Turns rough expertise into a recognizable book people can quote, remember, and buy into.",
+          "emoji": "📘"
+        },
+        "color": "#8B5E3C"
+      },
+      {
+        "id": "marketing-carousel-growth-engine",
+        "description": "内置营销 AI 员工，适合处理轮播内容增长Engine相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-carousel-growth-engine.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "轮播内容增长Engine",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-carousel-growth-engine.md",
+          "originalDescription": "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via Gemini image generation, publishes directly to feed via Upload-Post API with auto trending music, fetches analytics, and iteratively improves through a data-driven learning loop.",
+          "vibe": "Autonomously generates viral carousels from any URL and publishes them to feed.",
+          "emoji": "🎠"
+        },
+        "color": "#FF0050"
+      },
+      {
+        "id": "marketing-china-ecommerce-operator",
+        "description": "内置营销 AI 员工，适合处理中国电商运营员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-china-ecommerce-operator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "中国电商运营员",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-china-ecommerce-operator.md",
+          "originalDescription": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy.",
+          "vibe": "Runs your Taobao, Tmall, Pinduoduo, and JD storefronts like a native operator.",
+          "emoji": "🛒"
+        },
+        "color": "red"
+      },
+      {
+        "id": "marketing-china-market-localization-strategist",
+        "description": "内置营销 AI 员工，适合处理中国市场本地化策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-china-market-localization-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "中国市场本地化策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-china-market-localization-strategist.md",
+          "originalDescription": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond",
+          "vibe": "Turns China's chaotic trend landscape into a precision-guided marketing machine — data in, revenue out.",
+          "emoji": "🇨🇳"
+        },
+        "color": "#E60012"
+      },
+      {
+        "id": "marketing-content-creator",
+        "description": "内置营销 AI 员工，适合处理内容创作者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-content-creator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "内容创作者",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-content-creator.md",
+          "originalDescription": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement across all digital channels.",
+          "vibe": "Crafts compelling stories across every platform your audience lives on.",
+          "emoji": "✍️",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "marketing-cross-border-ecommerce",
+        "description": "内置营销 AI 员工，适合处理跨境Border电商相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-cross-border-ecommerce.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "跨境Border电商",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-cross-border-ecommerce.md",
+          "originalDescription": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development.",
+          "vibe": "Takes your products from Chinese factories to global bestseller lists.",
+          "emoji": "🌏"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "marketing-douyin-strategist",
+        "description": "内置营销 AI 员工，适合处理抖音策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-douyin-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "抖音策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-douyin-strategist.md",
+          "originalDescription": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies.",
+          "vibe": "Masters the Douyin algorithm so your short videos actually get seen.",
+          "emoji": "🎵"
+        },
+        "color": "#000000"
+      },
+      {
+        "id": "marketing-growth-hacker",
+        "description": "内置营销 AI 员工，适合处理增长增长黑客相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-growth-hacker.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "增长增长黑客",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-growth-hacker.md",
+          "originalDescription": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion funnels, and finds scalable growth channels for exponential business growth.",
+          "vibe": "Finds the growth channel nobody's exploited yet — then scales it.",
+          "emoji": "🚀",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "green"
+      },
+      {
+        "id": "marketing-instagram-curator",
+        "description": "内置营销 AI 员工，适合处理InstagramCurator相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-instagram-curator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "InstagramCurator",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-instagram-curator.md",
+          "originalDescription": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic development and drives meaningful engagement.",
+          "vibe": "Masters the grid aesthetic and turns scrollers into an engaged community.",
+          "emoji": "📸"
+        },
+        "color": "#E4405F"
+      },
+      {
+        "id": "marketing-kuaishou-strategist",
+        "description": "内置营销 AI 员工，适合处理快手策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-kuaishou-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "快手策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-kuaishou-strategist.md",
+          "originalDescription": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手.",
+          "vibe": "Grows grassroots audiences and drives live commerce on 快手.",
+          "emoji": "🎥"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "marketing-linkedin-content-creator",
+        "description": "内置营销 AI 员工，适合处理领英内容创作者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-linkedin-content-creator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "领英内容创作者",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-linkedin-content-creator.md",
+          "originalDescription": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters LinkedIn's algorithm and culture to drive inbound opportunities for founders, job seekers, developers, and anyone building a professional presence.",
+          "vibe": "Turns professional expertise into scroll-stopping content that makes the right people find you.",
+          "emoji": "💼"
+        },
+        "color": "#0A66C2"
+      },
+      {
+        "id": "marketing-livestream-commerce-coach",
+        "description": "内置营销 AI 员工，适合处理直播电商教练相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-livestream-commerce-coach.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "直播电商教练",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-livestream-commerce-coach.md",
+          "originalDescription": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization.",
+          "vibe": "Coaches your livestream hosts from awkward beginners to million-yuan sellers.",
+          "emoji": "🎙️"
+        },
+        "color": "#E63946"
+      },
+      {
+        "id": "marketing-podcast-strategist",
+        "description": "内置营销 AI 员工，适合处理播客策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-podcast-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "播客策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-podcast-strategist.md",
+          "originalDescription": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands.",
+          "vibe": "Guides your podcast from concept to loyal audience in China's booming audio scene.",
+          "emoji": "🎧"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "marketing-private-domain-operator",
+        "description": "内置营销 AI 员工，适合处理私域Domain运营员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-private-domain-operator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "私域Domain运营员",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-private-domain-operator.md",
+          "originalDescription": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization.",
+          "vibe": "Builds your WeChat private traffic empire from first contact to lifetime value.",
+          "emoji": "🔒"
+        },
+        "color": "#1A73E8"
+      },
+      {
+        "id": "marketing-reddit-community-builder",
+        "description": "内置营销 AI 员工，适合处理Reddit社区构建专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-reddit-community-builder.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Reddit社区构建专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-reddit-community-builder.md",
+          "originalDescription": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building. Masters Reddit culture navigation.",
+          "vibe": "Speaks fluent Reddit and builds community trust the authentic way.",
+          "emoji": "💬"
+        },
+        "color": "#FF4500"
+      },
+      {
+        "id": "marketing-seo-specialist",
+        "description": "内置营销 AI 员工，适合处理SEO专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-seo-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "SEO专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-seo-specialist.md",
+          "originalDescription": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth. Drives sustainable traffic through data-driven search strategies.",
+          "vibe": "Drives sustainable organic traffic through technical SEO and content strategy.",
+          "emoji": "🔍",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "#4285F4"
+      },
+      {
+        "id": "marketing-short-video-editing-coach",
+        "description": "内置营销 AI 员工，适合处理短视频视频Editing教练相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-short-video-editing-coach.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "短视频视频Editing教练",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-short-video-editing-coach.md",
+          "originalDescription": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing.",
+          "vibe": "Turns raw footage into scroll-stopping short videos with professional polish.",
+          "emoji": "🎬"
+        },
+        "color": "#7B2D8E"
+      },
+      {
+        "id": "marketing-social-media-strategist",
+        "description": "内置营销 AI 员工，适合处理社交媒体策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-social-media-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "社交媒体策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-social-media-strategist.md",
+          "originalDescription": "Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, builds communities, manages real-time engagement, and develops thought leadership strategies.",
+          "vibe": "Orchestrates cross-platform campaigns that build community and drive engagement.",
+          "emoji": "📣",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "marketing-tiktok-strategist",
+        "description": "内置营销 AI 员工，适合处理TikTok策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-tiktok-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "TikTok策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-tiktok-strategist.md",
+          "originalDescription": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Masters TikTok's unique culture and features for brand growth.",
+          "vibe": "Rides the algorithm and builds community through authentic TikTok culture.",
+          "emoji": "🎵"
+        },
+        "color": "#000000"
+      },
+      {
+        "id": "marketing-twitter-engager",
+        "description": "内置营销 AI 员工，适合处理TwitterEngager相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-twitter-engager.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "TwitterEngager",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-twitter-engager.md",
+          "originalDescription": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth. Builds brand authority through authentic conversation participation and viral thread creation.",
+          "vibe": "Builds thought leadership and brand authority 280 characters at a time.",
+          "emoji": "🐦"
+        },
+        "color": "#1DA1F2"
+      },
+      {
+        "id": "marketing-video-optimization-specialist",
+        "description": "内置营销 AI 员工，适合处理视频优化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-video-optimization-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "视频优化专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-video-optimization-specialist.md",
+          "originalDescription": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication.",
+          "vibe": "Energetic, data-driven, strategic, and hyper-focused on audience retention",
+          "emoji": "🎬"
+        },
+        "color": "red"
+      },
+      {
+        "id": "marketing-wechat-official-account",
+        "description": "内置营销 AI 员工，适合处理微信公众号客户相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-wechat-official-account.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "微信公众号客户",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-wechat-official-account.md",
+          "originalDescription": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization. Masters multi-format content and builds loyal communities through consistent value delivery.",
+          "vibe": "Grows loyal WeChat subscriber communities through consistent value delivery.",
+          "emoji": "📱"
+        },
+        "color": "#09B83E"
+      },
+      {
+        "id": "marketing-weibo-strategist",
+        "description": "内置营销 AI 员工，适合处理微博策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-weibo-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "微博策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-weibo-strategist.md",
+          "originalDescription": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform.",
+          "vibe": "Makes your brand trend on Weibo and keeps the conversation going.",
+          "emoji": "🔥"
+        },
+        "color": "#FF8200"
+      },
+      {
+        "id": "marketing-xiaohongshu-specialist",
+        "description": "内置营销 AI 员工，适合处理小红书专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-xiaohongshu-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "小红书专家",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-xiaohongshu-specialist.md",
+          "originalDescription": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement. Masters micro-content creation and drives viral growth through aesthetic storytelling.",
+          "vibe": "Masters lifestyle content and aesthetic storytelling on 小红书.",
+          "emoji": "🌸"
+        },
+        "color": "#FF1B6D"
+      },
+      {
+        "id": "marketing-zhihu-strategist",
+        "description": "内置营销 AI 员工，适合处理知乎策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/marketing/marketing-zhihu-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "知乎策略师",
+          "category": "营销",
+          "agencyCategory": "marketing",
+          "agencyPath": "marketing/marketing-zhihu-strategist.md",
+          "originalDescription": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement. Masters question-answering strategy and builds brand authority through authentic expertise sharing.",
+          "vibe": "Builds brand authority through expert knowledge-sharing on 知乎.",
+          "emoji": "🧠"
+        },
+        "color": "#0084FF"
+      },
+      {
+        "id": "paid-media-auditor",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体审计员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-auditor.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体审计员",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-auditor.md",
+          "originalDescription": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints spanning account structure, tracking, bidding, creative, audiences, and competitive positioning. Produces actionable audit reports with prioritized recommendations and projected impact.",
+          "vibe": "Finds the waste in your ad spend before your CFO does.",
+          "emoji": "📋",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "paid-media-creative-strategist",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体创意策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-creative-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体创意策略师",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-creative-strategist.md",
+          "originalDescription": "Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing frameworks across Google, Meta, Microsoft, and programmatic platforms. Bridges the gap between performance data and persuasive messaging.",
+          "vibe": "Turns ad creative from guesswork into a repeatable science.",
+          "emoji": "✍️",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "paid-media-paid-social-strategist",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体付费社交策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-paid-social-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体付费社交策略师",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-paid-social-strategist.md",
+          "originalDescription": "Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, and Snapchat. Designs full-funnel social ad programs from prospecting through retargeting with platform-specific creative and audience strategies.",
+          "vibe": "Makes every dollar on Meta, LinkedIn, and TikTok ads work harder.",
+          "emoji": "📱",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "paid-media-ppc-strategist",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体PPC策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-ppc-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体PPC策略师",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-ppc-strategist.md",
+          "originalDescription": "Senior paid media strategist specializing in large-scale search, shopping, and performance max campaign architecture across Google, Microsoft, and Amazon ad platforms. Designs account structures, budget allocation frameworks, and bidding strategies that scale from $10K to $10M+ monthly spend.",
+          "vibe": "Architects PPC campaigns that scale from $10K to $10M+ monthly.",
+          "emoji": "💰",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "paid-media-programmatic-buyer",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体程序化买方相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-programmatic-buyer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体程序化买方",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-programmatic-buyer.md",
+          "originalDescription": "Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360, trade desk platforms, partner media (newsletters, sponsored content), and ABM display strategies via platforms like Demandbase and 6Sense.",
+          "vibe": "Buys display and video inventory at scale with surgical precision.",
+          "emoji": "📺",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "paid-media-search-query-analyst",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体搜索查询分析师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-search-query-analyst.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体搜索查询分析师",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-search-query-analyst.md",
+          "originalDescription": "Specialist in search term analysis, negative keyword architecture, and query-to-intent mapping. Turns raw search query data into actionable optimizations that eliminate waste and amplify high-intent traffic across paid search accounts.",
+          "vibe": "Mines search queries to find the gold your competitors are missing.",
+          "emoji": "🔍",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "paid-media-tracking-specialist",
+        "description": "内置付费投放 AI 员工，适合处理付费媒体追踪专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/paid-media/paid-media-tracking-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "付费媒体追踪专家",
+          "category": "付费投放",
+          "agencyCategory": "paid-media",
+          "agencyPath": "paid-media/paid-media-tracking-specialist.md",
+          "originalDescription": "Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Google Ads, Meta CAPI, LinkedIn Insight Tag, and server-side implementations. Ensures every conversion is counted correctly and every dollar of ad spend is measurable.",
+          "vibe": "If it's not tracked correctly, it didn't happen.",
+          "emoji": "📡",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit, Bash"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "product-behavioral-nudge-engine",
+        "description": "内置产品 AI 员工，适合处理行为助推Engine相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/product/product-behavioral-nudge-engine.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "行为助推Engine",
+          "category": "产品",
+          "agencyCategory": "product",
+          "agencyPath": "product/product-behavioral-nudge-engine.md",
+          "originalDescription": "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and success.",
+          "vibe": "Adapts software interactions to maximize user motivation through behavioral psychology.",
+          "emoji": "🧠"
+        },
+        "color": "#FF8A65"
+      },
+      {
+        "id": "product-feedback-synthesizer",
+        "description": "内置产品 AI 员工，适合处理反馈Synthesizer相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/product/product-feedback-synthesizer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "反馈Synthesizer",
+          "category": "产品",
+          "agencyCategory": "product",
+          "agencyPath": "product/product-feedback-synthesizer.md",
+          "originalDescription": "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product insights. Transforms qualitative feedback into quantitative priorities and strategic recommendations.",
+          "vibe": "Distills a thousand user voices into the five things you need to build next.",
+          "emoji": "🔍",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "product-manager",
+        "description": "内置产品 AI 员工，适合处理产品经理相关任务。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/product/product-manager.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "产品经理",
+          "category": "产品",
+          "agencyCategory": "product",
+          "agencyPath": "product/product-manager.md",
+          "originalDescription": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through roadmap, stakeholder alignment, go-to-market, and outcome measurement. Bridges business goals, user needs, and technical reality to ship the right thing at the right time.",
+          "vibe": "Ships the right thing, not just the next thing — outcome-obsessed, user-grounded, and diplomatically ruthless about focus.",
+          "emoji": "🧭",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "product-sprint-prioritizer",
+        "description": "内置产品 AI 员工，适合处理冲刺优先级规划师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/product/product-sprint-prioritizer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "冲刺优先级规划师",
+          "category": "产品",
+          "agencyCategory": "product",
+          "agencyPath": "product/product-sprint-prioritizer.md",
+          "originalDescription": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource allocation. Focused on maximizing team velocity and business value delivery through data-driven prioritization frameworks.",
+          "vibe": "Maximizes sprint value through data-driven prioritization and ruthless focus.",
+          "emoji": "🎯",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "green"
+      },
+      {
+        "id": "product-trend-researcher",
+        "description": "内置产品 AI 员工，适合处理趋势研究员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/product/product-trend-researcher.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "趋势研究员",
+          "category": "产品",
+          "agencyCategory": "product",
+          "agencyPath": "product/product-trend-researcher.md",
+          "originalDescription": "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity assessment. Focused on providing actionable insights that drive product strategy and innovation decisions.",
+          "vibe": "Spots emerging trends before they hit the mainstream.",
+          "emoji": "🔭",
+          "agencyTools": "WebFetch, WebSearch, Read, Write, Edit"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "project-management-experiment-tracker",
+        "description": "内置项目管理 AI 员工，适合处理项目Management实验Tracker相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/project-management/project-management-experiment-tracker.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "项目Management实验Tracker",
+          "category": "项目管理",
+          "agencyCategory": "project-management",
+          "agencyPath": "project-management/project-management-experiment-tracker.md",
+          "originalDescription": "Expert project manager specializing in experiment design, execution tracking, and data-driven decision making. Focused on managing A/B tests, feature experiments, and hypothesis validation through systematic experimentation and rigorous analysis.",
+          "vibe": "Designs experiments, tracks results, and lets the data decide.",
+          "emoji": "🧪"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "project-management-jira-workflow-steward",
+        "description": "内置项目管理 AI 员工，适合处理项目ManagementJira工作流管家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/project-management/project-management-jira-workflow-steward.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "项目ManagementJira工作流管家",
+          "category": "项目管理",
+          "agencyCategory": "project-management",
+          "agencyPath": "project-management/project-management-jira-workflow-steward.md",
+          "originalDescription": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull requests, and release-safe branch strategy across software teams.",
+          "vibe": "Enforces traceable commits, structured PRs, and release-safe branch strategy.",
+          "emoji": "📋"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "project-management-project-shepherd",
+        "description": "内置项目管理 AI 员工，适合处理项目推进管家相关任务。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/project-management/project-management-project-shepherd.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "项目推进管家",
+          "category": "项目管理",
+          "agencyCategory": "project-management",
+          "agencyPath": "project-management/project-management-project-shepherd.md",
+          "originalDescription": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment. Focused on shepherding projects from conception to completion while managing resources, risks, and communications across multiple teams and departments.",
+          "vibe": "Herds cross-functional chaos into on-time, on-scope delivery.",
+          "emoji": "🐑"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "project-management-studio-operations",
+        "description": "内置项目管理 AI 员工，适合处理项目Management工作室Operations相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/project-management/project-management-studio-operations.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "项目Management工作室Operations",
+          "category": "项目管理",
+          "agencyCategory": "project-management",
+          "agencyPath": "project-management/project-management-studio-operations.md",
+          "originalDescription": "Expert operations manager specializing in day-to-day studio efficiency, process optimization, and resource coordination. Focused on ensuring smooth operations, maintaining productivity standards, and supporting all teams with the tools and processes needed for success.",
+          "vibe": "Keeps the studio running smoothly — processes, tools, and people in sync.",
+          "emoji": "🏭"
+        },
+        "color": "green"
+      },
+      {
+        "id": "project-management-studio-producer",
+        "description": "内置项目管理 AI 员工，适合处理工作室制片人相关任务。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/project-management/project-management-studio-producer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "工作室制片人",
+          "category": "项目管理",
+          "agencyCategory": "project-management",
+          "agencyPath": "project-management/project-management-studio-producer.md",
+          "originalDescription": "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, and multi-project portfolio management. Focused on aligning creative vision with business objectives while managing complex cross-functional initiatives and ensuring optimal studio operations.",
+          "vibe": "Aligns creative vision with business objectives across complex initiatives.",
+          "emoji": "🎬"
+        },
+        "color": "gold"
+      },
+      {
+        "id": "project-manager-senior",
+        "description": "内置项目管理 AI 员工，适合处理高级项目经理相关任务。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/project-management/project-manager-senior.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "高级项目经理",
+          "category": "项目管理",
+          "agencyCategory": "project-management",
+          "agencyPath": "project-management/project-manager-senior.md",
+          "originalDescription": "Converts specs to tasks and remembers previous projects. Focused on realistic scope, no background processes, exact spec requirements",
+          "vibe": "Converts specs to tasks with realistic scope — no gold-plating, no fantasy.",
+          "emoji": "📝"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "sales-account-strategist",
+        "description": "内置销售 AI 员工，适合处理客户策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-account-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "客户策略师",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-account-strategist.md",
+          "originalDescription": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention. Turns closed deals into long-term platform relationships through systematic expansion planning and multi-threaded account development.",
+          "vibe": "Maps the org, finds the whitespace, and turns customers into platforms.",
+          "emoji": "🗺️"
+        },
+        "color": "#2E7D32"
+      },
+      {
+        "id": "sales-coach",
+        "description": "内置销售 AI 员工，适合处理教练相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-coach.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "教练",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-coach.md",
+          "originalDescription": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy. Makes every rep and every deal better through structured coaching methodology and behavioral feedback.",
+          "vibe": "Asks the question that makes the rep rethink the entire deal.",
+          "emoji": "🏋️"
+        },
+        "color": "#E65100"
+      },
+      {
+        "id": "sales-deal-strategist",
+        "description": "内置销售 AI 员工，适合处理交易策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-deal-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "交易策略师",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-deal-strategist.md",
+          "originalDescription": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B sales cycles. Scores opportunities, exposes pipeline risk, and builds deal strategies that survive forecast review.",
+          "vibe": "Qualifies deals like a surgeon and kills happy ears on contact.",
+          "emoji": "♟️"
+        },
+        "color": "#1B4D3E"
+      },
+      {
+        "id": "sales-discovery-coach",
+        "description": "内置销售 AI 员工，适合处理需求发现教练相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-discovery-coach.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "需求发现教练",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-discovery-coach.md",
+          "originalDescription": "Coaches sales teams on elite discovery methodology — question design, current-state mapping, gap quantification, and call structure that surfaces real buying motivation.",
+          "vibe": "Asks one more question than everyone else — and that's the one that closes the deal.",
+          "emoji": "🔍"
+        },
+        "color": "#5C7CFA"
+      },
+      {
+        "id": "sales-engineer",
+        "description": "内置销售 AI 员工，适合处理工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "工程师",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-engineer.md",
+          "originalDescription": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes. Wins the technical decision so the deal can close.",
+          "vibe": "Wins the technical decision before the deal even hits procurement.",
+          "emoji": "🛠️"
+        },
+        "color": "#2E5090"
+      },
+      {
+        "id": "sales-outbound-strategist",
+        "description": "内置销售 AI 员工，适合处理外呼策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-outbound-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "外呼策略师",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-outbound-strategist.md",
+          "originalDescription": "Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline through research-driven personalization — not volume.",
+          "vibe": "Turns buying signals into booked meetings before the competition even notices.",
+          "emoji": "🎯"
+        },
+        "color": "#E8590C"
+      },
+      {
+        "id": "sales-pipeline-analyst",
+        "description": "内置销售 AI 员工，适合处理管道分析师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-pipeline-analyst.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "管道分析师",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-pipeline-analyst.md",
+          "originalDescription": "Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and data-driven sales coaching. Turns CRM data into actionable pipeline intelligence that surfaces risks before they become missed quarters.",
+          "vibe": "Tells you your forecast is wrong before you realize it yourself.",
+          "emoji": "📊"
+        },
+        "color": "#059669"
+      },
+      {
+        "id": "sales-proposal-strategist",
+        "description": "内置销售 AI 员工，适合处理方案策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/sales/sales-proposal-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "方案策略师",
+          "category": "销售",
+          "agencyCategory": "sales",
+          "agencyPath": "sales/sales-proposal-strategist.md",
+          "originalDescription": "Strategic proposal architect who transforms RFPs and sales opportunities into compelling win narratives. Specializes in win theme development, competitive positioning, executive summary craft, and building proposals that persuade rather than merely comply.",
+          "vibe": "Turns RFP responses into stories buyers can't put down.",
+          "emoji": "🏹"
+        },
+        "color": "#2563EB"
+      },
+      {
+        "id": "macos-spatial-metal-engineer",
+        "description": "内置空间计算 AI 员工，适合处理macOS空间Metal工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/spatial-computing/macos-spatial-metal-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "macOS空间Metal工程师",
+          "category": "空间计算",
+          "agencyCategory": "spatial-computing",
+          "agencyPath": "spatial-computing/macos-spatial-metal-engineer.md",
+          "originalDescription": "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for macOS and Vision Pro",
+          "vibe": "Pushes Metal to its limits for 3D rendering on macOS and Vision Pro.",
+          "emoji": "🍎"
+        },
+        "color": "metallic-blue"
+      },
+      {
+        "id": "terminal-integration-specialist",
+        "description": "内置空间计算 AI 员工，适合处理Terminal集成专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/spatial-computing/terminal-integration-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Terminal集成专家",
+          "category": "空间计算",
+          "agencyCategory": "spatial-computing",
+          "agencyPath": "spatial-computing/terminal-integration-specialist.md",
+          "originalDescription": "Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications",
+          "vibe": "Masters terminal emulation and text rendering in modern Swift applications.",
+          "emoji": "🖥️"
+        },
+        "color": "green"
+      },
+      {
+        "id": "visionos-spatial-engineer",
+        "description": "内置空间计算 AI 员工，适合处理visionOS空间工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/spatial-computing/visionos-spatial-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "visionOS空间工程师",
+          "category": "空间计算",
+          "agencyCategory": "spatial-computing",
+          "agencyPath": "spatial-computing/visionos-spatial-engineer.md",
+          "originalDescription": "Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation",
+          "vibe": "Builds native volumetric interfaces and Liquid Glass experiences for visionOS.",
+          "emoji": "🥽"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "xr-cockpit-interaction-specialist",
+        "description": "内置空间计算 AI 员工，适合处理XRCockpitInteraction专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/spatial-computing/xr-cockpit-interaction-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "XRCockpitInteraction专家",
+          "category": "空间计算",
+          "agencyCategory": "spatial-computing",
+          "agencyPath": "spatial-computing/xr-cockpit-interaction-specialist.md",
+          "originalDescription": "Specialist in designing and developing immersive cockpit-based control systems for XR environments",
+          "vibe": "Designs immersive cockpit control systems that feel natural in XR.",
+          "emoji": "🕹️"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "xr-immersive-developer",
+        "description": "内置空间计算 AI 员工，适合处理XR沉浸式开发者相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/spatial-computing/xr-immersive-developer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "XR沉浸式开发者",
+          "category": "空间计算",
+          "agencyCategory": "spatial-computing",
+          "agencyPath": "spatial-computing/xr-immersive-developer.md",
+          "originalDescription": "Expert WebXR and immersive technology developer with specialization in browser-based AR/VR/XR applications",
+          "vibe": "Builds browser-based AR/VR/XR experiences that push WebXR to its limits.",
+          "emoji": "🌐"
+        },
+        "color": "neon-cyan"
+      },
+      {
+        "id": "xr-interface-architect",
+        "description": "内置空间计算 AI 员工，适合处理XR界面架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/spatial-computing/xr-interface-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "XR界面架构师",
+          "category": "空间计算",
+          "agencyCategory": "spatial-computing",
+          "agencyPath": "spatial-computing/xr-interface-architect.md",
+          "originalDescription": "Spatial interaction designer and interface strategist for immersive AR/VR/XR environments",
+          "vibe": "Designs spatial interfaces where interaction feels like instinct, not instruction.",
+          "emoji": "🫧"
+        },
+        "color": "neon-green"
+      },
+      {
+        "id": "accounts-payable-agent",
+        "description": "内置专项能力 AI 员工，适合处理应付账款应付Agent相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/accounts-payable-agent.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "应付账款应付Agent",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/accounts-payable-agent.md",
+          "originalDescription": "Autonomous payment processing specialist that executes vendor payments, contractor invoices, and recurring bills across any payment rail — crypto, fiat, stablecoins. Integrates with AI agent workflows via tool calls.",
+          "vibe": "Moves money across any rail — crypto, fiat, stablecoins — so you don't have to.",
+          "emoji": "💸"
+        },
+        "color": "green"
+      },
+      {
+        "id": "agentic-identity-trust",
+        "description": "内置专项能力 AI 员工，适合处理智能体身份Trust相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/agentic-identity-trust.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "智能体身份Trust",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/agentic-identity-trust.md",
+          "originalDescription": "Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent environments. Ensures agents can prove who they are, what they're authorized to do, and what they actually did.",
+          "vibe": "Ensures every AI agent can prove who it is, what it's allowed to do, and what it actually did.",
+          "emoji": "🔐"
+        },
+        "color": "#2d5a27"
+      },
+      {
+        "id": "agents-orchestrator",
+        "description": "内置专项能力 AI 员工，适合处理Agent 编排总控相关任务。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/specialized/agents-orchestrator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Agent 编排总控",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/agents-orchestrator.md",
+          "originalDescription": "Autonomous pipeline manager that orchestrates the entire development workflow. You are the leader of this process.",
+          "vibe": "The conductor who runs the entire dev pipeline from spec to ship.",
+          "emoji": "🎛️"
+        },
+        "color": "cyan"
+      },
+      {
+        "id": "automation-governance-architect",
+        "description": "内置专项能力 AI 员工，适合处理Automation治理架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/automation-governance-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Automation治理架构师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/automation-governance-architect.md",
+          "originalDescription": "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation.",
+          "vibe": "Calm, skeptical, and operations-focused. Prefer reliable systems over automation hype.",
+          "emoji": "⚙️"
+        },
+        "color": "cyan"
+      },
+      {
+        "id": "blockchain-security-auditor",
+        "description": "内置专项能力 AI 员工，适合处理区块链安全审计员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/blockchain-security-auditor.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "区块链安全审计员",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/blockchain-security-auditor.md",
+          "originalDescription": "Expert smart contract security auditor specializing in vulnerability detection, formal verification, exploit analysis, and comprehensive audit report writing for DeFi protocols and blockchain applications.",
+          "vibe": "Finds the exploit in your smart contract before the attacker does.",
+          "emoji": "🛡️"
+        },
+        "color": "red"
+      },
+      {
+        "id": "compliance-auditor",
+        "description": "内置专项能力 AI 员工，适合处理合规审计员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/compliance-auditor.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "合规审计员",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/compliance-auditor.md",
+          "originalDescription": "Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits — from readiness assessment through evidence collection to certification.",
+          "vibe": "Walks you from readiness assessment through evidence collection to SOC 2 certification.",
+          "emoji": "📋"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "corporate-training-designer",
+        "description": "内置专项能力 AI 员工，适合处理企业培训设计师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/corporate-training-designer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "企业培训设计师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/corporate-training-designer.md",
+          "originalDescription": "Expert in enterprise training system design and curriculum development — proficient in training needs analysis, instructional design methodology, blended learning program design, internal trainer development, leadership programs, and training effectiveness evaluation and continuous optimization.",
+          "vibe": "Designs training programs that drive real behavior change — from needs analysis to Kirkpatrick Level 3 evaluation — because good training is measured by what learners do, not what instructors say.",
+          "emoji": "📚"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "customer-service",
+        "description": "内置专项能力 AI 员工，适合处理客户服务相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/customer-service.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "客户服务",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/customer-service.md",
+          "originalDescription": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction",
+          "vibe": "Every customer interaction is a chance to turn a problem into loyalty — handle it with care, speed, and a human touch.",
+          "emoji": "🎧"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "data-consolidation-agent",
+        "description": "内置专项能力 AI 员工，适合处理数据整合Agent相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/data-consolidation-agent.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "数据整合Agent",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/data-consolidation-agent.md",
+          "originalDescription": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries",
+          "vibe": "Consolidates scattered sales data into live reporting dashboards.",
+          "emoji": "🗄️"
+        },
+        "color": "#38a169"
+      },
+      {
+        "id": "government-digital-presales-consultant",
+        "description": "内置专项能力 AI 员工，适合处理政务数字化售前顾问相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/government-digital-presales-consultant.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "政务数字化售前顾问",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/government-digital-presales-consultant.md",
+          "originalDescription": "Presales expert for China's government digital transformation market (ToG), proficient in policy interpretation, solution design, bid document preparation, POC validation, compliance requirements (classified protection/cryptographic assessment/Xinchuang domestic IT), and stakeholder management — helping technical teams efficiently win government IT projects.",
+          "vibe": "Navigates the Chinese government IT procurement maze — from policy signals to winning bids — so your team lands digital transformation projects.",
+          "emoji": "🏛️"
+        },
+        "color": "#8B0000"
+      },
+      {
+        "id": "healthcare-customer-service",
+        "description": "内置专项能力 AI 员工，适合处理医疗客户服务相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/healthcare-customer-service.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "医疗客户服务",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/healthcare-customer-service.md",
+          "originalDescription": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff",
+          "vibe": "Every patient deserves to feel heard, respected, and supported — especially when they're scared, confused, or frustrated.",
+          "emoji": "🏥"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "healthcare-marketing-compliance",
+        "description": "内置专项能力 AI 员工，适合处理医疗营销合规相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/healthcare-marketing-compliance.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "医疗营销合规",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/healthcare-marketing-compliance.md",
+          "originalDescription": "Expert in healthcare marketing compliance in China, proficient in the Advertising Law, Medical Advertisement Management Measures, Drug Administration Law, and related regulations — covering pharmaceuticals, medical devices, medical aesthetics, health supplements, and internet healthcare across content review, risk control, platform rule interpretation, and patient privacy protection, helping enterprises conduct effective health marketing within legal boundaries.",
+          "vibe": "Keeps your healthcare marketing legal in China's tightly regulated landscape — reviewing content, flagging violations, and finding creative space within compliance boundaries.",
+          "emoji": "⚕️"
+        },
+        "color": "#2E8B57"
+      },
+      {
+        "id": "hospitality-guest-services",
+        "description": "内置专项能力 AI 员工，适合处理酒店服务宾客服务相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/hospitality-guest-services.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "酒店服务宾客服务",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/hospitality-guest-services.md",
+          "originalDescription": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue",
+          "vibe": "Hospitality is not a transaction — it's a feeling. Every guest interaction is an opportunity to create a memory, earn a return visit, and generate a five-star review.",
+          "emoji": "🏨"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "hr-onboarding",
+        "description": "内置专项能力 AI 员工，适合处理人力资源入门相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/hr-onboarding.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "人力资源入门",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/hr-onboarding.md",
+          "originalDescription": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity",
+          "vibe": "The first 90 days determine whether a new hire becomes a long-term contributor or a regrettable turnover. Get it right from day one.",
+          "emoji": "🤝"
+        },
+        "color": "green"
+      },
+      {
+        "id": "identity-graph-operator",
+        "description": "内置专项能力 AI 员工，适合处理身份图谱运营员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/identity-graph-operator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "身份图谱运营员",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/identity-graph-operator.md",
+          "originalDescription": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes.",
+          "vibe": "Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this?\"",
+          "emoji": "🕸️"
+        },
+        "color": "#C5A572"
+      },
+      {
+        "id": "language-translator",
+        "description": "内置专项能力 AI 员工，适合处理语言翻译相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/language-translator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "语言翻译",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/language-translator.md",
+          "originalDescription": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations",
+          "vibe": "Bridges languages with precision, cultural respect, and the fluency of a native speaker who's lived in both worlds.",
+          "emoji": "🌐"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "legal-billing-time-tracking",
+        "description": "内置专项能力 AI 员工，适合处理法务计费工时追踪相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/legal-billing-time-tracking.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "法务计费工时追踪",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/legal-billing-time-tracking.md",
+          "originalDescription": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model",
+          "vibe": "Every six minutes of unbilled time is money left on the table. Every unclear billing narrative is a client dispute waiting to happen. Capture it all. Describe it clearly. Collect it professionally.",
+          "emoji": "⏱️"
+        },
+        "color": "green"
+      },
+      {
+        "id": "legal-client-intake",
+        "description": "内置专项能力 AI 员工，适合处理法务Client接待相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/legal-client-intake.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "法务Client接待",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/legal-client-intake.md",
+          "originalDescription": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size",
+          "vibe": "The first conversation with a potential client sets the tone for the entire attorney-client relationship. Get it right — warm, professional, and thorough — from the very first touch.",
+          "emoji": "📋"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "legal-document-review",
+        "description": "内置专项能力 AI 员工，适合处理法务文档审查相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/legal-document-review.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "法务文档审查",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/legal-document-review.md",
+          "originalDescription": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area",
+          "vibe": "Every word in a legal document matters. Every missed clause is a liability. Every risk caught early is a client protected.",
+          "emoji": "⚖️"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "loan-officer-assistant",
+        "description": "内置专项能力 AI 员工，适合处理贷款专员Assistant相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/loan-officer-assistant.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "贷款专员Assistant",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/loan-officer-assistant.md",
+          "originalDescription": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending",
+          "vibe": "Every loan is someone's dream — a home, a business, a fresh start. Move it through the pipeline with precision, compliance, and genuine care for the person behind the application.",
+          "emoji": "🏦"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "lsp-index-engineer",
+        "description": "内置专项能力 AI 员工，适合处理LSPIndex工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/lsp-index-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "LSPIndex工程师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/lsp-index-engineer.md",
+          "originalDescription": "Language Server Protocol specialist building unified code intelligence systems through LSP client orchestration and semantic indexing",
+          "vibe": "Builds unified code intelligence through LSP orchestration and semantic indexing.",
+          "emoji": "🔎"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "real-estate-buyer-seller",
+        "description": "内置专项能力 AI 员工，适合处理房地产Estate买方卖方相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/real-estate-buyer-seller.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "房地产Estate买方卖方",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/real-estate-buyer-seller.md",
+          "originalDescription": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate",
+          "vibe": "Every transaction is someone's biggest financial decision. Every client deserves an agent who is organized, responsive, and genuinely invested in their outcome — not just the commission check.",
+          "emoji": "🏠"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "recruitment-specialist",
+        "description": "内置专项能力 AI 员工，适合处理Recruitment专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/recruitment-specialist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Recruitment专家",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/recruitment-specialist.md",
+          "originalDescription": "Expert recruitment operations and talent acquisition specialist — skilled in China's major hiring platforms, talent assessment frameworks, and labor law compliance. Helps companies efficiently attract, screen, and retain top talent while building a competitive employer brand.",
+          "vibe": "Builds your full-cycle recruiting engine across China's hiring platforms, from sourcing to onboarding to compliance.",
+          "emoji": "🎯"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "report-distribution-agent",
+        "description": "内置专项能力 AI 员工，适合处理报告分发Agent相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/report-distribution-agent.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "报告分发Agent",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/report-distribution-agent.md",
+          "originalDescription": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters",
+          "vibe": "Automates delivery of consolidated sales reports to the right reps.",
+          "emoji": "📤"
+        },
+        "color": "#d69e2e"
+      },
+      {
+        "id": "retail-customer-returns",
+        "description": "内置专项能力 AI 员工，适合处理零售客户退货相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/retail-customer-returns.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "零售客户退货",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/retail-customer-returns.md",
+          "originalDescription": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty",
+          "vibe": "A return is not a failure — it's an opportunity. Handle it with speed, fairness, and genuine care, and you'll turn a disappointed customer into a loyal one.",
+          "emoji": "🛒"
+        },
+        "color": "amber"
+      },
+      {
+        "id": "sales-data-extraction-agent",
+        "description": "内置专项能力 AI 员工，适合处理数据提取Agent相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/sales-data-extraction-agent.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "数据提取Agent",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/sales-data-extraction-agent.md",
+          "originalDescription": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting",
+          "vibe": "Watches your Excel files and extracts the metrics that matter.",
+          "emoji": "📊"
+        },
+        "color": "#2b6cb0"
+      },
+      {
+        "id": "sales-outreach",
+        "description": "内置专项能力 AI 员工，适合处理Outreach相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/sales-outreach.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Outreach",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/sales-outreach.md",
+          "originalDescription": "Consultative B2B sales outreach specialist for cold prospecting, lead follow-up, objection handling, proposal writing, and pipeline management — combining data-driven targeting with genuine relationship-building to open doors and close deals",
+          "vibe": "The best salespeople don't sell — they help people buy. Every outreach is a conversation starter, not a pitch.",
+          "emoji": "🎯"
+        },
+        "color": "amber"
+      },
+      {
+        "id": "specialized-chief-of-staff",
+        "description": "内置专项能力 AI 员工，适合处理幕僚长相关任务。",
+        "mode": "primary",
+        "prompt": {
+          "file": "./agents/specialized/specialized-chief-of-staff.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "幕僚长",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-chief-of-staff.md",
+          "originalDescription": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly.",
+          "vibe": "I don't own any function. I own the space between all of them.",
+          "emoji": "🧭"
+        },
+        "color": "#6B7280"
+      },
+      {
+        "id": "specialized-civil-engineer",
+        "description": "内置专项能力 AI 员工，适合处理土木工程师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-civil-engineer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "土木工程师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-civil-engineer.md",
+          "originalDescription": "Expert civil and structural engineer with global standards coverage — Eurocode, DIN, ACI, AISC, ASCE, AS/NZS, CSA, GB, IS, AIJ, and more. Specializes in structural analysis, geotechnical design, construction documentation, building code compliance, and multi-standard international projects.",
+          "vibe": "Designs structures that stand across borders — from seismic Tokyo to wind-swept Dubai, always code-compliant and constructible.",
+          "emoji": "🏗️"
+        },
+        "color": "yellow"
+      },
+      {
+        "id": "specialized-cultural-intelligence-strategist",
+        "description": "内置专项能力 AI 员工，适合处理文化智能策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-cultural-intelligence-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "文化智能策略师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-cultural-intelligence-strategist.md",
+          "originalDescription": "CQ specialist that detects invisible exclusion, researches global context, and ensures software resonates authentically across intersectional identities.",
+          "vibe": "Detects invisible exclusion and ensures your software resonates across cultures.",
+          "emoji": "🌍"
+        },
+        "color": "#FFA000"
+      },
+      {
+        "id": "specialized-developer-advocate",
+        "description": "内置专项能力 AI 员工，适合处理开发者布道师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-developer-advocate.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "开发者布道师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-developer-advocate.md",
+          "originalDescription": "Expert developer advocate specializing in building developer communities, creating compelling technical content, optimizing developer experience (DX), and driving platform adoption through authentic engineering engagement. Bridges product and engineering teams with external developers.",
+          "vibe": "Bridges your product team and the developer community through authentic engagement.",
+          "emoji": "🗣️"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "specialized-document-generator",
+        "description": "内置专项能力 AI 员工，适合处理文档Generator相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-document-generator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "文档Generator",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-document-generator.md",
+          "originalDescription": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization.",
+          "vibe": "Professional documents from code — PDFs, slides, spreadsheets, and reports.",
+          "emoji": "📄"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "specialized-french-consulting-market",
+        "description": "内置专项能力 AI 员工，适合处理FrenchConsulting市场相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-french-consulting-market.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "FrenchConsulting市场",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-french-consulting-market.md",
+          "originalDescription": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities",
+          "vibe": "The insider who decodes the opaque French consulting food chain so freelancers stop leaving money on the table",
+          "emoji": "🇫🇷"
+        },
+        "color": "#002395"
+      },
+      {
+        "id": "specialized-korean-business-navigator",
+        "description": "内置专项能力 AI 员工，适合处理韩国BusinessNavigator相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-korean-business-navigator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "韩国BusinessNavigator",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-korean-business-navigator.md",
+          "originalDescription": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics",
+          "vibe": "The bridge between Western directness and Korean relationship dynamics — reads the room so you don't torch the deal",
+          "emoji": "🇰🇷"
+        },
+        "color": "#003478"
+      },
+      {
+        "id": "specialized-mcp-builder",
+        "description": "内置专项能力 AI 员工，适合处理MCP构建专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-mcp-builder.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "MCP构建专家",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-mcp-builder.md",
+          "originalDescription": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts.",
+          "vibe": "Builds the tools that make AI agents actually useful in the real world.",
+          "emoji": "🔌"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "specialized-model-qa",
+        "description": "内置专项能力 AI 员工，适合处理模型QA相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-model-qa.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "模型QA",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-model-qa.md",
+          "originalDescription": "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconstruction to replication, calibration testing, interpretability analysis, performance monitoring, and audit-grade reporting.",
+          "vibe": "Audits ML models end-to-end — from data reconstruction to calibration testing.",
+          "emoji": "🔬"
+        },
+        "color": "#B22222"
+      },
+      {
+        "id": "specialized-salesforce-architect",
+        "description": "内置专项能力 AI 员工，适合处理Salesforce架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-salesforce-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Salesforce架构师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-salesforce-architect.md",
+          "originalDescription": "Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model governance for enterprise-scale orgs",
+          "vibe": "The calm hand that turns a tangled Salesforce org into an architecture that scales — one governor limit at a time",
+          "emoji": "☁️"
+        },
+        "color": "#00A1E0"
+      },
+      {
+        "id": "specialized-workflow-architect",
+        "description": "内置专项能力 AI 员工，适合处理工作流架构师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/specialized-workflow-architect.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "工作流架构师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/specialized-workflow-architect.md",
+          "originalDescription": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agent interaction — covering happy paths, all branch conditions, failure modes, recovery paths, handoff contracts, and observable states to produce build-ready specs that agents can implement against and QA can test against.",
+          "vibe": "Every path the system can take — mapped, named, and specified before a single line is written.",
+          "emoji": "\\U0001F5FA\\uFE0F"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "study-abroad-advisor",
+        "description": "内置专项能力 AI 员工，适合处理留学AbroadAdvisor相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/study-abroad-advisor.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "留学AbroadAdvisor",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/study-abroad-advisor.md",
+          "originalDescription": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans.",
+          "vibe": "Guides Chinese students through the entire study abroad journey — from school selection and essays to visas — with data-driven advice and zero anxiety selling.",
+          "emoji": "🎓"
+        },
+        "color": "#1B4D3E"
+      },
+      {
+        "id": "supply-chain-strategist",
+        "description": "内置专项能力 AI 员工，适合处理供应链Chain策略师相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/supply-chain-strategist.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "供应链Chain策略师",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/supply-chain-strategist.md",
+          "originalDescription": "Expert supply chain management and procurement strategy specialist — skilled in supplier development, strategic sourcing, quality control, and supply chain digitalization. Grounded in China's manufacturing ecosystem, helps companies build efficient, resilient, and sustainable supply chains.",
+          "vibe": "Builds your procurement engine and supply chain resilience across China's manufacturing ecosystem, from supplier sourcing to risk management.",
+          "emoji": "🔗"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "zk-steward",
+        "description": "内置专项能力 AI 员工，适合处理知识库管家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/specialized/zk-steward.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "知识库管家",
+          "category": "专项能力",
+          "agencyCategory": "specialized",
+          "agencyPath": "specialized/zk-steward.md",
+          "originalDescription": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support.",
+          "vibe": "Channels Luhmann's Zettelkasten to build connected, validated knowledge bases.",
+          "emoji": "🗃️"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "support-analytics-reporter",
+        "description": "内置支持运营 AI 员工，适合处理分析Reporter相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/support/support-analytics-reporter.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "分析Reporter",
+          "category": "支持运营",
+          "agencyCategory": "support",
+          "agencyPath": "support/support-analytics-reporter.md",
+          "originalDescription": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting.",
+          "vibe": "Transforms raw data into the insights that drive your next decision.",
+          "emoji": "📊"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "support-executive-summary-generator",
+        "description": "内置支持运营 AI 员工，适合处理高管SummaryGenerator相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/support/support-executive-summary-generator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "高管SummaryGenerator",
+          "category": "支持运营",
+          "agencyCategory": "support",
+          "agencyPath": "support/support-executive-summary-generator.md",
+          "originalDescription": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers.",
+          "vibe": "Thinks like a McKinsey consultant, writes for the C-suite.",
+          "emoji": "📝"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "support-finance-tracker",
+        "description": "内置支持运营 AI 员工，适合处理财务Tracker相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/support/support-finance-tracker.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "财务Tracker",
+          "category": "支持运营",
+          "agencyCategory": "support",
+          "agencyPath": "support/support-finance-tracker.md",
+          "originalDescription": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth.",
+          "vibe": "Keeps the books clean, the cash flowing, and the forecasts honest.",
+          "emoji": "💰"
+        },
+        "color": "green"
+      },
+      {
+        "id": "support-infrastructure-maintainer",
+        "description": "内置支持运营 AI 员工，适合处理基础设施维护员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/support/support-infrastructure-maintainer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "基础设施维护员",
+          "category": "支持运营",
+          "agencyCategory": "support",
+          "agencyPath": "support/support-infrastructure-maintainer.md",
+          "originalDescription": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency.",
+          "vibe": "Keeps the lights on, the servers humming, and the alerts quiet.",
+          "emoji": "🏢"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "support-legal-compliance-checker",
+        "description": "内置支持运营 AI 员工，适合处理法务合规Checker相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/support/support-legal-compliance-checker.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "法务合规Checker",
+          "category": "支持运营",
+          "agencyCategory": "support",
+          "agencyPath": "support/support-legal-compliance-checker.md",
+          "originalDescription": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions.",
+          "vibe": "Ensures your operations comply with the law across every jurisdiction that matters.",
+          "emoji": "⚖️"
+        },
+        "color": "red"
+      },
+      {
+        "id": "support-support-responder",
+        "description": "内置支持运营 AI 员工，适合处理支持响应员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/support/support-support-responder.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "支持响应员",
+          "category": "支持运营",
+          "agencyCategory": "support",
+          "agencyPath": "support/support-support-responder.md",
+          "originalDescription": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences.",
+          "vibe": "Turns frustrated users into loyal advocates, one interaction at a time.",
+          "emoji": "💬"
+        },
+        "color": "blue"
+      },
+      {
+        "id": "testing-accessibility-auditor",
+        "description": "内置测试 AI 员工，适合处理无障碍审计员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-accessibility-auditor.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "无障碍审计员",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-accessibility-auditor.md",
+          "originalDescription": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ensures inclusive design. Defaults to finding barriers — if it's not tested with a screen reader, it's not accessible.",
+          "vibe": "If it's not tested with a screen reader, it's not accessible.",
+          "emoji": "♿"
+        },
+        "color": "#0077B6"
+      },
+      {
+        "id": "testing-api-tester",
+        "description": "内置测试 AI 员工，适合处理API测试员相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-api-tester.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "API测试员",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-api-tester.md",
+          "originalDescription": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations",
+          "vibe": "Breaks your API before your users do.",
+          "emoji": "🔌"
+        },
+        "color": "purple"
+      },
+      {
+        "id": "testing-evidence-collector",
+        "description": "内置测试 AI 员工，适合处理EvidenceCollector相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-evidence-collector.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "EvidenceCollector",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-evidence-collector.md",
+          "originalDescription": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything",
+          "vibe": "Screenshot-obsessed QA who won't approve anything without visual proof.",
+          "emoji": "📸"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "testing-performance-benchmarker",
+        "description": "内置测试 AI 员工，适合处理PerformanceBenchmarker相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-performance-benchmarker.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "PerformanceBenchmarker",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-performance-benchmarker.md",
+          "originalDescription": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure",
+          "vibe": "Measures everything, optimizes what matters, and proves the improvement.",
+          "emoji": "⏱️"
+        },
+        "color": "orange"
+      },
+      {
+        "id": "testing-reality-checker",
+        "description": "内置测试 AI 员工，适合处理真实验收Checker相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-reality-checker.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "真实验收Checker",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-reality-checker.md",
+          "originalDescription": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness",
+          "vibe": "Defaults to \"NEEDS WORK\" — requires overwhelming proof for production readiness.",
+          "emoji": "🧐"
+        },
+        "color": "red"
+      },
+      {
+        "id": "testing-test-results-analyzer",
+        "description": "内置测试 AI 员工，适合处理Test结果Analyzer相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-test-results-analyzer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "Test结果Analyzer",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-test-results-analyzer.md",
+          "originalDescription": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities",
+          "vibe": "Reads test results like a detective reads evidence — nothing gets past.",
+          "emoji": "📋"
+        },
+        "color": "indigo"
+      },
+      {
+        "id": "testing-tool-evaluator",
+        "description": "内置测试 AI 员工，适合处理工具Evaluator相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-tool-evaluator.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "工具Evaluator",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-tool-evaluator.md",
+          "originalDescription": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization",
+          "vibe": "Tests and recommends the right tools so your team doesn't waste time on the wrong ones.",
+          "emoji": "🔧"
+        },
+        "color": "teal"
+      },
+      {
+        "id": "testing-workflow-optimizer",
+        "description": "内置测试 AI 员工，适合处理工作流优化专家相关任务。",
+        "mode": "subagent",
+        "prompt": {
+          "file": "./agents/testing/testing-workflow-optimizer.md"
+        },
+        "permission": {
+          "*": "allow",
+          "question": "allow",
+          "skill": {
+            "*": "deny"
+          }
+        },
+        "options": {
+          "displayName": "工作流优化专家",
+          "category": "测试",
+          "agencyCategory": "testing",
+          "agencyPath": "testing/testing-workflow-optimizer.md",
+          "originalDescription": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency",
+          "vibe": "Finds the bottleneck, fixes the process, automates the rest.",
+          "emoji": "⚡"
+        },
+        "color": "green"
+      }
+    ]
+  },
+  "$schema": "../../catalog/schema/manifest.schema.json",
+  "engines": {
+    "novaway": ">=0.0.0"
+  }
+}

@@ -26,7 +26,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 - `com.novaway.agency-agents@1.0.0`：184 个 Agency AI 员工 Agent，覆盖研究、设计、工程、产品、项目、营销、销售与专项能力；
 - `com.novaway.mcp-suite@1.0.0`：官方 MCP 基础连接器，包含浏览器、Context7、Memory、Sequential Thinking 和腾讯文档；
 - `com.novaway.office-suite@0.3.1`：完整办公工作台，包含 9 个 Agent、14 个 Office Skill（含 Anthropic 官方 DOCX/PDF/PPTX/XLSX 技能）、Tool、Command 和内置 PPT Workflow；
-- `com.novaway.powersnexus@1.1.2`：工程技能库。
+- `com.novaway.powersnexus@1.1.3`：工程技能库。
 
 两个 Smoke 测试插件已经从源码、stable/local catalog、Release artifact、发布流程 和公开验收入口全部移除，不再作为市场插件展示。
 
@@ -70,7 +70,7 @@ NovaWay 客户端从本仓库读取 `catalog/index.json`，根据目录中的 ar
 
 `plugins/com.novaway.powersnexus` 是 NovaWay 维护的 PowersNexus（superpowers 分支）工程技能库，包含 23 个 declarative Skill（TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等），保留上游 MIT 许可证与署名。安装后的 Skill 使用 `powersnexus_` 命名空间。
 
-- 构建：`npm run build:powersnexus`，生成 `dist/com.novaway.powersnexus-1.1.2.zip`。
+- 构建：`npm run build:powersnexus`，生成 `dist/com.novaway.powersnexus-1.1.3.zip`。
 - NovaWay 源码仓库中，从 `packages/novaway` 运行：`NOVAWAY_POWERSNEXUS_ARCHIVE=<ZIP绝对路径> bun test test/plugin/powersnexus-marketplace.test.ts`。
 - 该包已从宿主内置默认种子（`DEFAULT_GLOBAL_PLUGINS` 的 Gitee git 种子）迁移为市场插件；宿主不再自动补种，需从市场安装启用。
 - 构建确定性 `--stored` ZIP，将归档放入 `artifacts/` 并校验摘要与目录一致。

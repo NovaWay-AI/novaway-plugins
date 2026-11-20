@@ -74,7 +74,7 @@ Skills speak in actions ("dispatch a subagent", "create a todo", "read a file") 
 
 ## The Rule
 
-**在当前动作直接需要某技能，或用户明确请求该技能时，先激活它。** 不要为探索、寒暄、L0 修改或仅仅“可能相关”的情况预加载技能。
+**在当前动作直接需要某技能，或用户明确请求该技能时，先激活它。** L0/L1 的 grill-me 是正式的轻量路由门禁：编码任务应经过该门禁，但需求清晰时可以零提问；不要把它误解为重型预加载。除该门禁外，不要为探索、寒暄或仅仅“可能相关”的情况预加载 brainstorming、writing-plans、OpenSpec 或 red-team。
 
 ```dot
 digraph skill_flow {

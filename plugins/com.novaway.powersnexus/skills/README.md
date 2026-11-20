@@ -6,7 +6,7 @@ A collection of agentic skills for software development workflows. Each skill gu
 
 | Skill | Description |
 |-------|-------------|
-| [brainstorming](brainstorming/) | Use for L1+ behavior or feature work after L0-L4 classification - explores user intent, requirements and design before implementation |
+| [brainstorming](brainstorming/) | Use for L2+ behavior or feature work after L0-L4 classification - explores user intent, requirements and design before implementation; L0/L1 use the lightweight gate |
 | [writing-plans](writing-plans/) | Use when you have a spec or requirements for a multi-step task, before touching code |
 | [openspec](openspec/) | Manages artifact generation, delta specs, and change lifecycle for PowersNexus |
 | [ui-ux-pro-max](ui-ux-pro-max/) | Use for UI/UX design intelligence: local design-system generation and framework-aware visual guidance |

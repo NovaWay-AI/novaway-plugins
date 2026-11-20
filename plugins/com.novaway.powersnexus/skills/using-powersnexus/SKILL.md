@@ -20,14 +20,14 @@ If you were dispatched as a subagent to execute a specific task, skip this skill
 
 ## 通用化轨道路由（双轴）
 
-先按**工作类型**（编码/非编码）分流，再按**规模**（L0-L4）分级。非编码与轻量编码从 grill-me 拷问入口开始。
+先按**工作类型**（编码/非编码）分流，再按**规模**（L0-L4）分级。非编码需求或用户主动要求“盘问”时进入 grill-me；编码 L0/L1 不因流程完整性而强制加载重型技能。
 
 | 工作类型 | 规模 | 轨道 | 入口 | 交付 |
 |---|---|---|---|---|
-| 编码 | 大/中（L2-L4） | 重型链 | brainstorming → openspec → plans → SDD → review → finish | application/library/web |
-| 编码 | 小/个人（L0-L1） | 轻量链 | **grill-me** → 实现 → 聚焦测试 → 自审 → 提交 | 默认跳过 |
-| 非编码（文档/PRD/数据/运营） | — | 非编码链 | **grill-me** → 轻量任务清单 → 执行 → document 交付 | **document** |
-| 用户主动 "grill me/盘问" | 任意 | 拷问入口 | grill-me 直入，零文档副作用 | 不适用 |
+| 编码 | L0 | 机械性任务 | 直接修改 → 聚焦验证 | 不加载流程技能 |
+| 编码 | L1 | 小型功能/缺陷 | 简短假设 → 实现 → 测试 → 自审 | 只有阻塞性未知才提问 |
+| 编码 | L2 | 中型功能/模块 | brainstorming → 计划 → 实现 → 审查 → 测试 | 设计契约 |
+| 编码 | L3/L4 | 大型功能/架构 | 完整规格 → 风险审查 → 实现 → 多阶段验证 | 完整交付工件 |
 
 **升级方向：** grill-me 拷问中暴露复杂度（跨模块/架构决策/风险中上/需文档记录）→ 单向升级 L2+，按[升级交接协议]交接给 brainstorming，brainstorming 从方案比选阶段接手、不再重问需求。反向不存在。
 
@@ -42,13 +42,15 @@ If you were dispatched as a subagent to execute a specific task, skip this skill
 
 ## Instruction Priority
 
-PowersNexus skills override default system prompt behavior, but **user instructions always take precedence**:
+安全与宿主权限始终由 NovaWay 运行时强制执行；用户的明确要求决定目标；项目指令与已激活 Skill 决定工作方法；默认提示词只提供兜底行为。
 
-1. **User's explicit instructions** (CLAUDE.md, GEMINI.md, AGENTS.md, direct requests) — highest priority
-2. **PowersNexus skills** — override default system behavior where they conflict
-3. **Default system prompt** — lowest priority
+1. **安全、权限和运行时门禁** — 最高优先级，不得由 Prompt 或 Skill 绕过
+2. **用户明确要求** — 目标、范围、语言和明确约束
+3. **项目指令** — AGENTS.md、CLAUDE.md、GEMINI.md、.novaway/rules 等
+4. **已激活的 PowersNexus Skill** — 当前阶段的工程方法
+5. **NovaWay 默认提示词** — 仅在上面没有明确规则时生效
 
-If CLAUDE.md, GEMINI.md, or AGENTS.md says "don't use TDD" and a skill says "always use TDD," follow the user's instructions. The user is in control.
+如果项目指令与 Skill 冲突，遵循项目指令；如果 Skill 与默认提示词冲突，遵循已激活 Skill，但不得违反安全、权限或用户明确要求。
 
 ## How to Access Skills
 
@@ -138,8 +140,8 @@ When multiple skills could apply, use this order:
 1. **Process skills first** (brainstorming, systematic-debugging) - these determine HOW to approach the task
 2. **Implementation skills second** (frontend-design, mcp-builder) - these guide execution
 
-"Let's build X" → 先按 L0-L4 分类；L1+ 再使用 brainstorming，然后激活实现技能。
-"Fix this bug" → systematic-debugging first, then domain-specific skills.
+"Let's build X" → 先按 L0-L4 分类；L2+ 使用 brainstorming，L1 采用简短假设并直接执行。
+"Fix this bug" → systematic-debugging first；L1 小缺陷直接聚焦修复，L2+ 再进入设计流程。
 
 ## Skill Types
 

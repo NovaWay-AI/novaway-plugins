@@ -143,7 +143,7 @@
     {
       "packageId": "com.novaway.powersnexus",
       "name": "PowersNexus",
-      "version": "1.1.1",
+      "version": "1.1.2",
       "description": "PowersNexus 工程技能库：TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等经过验证的工作流。",
       "longDescription": "NovaWay 维护的 PowersNexus（superpowers 分支）技能库，23 个 declarative Skill，保留上游 MIT 许可证与署名。安装后使用 powersnexus_ 命名空间。",
       "author": "NovaWay-AI",
@@ -176,16 +176,16 @@
         "skills"
       ],
       "permissions": [],
-      "releaseNotes": "统一澄清交互：所有需要用户回答的问题都调用 question 工具；开放式问题使用自由输入。",
+      "releaseNotes": "统一 L0-L4 路由与提示词优先级：L0/L1 轻量执行，L2+ 才进入 brainstorming；所有需要用户回答的问题使用 question 工具。",
       "artifacts": [
         {
           "type": "archive",
-          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.powersnexus-v1.1.1/com.novaway.powersnexus-1.1.1.zip",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.powersnexus-v1.1.2/com.novaway.powersnexus-1.1.2.zip",
           "repository": "NovaWay-AI/novaway-plugins",
-          "tag": "com.novaway.powersnexus-v1.1.1",
-          "asset": "com.novaway.powersnexus-1.1.1.zip",
-          "sha256": "a1e45cd2f6ebc786640297f317809f79ac015b39cef6c5f77b01de5263a272b2",
-          "size": 2184986
+          "tag": "com.novaway.powersnexus-v1.1.2",
+          "asset": "com.novaway.powersnexus-1.1.2.zip",
+          "sha256": "cfbad843a2f5c934e890ba94b5c7b0f6b54167c1830d4e356d24f76188ecc589",
+          "size": 2186014
         }
       ],
       "displayName": "PowersNexus 工程技能库",

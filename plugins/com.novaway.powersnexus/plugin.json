@@ -1,7 +1,7 @@
 {
   "apiVersion": 2,
   "name": "powersnexus",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "PowersNexus 工程技能库：TDD、系统化调试、头脑风暴、计划与执行、代码评审、子代理协作、UI/UX 等经过验证的工作流。",
   "kind": "declarative",
   "categories": [
@@ -15,7 +15,7 @@
     "skills": [
       {
         "id": "brainstorming",
-        "description": "Use for L1+ behavior or feature work after L0-L4 classification. Produces a design proportionate to task risk; L0 mechanical changes bypass this skill.",
+        "description": "Use for L2+ behavior or feature work after L0-L4 classification. Produces a design proportionate to task risk; L0/L1 lightweight changes bypass this skill.",
         "source": {
           "file": "./skills/brainstorming/SKILL.md"
         }

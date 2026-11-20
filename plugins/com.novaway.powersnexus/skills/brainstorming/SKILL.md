@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: "Use for L1+ behavior or feature work after L0-L4 classification. Produces a design proportionate to task risk; L0 mechanical changes bypass this skill."
+description: "Use for L2+ behavior or feature work after L0-L4 classification. Produces a design proportionate to task risk; L0/L1 lightweight work bypasses this skill."
 ---
 
 # Brainstorming Ideas Into Designs
@@ -10,7 +10,7 @@ Help turn ideas into fully formed designs and specs through natural collaborativ
 对 L2+，先理解项目上下文，再按风险提出必要问题并形成设计契约。L1 使用简短假设和验收说明，不展开完整设计流程。
 
 <HARD-GATE>
-L1+ 行为或功能变更，在完成与其风险相称的设计说明前，不要进入实现。L0 的机械性改动不调用本技能，直接修改并聚焦验证。
+L2+ 行为或功能变更，在完成与其风险相称的设计说明前，不要进入实现。L0/L1 轻量任务不调用本技能，直接执行简短假设、实现和聚焦验证。
 </HARD-GATE>
 
 ## 入口路由（本技能与 grill-me 的分工）
@@ -31,7 +31,7 @@ PowersNexus uses a 5-level process system. The task-size-assessor skill automati
 | **L1** | Quick Fix | small features, bug fixes | 简短假设 → 实现 → 测试 | 简短验收说明 | < 30 min |
 | **L2** | Standard | medium features, modules | 设计契约 + 计划 + 审查 + 测试 | design + tasks | 1-2 hrs |
 | **L3** | Full Process | large features, architecture | Full OpenSpec + Red Team | full docs | 4-8 hrs |
-| **L4** | Heavyweight | core architecture, major refactor | L3 + multi-review + user approval | full + review records | 1 day+ |
+| **L4** | Heavyweight | core architecture, major refactor | L3 + multi-review + explicit decision gates | full + review records | 1 day+ |
 
 **Assessment trigger:** L2+ 在 brainstorming 开始时调用 task-size-assessor；L1 可使用 CLI 快速评估，不再额外加载完整评估技能。
 
@@ -47,16 +47,16 @@ PowersNexus uses a 5-level process system. The task-size-assessor skill automati
 在 L2+ 已由 task-size-assessor 决定进入本技能后，再按请求性质选择仪式深度。开工前先说出分类（如"这看起来是 bounded，我会在这里给一份简短设计，而不是写 spec"），以便人类纠正：
 
 - **Spike** — 可行性问题（"能不能…"、"是否可能…"、"快速粗糙即可"），产出是答案而非保留的代码。用 2-3 句给出问题与探针计划，得到点头后以最低成本查明。无 design doc、无 spec。结论作为建议报告；任何临时产物标注为 throwaway。
-- **Bounded** — 对**本仓库已有代码**的范围明确改动：新增开关、小端点、单文件修复。**"熟悉这类应用"不算 bounded**——bounded 指要改的流程已在本仓库可读；若没有既有流程可改，就不是 bounded。只问关键澄清问题，给一份**对话内的简短设计**（几句话到几段），然后**停下**。只有在人类明确同意后才开始实现——bounded 的批准门槛与 architectural 一样硬。不写 spec 文件、不写实现计划文档。
+- **Bounded** — 对**本仓库已有代码**的范围明确改动：新增开关、小端点、单文件修复。**"熟悉这类应用"不算 bounded**——bounded 指要改的流程已在本仓库可读；若没有既有流程可改，就不是 bounded。只问关键澄清问题，给一份**对话内的简短设计**（几句话到几段），然后按用户授权或明确决策门继续实现。不写 spec 文件、不写实现计划文档。
 - **Architectural** — 新项目、新子系统、重构组件协作方式或改动他人依赖的接口。走完整流程：澄清问题、方案比选、分段设计、写 spec，再进入 writing-plans。
 
-每条路径都在实现前以人类批准相应设计收尾。bounded 可能只需两句话；新的 todo-list 项目属 architectural，需要写 spec 与规划交接。按所选路径伸缩工件，并在实现前完成该路径的评审。
+每条路径都在实现前完成与风险相称的设计记录。只有存在真正需要用户决策的未知项时才请求批准；自动本地交付授权下，不为正常阶段重复提问。
 
 ## Anti-Pattern: "This Is Too Simple To Need A Design"
 
-L1+ 项目都需要与风险相称的设计。L0 的文案、配置和机械性微调不进入本技能；它们以变更说明和聚焦验证替代设计工件。
+L2+ 项目都需要与风险相称的设计。L0/L1 的文案、配置、机械性微调和小型缺陷不进入本技能；它们以变更说明、聚焦测试和验收结果替代设计工件。
 
-**L1 例外：** 设计可以只有几行。若用户目标和验收条件已明确，可记录假设后直接实施；仅在关键选择未明确时请求一次澄清。
+- **L1 例外：** 设计可以只有几行。若用户目标和验收条件已明确，记录假设后直接实施；仅在关键未知项阻塞实现时请求一次澄清。
 
 ## Checklist（仅 L2+）
 
@@ -84,8 +84,8 @@ L1 已按“渐进执行规则”完成简短假设后直接进入实现和聚�
 5. **Ask clarifying questions** — MAXIMUM 8 questions total. Focus on: purpose, constraints, success criteria; prioritize the most critical questions first.
    - **第一条消息（唯一开场定义）** — 跳过流程说明（用户可以要求直接开工），直接调用 `question` 工具提出**一个开放问题**：单个句子，锚定具体时刻或画面。传 `options: []`，让用户自由输入答案。Phase 0 的上下文探查与 task-size 初评是这条消息之前的后台动作，不占消息、不发菜单。
    - **统一交互（NovaWay question 合同）** — 任何需要用户回答、澄清、选择或拍板的问题都必须调用 `question` 工具，不得在普通文本中提出问题后停止。开放式问题使用 `options: []`，让用户在自定义输入框中自由回答；封闭式问题提供 2-4 个选项。"你随便猜"或"你觉得呢"时，给出可被纠正的具体假设，而不是再抛问题。
-6. **Propose 2-3 approaches** — Use the `question` tool to present approaches with trade-offs and your recommendation (use decision expert framework). User must select one approach before proceeding.
-7. **Present design** — in sections scaled to their complexity. 默认在每段后使用 `question` 工具获取批准；已有自动本地交付授权时，在不涉及外部或不可逆操作的前提下记录设计并连续推进，只有关键未知项才提问。
+6. **Propose 2-3 approaches** — Compare trade-offs and give a recommendation. Use the `question` tool only when the choice is owned by the user and changes the acceptance criteria, scope, or an external/irreversible action; otherwise record the recommendation and continue under the active authorization.
+   - **Present design** — in sections scaled to their complexity. 只有需要用户拍板的设计决策才调用 `question`；其他设计记录直接进入下一阶段。已有自动本地交付授权时，不涉及外部或不可逆操作的设计无需重复请求批准。
 
 ### Phase 2: Quality Assurance
 8. **Risk assessment** — identify technical risks, dependencies, and mitigation strategies (Standard/Complete Paths)
@@ -118,14 +118,14 @@ digraph brainstorming {
     "Ask clarifying questions" [shape=box];
     "Propose 2-3 approaches\n(Decision Expert framework)" [shape=box];
     "Present design sections" [shape=box];
-    "User approves design?" [shape=diamond];
+    "Decision owned by user?" [shape=diamond];
     "Risk assessment\n(Standard/Complete)" [shape=box];
     "Design self-review\n(Standard/Complete)" [shape=box];
     "Red Team Review Panel\n(parallel, Standard/Complete)" [shape=box];
     "Fix critical issues" [shape=box];
     "Generate OpenSpec artifacts" [shape=box];
     "Spec self-review\n(Standard/Complete)" [shape=box];
-    "User reviews spec?" [shape=diamond];
+    "Review document if required?" [shape=diamond];
     "Invoke writing-plans skill" [shape=doublecircle];
 
     "Explore project context\n+ knowledge base" -> "Assess complexity\n(Decision Expert recommendation)";
@@ -133,19 +133,19 @@ digraph brainstorming {
     "Initialize OpenSpec" -> "Ask clarifying questions";
     "Ask clarifying questions" -> "Propose 2-3 approaches\n(Decision Expert framework)";
     "Propose 2-3 approaches\n(Decision Expert framework)" -> "Present design sections";
-    "Present design sections" -> "User approves design?";
-    "User approves design?" -> "Present design sections" [label="no, revise"];
-    "User approves design?" -> "Risk assessment\n(Standard/Complete)" [label="yes, Std/Complete"];
-    "User approves design?" -> "Generate OpenSpec artifacts" [label="yes, Fast"];
+    "Present design sections" -> "Decision owned by user?";
+    "Decision owned by user?" -> "Present design sections" [label="yes, ask and revise"];
+    "Decision owned by user?" -> "Risk assessment\n(Standard/Complete)" [label="no, or resolved"];
+    "Decision owned by user?" -> "Generate OpenSpec artifacts" [label="no, Fast"];
     "Risk assessment\n(Standard/Complete)" -> "Design self-review\n(Standard/Complete)";
     "Design self-review\n(Standard/Complete)" -> "Red Team Review Panel\n(parallel, Standard/Complete)";
     "Red Team Review Panel\n(parallel, Standard/Complete)" -> "Fix critical issues";
     "Fix critical issues" -> "Generate OpenSpec artifacts";
     "Generate OpenSpec artifacts" -> "Spec self-review\n(Standard/Complete)" [label="Standard/Complete"];
     "Generate OpenSpec artifacts" -> "Invoke writing-plans skill" [label="Fast"];
-    "Spec self-review\n(Standard/Complete)" -> "User reviews spec?";
-    "User reviews spec?" -> "Generate OpenSpec artifacts" [label="changes requested"];
-    "User reviews spec?" -> "Invoke writing-plans skill" [label="approved"];
+    "Spec self-review\n(Standard/Complete)" -> "Review document if required?";
+    "Review document if required?" -> "Generate OpenSpec artifacts" [label="changes requested"];
+    "Review document if required?" -> "Invoke writing-plans skill" [label="not required or approved"];
 }
 ```
 
@@ -200,11 +200,13 @@ Based on your description, I've evaluated this project as:
 
 **Workflow Definitions:**
 
-| Path | Complexity | Output | Quality Gates |
-|------|------------|--------|---------------|
-| **Fast Path** | Simple | design.md, tasks.md | User approval |
-| **Standard Path** | Medium | Full artifacts | User approval + spec self-review |
-| **Complete Path** | Complex | Full artifacts + risk assessment + design review | All gates |
+### Decision and review gates
+
+- Fast Path: record the design and continue when the target and acceptance criteria are clear; ask only for a user-owned decision that changes the work.
+- Standard Path: perform spec self-review; use `review_document` or `question` only when the written artifact contains a decision the user must own or when automatic local delivery authorization is absent.
+- Complete Path: retain all required risk and review evidence. A user decision gate is required only for user-owned scope, acceptance, or external/irreversible actions.
+
+Auto-local-delivery authorization removes routine approval pauses; it never bypasses security, permissions, verification, or explicit consent for external side effects.
 
 **Auto-detection:**
 - If the request is clearly simple (e.g., "fix a typo", "change a color"), auto-select Fast Path
@@ -236,18 +238,11 @@ Based on your description, I've evaluated this project as:
 
 **Exploring approaches:**
 
-- Propose 2-3 different approaches with trade-offs
-- Use the `question` tool to present options with your recommendation and reasoning
-- Lead with your recommended option and explain why
-- User must select one approach before proceeding
+- Propose 2-3 different approaches with trade-offs and lead with a recommendation. Use the `question` tool only when the choice belongs to the user and changes scope, acceptance criteria, or external/irreversible behavior; otherwise record the recommendation and continue.
 
 **Presenting the design:**
 
-- Once you believe you understand what you're building, present the design
-- Scale each section to its complexity: a few sentences if straightforward, up to 200-300 words if nuanced
-- After each section, use the `question` tool to ask "Does this look right so far?" with options: [Approved, Needs changes, Skip to next section]
-- Cover: architecture, components, data flow, error handling, testing
-- Be ready to go back and revise if user selects "Needs changes"
+- Present the design in sections scaled to complexity: a few sentences if straightforward, up to 200-300 words if nuanced. Use `question` only at a genuine decision-dependent transition; do not ask for approval after every section. Cover architecture, components, data flow, error handling, and testing. Revise when the user identifies a decision-changing issue.
 
 **Design for isolation and clarity:**
 
@@ -275,13 +270,13 @@ Phase 0 的 task-size-assessor 初评基于初始请求，可能不准。理解�
 
 ## Play It Back（逐段回放）
 
-理解需求贯穿全程：每当某一部分理解到足以描述（它为何存在、服务谁，或某一块如何工作），用 200-300 字回放给对方，再回到下一部分的提问。回放与提问交替，最后一段覆盖剩余内容。回放中凡是自己推测的一律标注"我猜"；只有对方说过的才以对方名义写入。每段结尾问"哪里不对或漏了什么？"
+理解需求贯穿全程：每当某一部分理解到足以描述（它为何存在、服务谁，或某一块如何工作），用 200-300 字回放给对方，再回到下一部分。回放中凡是自己推测的一律标注"我猜"；只有对方说过的才以对方名义写入。若回放后确实需要用户纠正或补充，调用 `question` 工具使用空 `options`，不要在普通文本中留下等待回答的问题。
 
 若某段描述的是用户要看的东西（页面、屏幕、时间表、打印件）且对方还没见过 Visual Companion 提议，先把提议（单独一条消息）发出去，该段回放下条消息再发。
 
 ## Risk Assessment
 
-After user approves the design and before generating artifacts, conduct a thorough risk assessment. Present the findings to the user as part of the design review.
+在完成设计记录并处理真正的决策项后、生成工件前，进行风险评估。若存在必须由用户决定的高影响风险，使用 `question`；否则在设计记录中保留风险与缓解措施并继续。
 
 **Technical Risks:**
 - Performance bottlenecks — slow operations, N+1 queries, memory concerns
@@ -367,13 +362,13 @@ After risk assessment and before generating artifacts, review the design with th
 - Security — are auth, validation, and data protection covered?
 - Accessibility — if UI, are a11y standards considered?
 
-Fix any issues found. If significant changes are needed, go back through user approval for the revised design.
+Fix any issues found. If significant changes alter a user-owned decision, use `question` to revisit that decision; otherwise fix the design record and continue.
 
 ## After the Design
 
 **OpenSpec Artifacts Generation:**
 
-After user approves the design, generate all OpenSpec artifacts in `.novaway/powersnexus/changes/<name>/`:
+After the design record and required decision gates are complete, generate the OpenSpec artifacts. With automatic local delivery authorization, do not pause for routine approval.
 
 1. **proposal.md** — Intent, scope, and approach (with create mode in Metadata)
 2. **delta-specs/** — Delta specs with ADDED/MODIFIED/REMOVED requirements (with mode field in header)
@@ -440,15 +435,9 @@ After writing the spec document, look at it with fresh eyes:
 
 Fix any issues inline. No need to re-review — just fix and move on.
 
-**User Review Gate:**
-After the spec review loop passes, use the `question` tool to ask the user to review the written spec before proceeding:
+**Decision-dependent artifact review:**
 
-Question options:
-- Approved - Proceed to implementation
-- Needs changes - I'll revise the spec
-- Skip - Move to implementation without review
-
-Wait for the user's response. If they select "Needs changes", make them and re-run the spec review loop. Only proceed once the user approves.
+After the spec review loop passes, inspect whether the artifact contains a decision owned by the user or an external/irreversible action. If so, call `review_document` when available (otherwise `question`) and wait for the user's response. If automatic local delivery authorization is active and no such decision exists, record the review result and proceed without a routine approval pause. If the user requests changes, revise the artifact and rerun the spec review loop.
 
 **Implementation:**
 
@@ -457,13 +446,12 @@ Wait for the user's response. If they select "Needs changes", make them and re-r
 
 ## Key Principles
 
-- **One question at a time** - Don't overwhelm with multiple questions
-- **Use question tool everywhere** - 结构化选择与确认类问题（approach selection, design approval, spec review 等）始终用该工具；需求理解的开放问题用纯文本（见「对话纪律」）
+- **Use question tool everywhere** - 所有需要用户回答的问题（开放澄清、结构化选择、确认类问题、方案和规格审查）都使用该工具；开放问题传 `options: []`
 - **Max 8 clarifying questions** - Be sharp, ask only the most critical during requirements gathering
-- **Open questions first** - 需求理解用开放问题；选项菜单（multiple choice）只在用户卡住或问题本身是封闭选择时提供
+- **Ask only when needed** - 不要把每段设计或普通回放都变成审批；只有用户决策会改变后续工作时才提问
 - **YAGNI ruthlessly** - Remove unnecessary features from all designs
 - **Explore alternatives** - Always propose 2-3 approaches before settling
-- **Incremental validation** - Present design, get approval before moving on
+- **Incremental validation** - Present design, record decisions, and use `question` only before a decision-dependent transition
 - **Be flexible** - Go back and clarify when something doesn't make sense
 
 ## Visual Companion

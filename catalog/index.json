@@ -81,6 +81,80 @@
       }
     },
     {
+      "packageId": "com.novaway.operations-suite",
+      "name": "NovaWay Operations Workbench",
+      "version": "1.0.0",
+      "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘。",
+      "longDescription": "完整运营工作台，包含运营主 Agent、6 个运营 Skill，以及小红书脚本、Chrome 扩展、公众号提示词和平台参考资料。安装后动态出现运营工作台，Agent 可按需调用已授权技能。",
+      "author": "NovaWay-AI",
+      "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
+      "license": "MIT",
+      "icon": "https://gitee.com/NovaWay-AI/novaway-plugins/raw/main/plugins/com.novaway.operations-suite/assets/icon.svg",
+      "categories": [
+        "productivity",
+        "marketing",
+        "automation",
+        "social",
+        "workbench"
+      ],
+      "tags": [
+        "official",
+        "operations",
+        "marketing",
+        "social-media",
+        "content",
+        "workbench",
+        "agent",
+        "skill"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ],
+      "packageFormats": [
+        "zip"
+      ],
+      "compatibility": {
+        "minNovaWayApi": "0.0.0",
+        "manifestVersion": 2,
+        "requiresRestart": false
+      },
+      "capabilities": [
+        "agents",
+        "skills",
+        "tools",
+        "commands"
+      ],
+      "permissions": [
+        "mcp:wechat-official"
+      ],
+      "dependencies": {},
+      "releaseNotes": "将宿主内置运营 Agent 与运营 Skill 提取为可安装、可启停、可热刷新的运营工作台插件；完整保留小红书自动化资源、公众号提示词和平台参考资料。",
+      "artifacts": [
+        {
+          "type": "archive",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.operations-suite-v1.0.0/com.novaway.operations-suite-1.0.0.zip",
+          "repository": "NovaWay-AI/novaway-plugins",
+          "tag": "com.novaway.operations-suite-v1.0.0",
+          "asset": "com.novaway.operations-suite-1.0.0.zip",
+          "sha256": "140dbb25b9a1b1aac69547ff60f828eb00fbdf46c20ea65e7b4b4dd739f6a55b",
+          "size": 583209
+        }
+      ],
+      "marketTypes": [
+        "workbench",
+        "agents",
+        "skills",
+        "tools",
+        "commands"
+      ],
+      "displayName": "运营工作台",
+      "displayNameI18n": {
+        "zh-CN": "运营工作台",
+        "zh-TW": "營運工作台",
+        "en": "Operations Workbench"
+      }
+    },
+    {
       "packageId": "com.novaway.mcp-suite",
       "name": "NovaWay MCP Suite",
       "version": "1.0.0",

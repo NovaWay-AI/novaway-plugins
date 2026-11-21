@@ -66,6 +66,36 @@
       ]
     },
     {
+      "packageId": "com.novaway.operations-suite",
+      "name": "operations-suite",
+      "version": "1.0.0",
+      "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘。",
+      "path": "plugins/com.novaway.operations-suite",
+      "categories": [
+        "productivity",
+        "marketing",
+        "automation",
+        "social",
+        "workbench"
+      ],
+      "capabilities": [
+        "agents",
+        "commands",
+        "skills",
+        "tools"
+      ],
+      "marketTypes": [
+        "agents",
+        "commands",
+        "skills",
+        "tools",
+        "workbench"
+      ],
+      "runtimeTargets": [
+        "novaway-v2"
+      ]
+    },
+    {
       "packageId": "com.novaway.powersnexus",
       "name": "powersnexus",
       "version": "1.1.4",

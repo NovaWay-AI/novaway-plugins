@@ -83,9 +83,9 @@
     {
       "packageId": "com.novaway.operations-suite",
       "name": "NovaWay Operations Workbench",
-      "version": "1.0.0",
-      "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘。",
-      "longDescription": "完整运营工作台，包含运营主 Agent、6 个运营 Skill，以及小红书脚本、Chrome 扩展、公众号提示词和平台参考资料。安装后动态出现运营工作台，Agent 可按需调用已授权技能。",
+      "version": "1.0.1",
+      "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘，并提供多平台账号统一管理。",
+      "longDescription": "完整运营工作台，包含运营主 Agent、6 个运营 Skill、多平台账号统一管理界面，以及小红书脚本、Chrome 扩展、公众号提示词和平台参考资料。安装后动态出现运营工作台，Agent 可按需调用已授权技能。",
       "author": "NovaWay-AI",
       "repository": "https://gitee.com/NovaWay-AI/novaway-plugins",
       "license": "MIT",
@@ -122,22 +122,23 @@
         "agents",
         "skills",
         "tools",
-        "commands"
+        "commands",
+        "surfaces"
       ],
       "permissions": [
         "mcp:wechat-official"
       ],
       "dependencies": {},
-      "releaseNotes": "将宿主内置运营 Agent 与运营 Skill 提取为可安装、可启停、可热刷新的运营工作台插件；完整保留小红书自动化资源、公众号提示词和平台参考资料。",
+      "releaseNotes": "新增由插件声明的运营工作台侧边栏 Surface；账号矩阵、多平台账号统一管理、登录状态巡检、平台 WebView 和发布入口随运营工作台激活。",
       "artifacts": [
         {
           "type": "archive",
-          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.operations-suite-v1.0.0/com.novaway.operations-suite-1.0.0.zip",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.operations-suite-v1.0.1/com.novaway.operations-suite-1.0.1.zip",
           "repository": "NovaWay-AI/novaway-plugins",
-          "tag": "com.novaway.operations-suite-v1.0.0",
-          "asset": "com.novaway.operations-suite-1.0.0.zip",
-          "sha256": "140dbb25b9a1b1aac69547ff60f828eb00fbdf46c20ea65e7b4b4dd739f6a55b",
-          "size": 583209
+          "tag": "com.novaway.operations-suite-v1.0.1",
+          "asset": "com.novaway.operations-suite-1.0.1.zip",
+          "sha256": "db15fd425faf5b9e29c5ebf09c6c61d8674f5cc15f5c26301ae4b30c725b8769",
+          "size": 583615
         }
       ],
       "marketTypes": [
@@ -145,7 +146,8 @@
         "agents",
         "skills",
         "tools",
-        "commands"
+        "commands",
+        "ui"
       ],
       "displayName": "运营工作台",
       "displayNameI18n": {

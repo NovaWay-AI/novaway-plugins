@@ -2,7 +2,7 @@
   "$schema": "../../catalog/schema/manifest.schema.json",
   "apiVersion": 2,
   "name": "operations-suite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘。",
   "kind": "declarative",
   "categories": [
@@ -124,6 +124,23 @@
         "description": "Check the installed Operations Workbench Agent and Skills.",
         "template": "检查运营工作台当前已安装的 Agent、Skill 和辅助资源。",
         "agent": "operations-suite_pulse-orchestrator"
+      }
+    ],
+    "surfaces": [
+      {
+        "id": "operations-workbench",
+        "slot": "sidebar.item",
+        "title": "运营工作台",
+        "icon": "globe",
+        "order": 45,
+        "action": {
+          "type": "view",
+          "viewId": "operations-workbench",
+          "render": {
+            "type": "builtin",
+            "component": "operations-workbench"
+          }
+        }
       }
     ]
   },

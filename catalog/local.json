@@ -68,7 +68,7 @@
     {
       "packageId": "com.novaway.operations-suite",
       "name": "operations-suite",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘。",
       "path": "plugins/com.novaway.operations-suite",
       "categories": [

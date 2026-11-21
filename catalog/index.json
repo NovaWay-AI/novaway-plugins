@@ -83,7 +83,7 @@
     {
       "packageId": "com.novaway.operations-suite",
       "name": "NovaWay Operations Workbench",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "NovaWay 运营工作台：选题、创作、预检、发布和数据复盘，并提供多平台账号统一管理。",
       "longDescription": "完整运营工作台，包含运营主 Agent、6 个运营 Skill、多平台账号统一管理界面，以及小红书脚本、Chrome 扩展、公众号提示词和平台参考资料。安装后动态出现运营工作台，Agent 可按需调用已授权技能。",
       "author": "NovaWay-AI",
@@ -133,12 +133,12 @@
       "artifacts": [
         {
           "type": "archive",
-          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.operations-suite-v1.0.1/com.novaway.operations-suite-1.0.1.zip",
+          "url": "https://gitee.com/NovaWay-AI/novaway-plugins/releases/download/com.novaway.operations-suite-v1.0.2/com.novaway.operations-suite-1.0.2.zip",
           "repository": "NovaWay-AI/novaway-plugins",
-          "tag": "com.novaway.operations-suite-v1.0.1",
-          "asset": "com.novaway.operations-suite-1.0.1.zip",
-          "sha256": "db15fd425faf5b9e29c5ebf09c6c61d8674f5cc15f5c26301ae4b30c725b8769",
-          "size": 583615
+          "tag": "com.novaway.operations-suite-v1.0.2",
+          "asset": "com.novaway.operations-suite-1.0.2.zip",
+          "sha256": "d3eeabd6701797cb5d115506611ffa952ac3d970dcae3df15d18616cb078a9ec",
+          "size": 583693
         }
       ],
       "marketTypes": [
